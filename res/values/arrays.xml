@@ -12,6 +12,20 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+    Per article 5 of the Apache 2.0 License, some modifications to this code
+    were made by the OmniROM Project.
+
+    Modifications Copyright (C) 2013 The OmniROM Project
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License
+    as published by the Free Software Foundation; either version 3
+    of the License, or (at your option) any later version.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string-array name="microphone_recording_presets">
@@ -116,6 +130,36 @@
     <item>0</item>
     <item>500</item>
     <item>1000</item>
+  </string-array>
+
+  <string-array name="bassboost_freqs" translatable="false">
+    <item>20Hz</item>
+    <item>30Hz</item>
+    <item>45Hz</item>
+    <item>55Hz</item>
+    <item>60Hz</item>
+    <item>70Hz</item>
+    <item>80Hz</item>
+    <item>100Hz</item>
+    <item>120Hz</item>
+    <item>150Hz</item>
+    <item>180Hz</item>
+    <item>200Hz</item>
+  </string-array>
+
+  <string-array name="bassboost_freqs_values" translatable="false">
+    <item>20</item>
+    <item>30</item>
+    <item>45</item>
+    <item>55</item>
+    <item>60</item>
+    <item>70</item>
+    <item>80</item>
+    <item>100</item>
+    <item>120</item>
+    <item>150</item>
+    <item>180</item>
+    <item>200</item>
   </string-array>
 
   <string-array name="wm8994_bassboost_modes">

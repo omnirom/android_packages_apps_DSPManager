@@ -36,7 +36,7 @@ typedef struct {
 } reply1x4_1x2_t;
 
 EffectBassBoost::EffectBassBoost()
-    : mStrength(0)
+    : mStrength(0), mCenterFrequency(55.0f)
 {
     refreshStrength();
 }
@@ -76,6 +76,14 @@ int32_t EffectBassBoost::command(uint32_t cmdCode, uint32_t cmdSize, void* pCmdD
                 *replySize = sizeof(reply1x4_1x2_t);
                 return 0;
             }
+            if (cmd == BASSBOOST_PARAM_CENTER_FREQUENCY) {
+                reply1x4_1x2_t *replyData = (reply1x4_1x2_t *) pReplyData;
+                replyData->status = 0;
+                replyData->vsize = 2;
+                replyData->data = (int16_t) mCenterFrequency;
+                *replySize = sizeof(reply1x4_1x2_t);
+                return 0;
+            }
         }
 
         ALOGE("Unknown GET_PARAM of %d bytes", cep->psize);
@@ -98,6 +106,14 @@ int32_t EffectBassBoost::command(uint32_t cmdCode, uint32_t cmdSize, void* pCmdD
                 *replyData = 0;
                 return 0;
             }
+            if (cmd == BASSBOOST_PARAM_CENTER_FREQUENCY) {
+                mCenterFrequency = ((int16_t* )cep)[8];
+                ALOGI("New center freq: %d", mCenterFrequency);
+                refreshStrength();
+                int32_t *replyData = (int32_t *) pReplyData;
+                *replyData = 0;
+                return 0;
+            }
         }
 
         ALOGE("Unknown SET_PARAM of %d, %d bytes", cep->psize, cep->vsize);
@@ -112,7 +128,7 @@ int32_t EffectBassBoost::command(uint32_t cmdCode, uint32_t cmdSize, void* pCmdD
 void EffectBassBoost::refreshStrength()
 {
     /* Q = 0.5 .. 2.0 */
-    mBoost.setLowPass(0, 55.0f, mSamplingRate, 0.5f + mStrength / 666.0f);
+    mBoost.setLowPass(0, mCenterFrequency, mSamplingRate, 0.5f + mStrength / 666.0f);
 }
 
 int32_t EffectBassBoost::process(audio_buffer_t* in, audio_buffer_t* out)
