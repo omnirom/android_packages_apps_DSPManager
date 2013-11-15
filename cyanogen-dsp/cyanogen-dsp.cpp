@@ -23,12 +23,14 @@
 #include <audio_effects/effect_bassboost.h>
 #include <audio_effects/effect_equalizer.h>
 #include <audio_effects/effect_virtualizer.h>
+#include <audio_effects/effect_stereowide.h>
 
 #include "Effect.h"
 #include "EffectBassBoost.h"
 #include "EffectCompression.h"
 #include "EffectEqualizer.h"
 #include "EffectVirtualizer.h"
+#include "EffectStereoWide.h"
 
 static effect_descriptor_t compression_descriptor = {
 	{ 0x09e8ede0, 0xddde, 0x11db, 0xb4f6, { 0x00, 0x02, 0xa5, 0xd5, 0xc5, 0x1b } }, // SL_IID_VOLUME
@@ -50,6 +52,18 @@ static effect_descriptor_t virtualizer_descriptor = {
 	1,
 	"CyanogenMod's Headset Virtualization",
 	"Antti S. Lankila"
+};
+
+static effect_descriptor_t stereowide_descriptor = {
+	*SL_IID_STEREOWIDE,
+        /* 37cc2c00-dddd-11db-8577-0002a5d5c51c */
+	{ 0x37cc2c00, 0xdddd, 0x11db, 0x8577, { 0x00, 0x02, 0xa5, 0xd5, 0xc5, 0x1c } }, // own UUID
+	EFFECT_CONTROL_API_VERSION,
+	EFFECT_FLAG_INSERT_LAST,
+	10, /* 1 MIPS. FIXME: should be measured. */
+	1,
+	"OmniROM's Stereo Widener",
+	"Guillaume Lesniak"
 };
 
 static effect_descriptor_t equalizer_descriptor = {
@@ -139,6 +153,14 @@ int32_t EffectCreate(const effect_uuid_t *uuid, int32_t sessionId, int32_t ioId,
 		*pEffect = (effect_handle_t) e;
 		return 0;
 	}
+	if (memcmp(uuid, &stereowide_descriptor.uuid, sizeof(effect_uuid_t)) == 0) {
+		struct effect_module_s *e = (struct effect_module_s *) calloc(1, sizeof(struct effect_module_s));
+		e->itfe = &generic_interface;
+		e->effect = new EffectStereoWide();
+		e->descriptor = &stereowide_descriptor;
+		*pEffect = (effect_handle_t) e;
+		return 0;
+	}
 
 	return -EINVAL;
 }
@@ -166,6 +188,10 @@ int32_t EffectGetDescriptor(const effect_uuid_t *uuid, effect_descriptor_t *pDes
 	}
 	if (memcmp(uuid, &bassboost_descriptor.uuid, sizeof(effect_uuid_t)) == 0) {
 	    memcpy(pDescriptor, &bassboost_descriptor, sizeof(effect_descriptor_t));
+	    return 0;
+	}
+	if (memcmp(uuid, &stereowide_descriptor.uuid, sizeof(effect_uuid_t)) == 0) {
+	    memcpy(pDescriptor, &stereowide_descriptor, sizeof(effect_descriptor_t));
 	    return 0;
 	}
 

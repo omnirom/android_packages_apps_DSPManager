@@ -53,6 +53,11 @@
     <string name="pref_room_title">Select room type</string>
     <string name="dialog_room">Room type</string>
     <string name="menu_reset">Reset</string>
+    <string name="pref_headset_stereowide_title">Stereo widener</string>
+    <string name="pref_headset_stereowide_summary_on">Stereo widener is enabled</string>
+    <string name="pref_headset_stereowide_summary_off">Stereo widener is disabled</string>
+    <string name="pref_headset_stereowide_enable">Enable</string>
+    <string name="dialog_stereo">Stereo widener</string>
 
     <string name="eq_preset_acoustic">Acoustic</string>
     <string name="eq_preset_bass_booster">Bass booster</string>

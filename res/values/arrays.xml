@@ -171,4 +171,16 @@
     <item>0</item>
     <item>-1</item>
   </string-array>
+
+  <string-array name="stereowide_modes">
+    <item>Light</item>
+    <item>Moderate</item>
+    <item>High</item>
+  </string-array>
+
+  <string-array name="stereowide_values" translatable="false">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+  </string-array>
 </resources>

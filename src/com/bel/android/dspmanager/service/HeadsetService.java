@@ -19,6 +19,7 @@ import android.media.audiofx.AudioEffect;
 import android.media.audiofx.BassBoost;
 import android.media.audiofx.Equalizer;
 import android.media.audiofx.Virtualizer;
+import android.media.audiofx.StereoWide;
 import android.provider.Settings;
 import android.os.Binder;
 import android.os.IBinder;
@@ -57,6 +58,8 @@ public class HeadsetService extends Service {
 		private final BassBoost mBassBoost;
 		/** Session-specific virtualizer */
 		private final Virtualizer mVirtualizer;
+		/** Session-specific stereo widener */
+		private final StereoWide mStereoWide;
 
 		protected EffectSet(int sessionId) {
 			try {
@@ -73,6 +76,7 @@ public class HeadsetService extends Service {
 			mEqualizer = new Equalizer(0, sessionId);
 			mBassBoost = new BassBoost(0, sessionId);
 			mVirtualizer = new Virtualizer(0, sessionId);
+			mStereoWide = new StereoWide(0, sessionId);
 		}
 
 		protected void release() {
@@ -80,6 +84,7 @@ public class HeadsetService extends Service {
 			mEqualizer.release();
 			mBassBoost.release();
 			mVirtualizer.release();
+			mStereoWide.release();
 		}
 
 		/**
@@ -365,5 +370,8 @@ public class HeadsetService extends Service {
 
 		session.mVirtualizer.setEnabled(preferences.getBoolean("dsp.headphone.enable", false));
 		session.mVirtualizer.setStrength(Short.valueOf(preferences.getString("dsp.headphone.mode", "0")));
+
+		session.mStereoWide.setEnabled(preferences.getBoolean("dsp.stereowide.enable", false));
+		session.mStereoWide.setStrength(Short.valueOf(preferences.getString("dsp.stereowide.mode", "0")));
 	}
 }

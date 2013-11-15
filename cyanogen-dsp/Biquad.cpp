@@ -12,6 +12,20 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Per article 5 of the Apache 2.0 License, some modifications to this code
+ * were made by the OmniROM Project.
+ *
+ * Modifications Copyright (C) 2013 The OmniROM Project
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 3
+ * of the License, or (at your option) any later version.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
 #include "Biquad.h"
@@ -99,6 +113,21 @@ void Biquad::setBandPass(int32_t steps, double center_frequency, double sampling
     double b0 =   sin(w0)/2;
     double b1 =   0;
     double b2 =  -sin(w0)/2;
+    double a0 =   1 + alpha;
+    double a1 =  -2*cos(w0);
+    double a2 =   1 - alpha;
+
+    setCoefficients(steps, a0, a1, a2, b0, b1, b2);
+}
+
+void Biquad::setHighPass(int32_t steps, double center_frequency, double sampling_frequency, double resonance)
+{
+    double w0 = 2 * M_PI * center_frequency / sampling_frequency;
+    double alpha = sin(w0) / (2*resonance);
+
+    double b0 =  (1 + cos(w0))/2;
+    double b1 = -(1 + cos(w0));
+    double b2 =  (1 + cos(w0))/2;
     double a0 =   1 + alpha;
     double a1 =  -2*cos(w0);
     double a2 =   1 - alpha;

@@ -60,4 +60,13 @@
 			android:defaultValue="0" android:dialogTitle="@string/dialog_room" android:entries="@array/headphone_modes" android:entryValues="@array/headphone_modes_values" android:title="@string/pref_room_title" android:key="dsp.headphone.mode"/>
 	</PreferenceCategory>
 
+	<PreferenceCategory android:title="@string/pref_headset_stereowide_title">
+		<CheckBoxPreference android:key="dsp.stereowide.enable"
+			android:disableDependentsState="false" android:summaryOn="@string/pref_headset_stereowide_summary_on"
+			android:summaryOff="@string/pref_headset_stereowide_summary_off" android:title="@string/pref_headset_stereowide_enable"></CheckBoxPreference>
+		<com.bel.android.dspmanager.preference.SummariedListPreference
+			android:defaultValue="0" android:dialogTitle="@string/dialog_stereo" android:entries="@array/stereowide_modes" android:entryValues="@array/stereowide_values"
+			android:title="@string/dialog_stereo" android:key="dsp.stereowide.mode"/>
+	</PreferenceCategory>
+
 </PreferenceScreen>
