@@ -28,18 +28,24 @@
     <string-array name="compression_modes">
         <item>Léger</item>
         <item>Moyen</item>
-        <item>Extrême</item>
+        <item>Élevé</item>
     </string-array>
 
     <string-array name="bassboost_modes">
         <item>Léger</item>
         <item>Moyen</item>
-        <item>Extrême</item>
+        <item>Élevé</item>
     </string-array>
 
     <string-array name="wm8994_bassboost_modes">
         <item>Standard</item>
         <item>Petit haut-parleur</item>
+    </string-array>
+
+    <string-array name="stereowide_modes">
+      <item>Léger</item>
+      <item>Moyen</item>
+      <item>Élevé</item>
     </string-array>
 
 </resources>

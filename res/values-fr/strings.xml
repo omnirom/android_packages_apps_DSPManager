@@ -32,7 +32,8 @@
     <string name="pref_dsp_summary_on">La compression est activée</string>
     <string name="pref_dsp_summary_off">La compression est désactivée</string>
     <string name="pref_dsp_enable">Activer</string>
-    <string name="pref_effect_title">Choisir la force de l\'effet</string>
+    <string name="pref_effect_title">Définir la force de l\'effet</string>
+    <string name="pref_effect_freq_title">Définir la fréquence centrale de l\'effet</string>
     <string name="dialog_effect">Force de l\'effet</string>
     <string name="pref_equalizer_title">Égaliseur</string>
     <string name="pref_equalizer_summary_on">L\'égaliseur est activé</string>
@@ -48,6 +49,11 @@
     <string name="pref_headset_virtual_summary_on">L\'effet chambre virtuelle est activé</string>
     <string name="pref_headset_virtual_summary_off">L\'effet chambre virtuelle est désactivé</string>
     <string name="pref_headset_virtual_enable">Activer</string>
+    <string name="pref_headset_stereowide_title">Élargisseur stéréo</string>
+    <string name="pref_headset_stereowide_summary_on">Élargisseur stéréo activé</string>
+    <string name="pref_headset_stereowide_summary_off">Élargisseur stéréo désactivé</string>
+    <string name="pref_headset_stereowide_enable">Activer</string>
+    <string name="dialog_stereo">Élargisseur stéréo</string>
     <string name="pref_room_title">Type de chambre</string>
     <string name="dialog_room">Type de chambre</string>
     <string name="menu_reset">Remise à zéro</string>
@@ -104,6 +110,9 @@
     <string name="pref_wm8994_adc_osr128_summary">Convertisseur analogique vers digital, suréchantillonnage de 128x &#8212; augmente la qualité des enregistrements</string>
     <string name="pref_wm8994_fll_tuning_title">Horloge audio personalisée</string>
     <string name="pref_wm8994_fll_tuning_summary">Utiliser une horloge audio pour WM8994 personnalisée &#8212; améliore la qualité du son</string>
+    <string name="save_preset">Sauver les pré-réglages</string>
+    <string name="load_preset">Charger les pré-réglages</string>
+    <string name="new_preset">Nouveau pré-réglage\u2026</string>
     <string name="help_title">Guide utilisateur</string>
     <string name="help_text"><b>Qu\'est-ce que DSP Manager ?</b>
 \n
