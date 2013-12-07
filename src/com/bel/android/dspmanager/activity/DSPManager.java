@@ -1,4 +1,15 @@
-
+/*
+ * Modifications Copyright (C) 2013 The OmniROM Project
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 3
+ * of the License, or (at your option) any later version.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
 package com.bel.android.dspmanager.activity;
 
 import android.app.ActionBar;
@@ -12,8 +23,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Environment;
@@ -33,15 +42,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.bel.android.dspmanager.R;
+import com.bel.android.dspmanager.modules.soundcontrol.SoundControl;
+import com.bel.android.dspmanager.modules.soundcontrol.SoundControlHelper;
 import com.bel.android.dspmanager.service.HeadsetService;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -156,46 +167,46 @@ public final class DSPManager extends FragmentActivity {
 
         // The first entry is "New preset", so we offset
         File[] presets = presetsDir.listFiles((FileFilter) null);
-        final String[] names = new String[presets != null ? presets.length+1 : 1];
+        final String[] names = new String[presets != null ? presets.length + 1 : 1];
         names[0] = getString(R.string.new_preset);
         if (presets != null) {
             for (int i = 0; i < presets.length; i++) {
-                names[i+1] = presets[i].getName();
+                names[i + 1] = presets[i].getName();
             }
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(DSPManager.this);
         builder.setTitle(R.string.save_preset)
-               .setItems(names, new DialogInterface.OnClickListener() {
-                   public void onClick(DialogInterface dialog, int which) {
-                       if (which == 0) {
-                           // New preset, we ask for the name
-                           AlertDialog.Builder inputBuilder = new AlertDialog.Builder(DSPManager.this);
+                .setItems(names, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (which == 0) {
+                            // New preset, we ask for the name
+                            AlertDialog.Builder inputBuilder = new AlertDialog.Builder(DSPManager.this);
 
-                           inputBuilder.setTitle(R.string.new_preset);
+                            inputBuilder.setTitle(R.string.new_preset);
 
-                           // Set an EditText view to get user input 
-                           final EditText input = new EditText(DSPManager.this);
-                           inputBuilder.setView(input);
+                            // Set an EditText view to get user input
+                            final EditText input = new EditText(DSPManager.this);
+                            inputBuilder.setView(input);
 
-                           inputBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                               public void onClick(DialogInterface dialog, int whichButton) {
-                                   String value = input.getText().toString();
-                                   savePreset(value);
-                               }
-                           });
-                           inputBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                               public void onClick(DialogInterface dialog, int whichButton) {
-                                   // Canceled.
-                               }
-                           });
+                            inputBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int whichButton) {
+                                    String value = input.getText().toString();
+                                    savePreset(value);
+                                }
+                            });
+                            inputBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int whichButton) {
+                                    // Canceled.
+                                }
+                            });
 
-                           inputBuilder.show();
-                       } else {
-                           savePreset(names[which]);
-                       }
-                   }
-        });
+                            inputBuilder.show();
+                        } else {
+                            savePreset(names[which]);
+                        }
+                    }
+                });
         Dialog dlg = builder.create();
         dlg.show();
     }
@@ -214,16 +225,16 @@ public final class DSPManager extends FragmentActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(DSPManager.this);
         builder.setTitle(R.string.load_preset)
-               .setItems(names, new DialogInterface.OnClickListener() {
-                   public void onClick(DialogInterface dialog, int which) {
-                       loadPreset(names[which]);
-                   }
-        });
+                .setItems(names, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        loadPreset(names[which]);
+                    }
+                });
         builder.create().show();
     }
 
     public void savePreset(String name) {
-        final String spDir = getApplicationInfo().dataDir+"/shared_prefs/";
+        final String spDir = getApplicationInfo().dataDir + "/shared_prefs/";
 
         // Copy the SharedPreference to our output directory
         File presetDir = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + PRESETS_FOLDER + "/" + name);
@@ -232,14 +243,14 @@ public final class DSPManager extends FragmentActivity {
         Log.e("DSP", "Saving preset to " + presetDir.getAbsolutePath());
 
         final String packageName = "com.bel.android.dspmanager.";
-        File bluetooth = new File(presetDir, packageName+"bluetooth.xml");
-        File headset = new File(presetDir, packageName+"headset.xml");
-        File speaker = new File(presetDir, packageName+"speaker.xml");
+        File bluetooth = new File(presetDir, packageName + "bluetooth.xml");
+        File headset = new File(presetDir, packageName + "headset.xml");
+        File speaker = new File(presetDir, packageName + "speaker.xml");
 
         try {
-        copy(new File(spDir+packageName+"bluetooth.xml"), bluetooth);
-        copy(new File(spDir+packageName+"headset.xml"), headset);
-        copy(new File(spDir+packageName+"speaker.xml"), speaker);
+            copy(new File(spDir + packageName + "bluetooth.xml"), bluetooth);
+            copy(new File(spDir + packageName + "headset.xml"), headset);
+            copy(new File(spDir + packageName + "speaker.xml"), speaker);
         } catch (IOException e) {
             Log.e("DSP", "Cannot save preset", e);
         }
@@ -251,12 +262,12 @@ public final class DSPManager extends FragmentActivity {
         if (!presetDir.exists()) presetDir.mkdirs();
 
         final String packageName = "com.bel.android.dspmanager.";
-        final String spDir = getApplicationInfo().dataDir+"/shared_prefs/";
+        final String spDir = getApplicationInfo().dataDir + "/shared_prefs/";
 
         try {
-        copy(new File(presetDir, packageName+"bluetooth.xml"), new File(spDir+packageName+"bluetooth.xml"));
-        copy(new File(presetDir, packageName+"headset.xml"), new File(spDir+packageName+"headset.xml"));
-        copy(new File(presetDir, packageName+"speaker.xml"), new File(spDir+packageName+"speaker.xml"));
+            copy(new File(presetDir, packageName + "bluetooth.xml"), new File(spDir + packageName + "bluetooth.xml"));
+            copy(new File(presetDir, packageName + "headset.xml"), new File(spDir + packageName + "headset.xml"));
+            copy(new File(presetDir, packageName + "speaker.xml"), new File(spDir + packageName + "speaker.xml"));
         } catch (IOException e) {
             Log.e("DSP", "Cannot load preset", e);
         }
@@ -265,7 +276,7 @@ public final class DSPManager extends FragmentActivity {
         startActivity(new Intent(this, DSPManager.class));
         finish();
     }
-  
+
     public static void copy(File src, File dst) throws IOException {
         InputStream in = new FileInputStream(src);
         OutputStream out = new FileOutputStream(dst);
@@ -310,6 +321,12 @@ class MyAdapter extends FragmentPagerAdapter {
             tmpTitles.add(res.getString(R.string.wm8994_title).toUpperCase());
         }
 
+        // Determine if SoundControl is supported
+        if (SoundControlHelper.getSoundControlHelper(context).isSupported()) {
+            tmpEntries.add(SoundControl.NAME);
+            tmpTitles.add(res.getString(R.string.soundcontrol_title).toUpperCase());
+        }
+
         entries = (String[]) tmpEntries.toArray(new String[tmpEntries.size()]);
         titles = (String[]) tmpTitles.toArray(new String[tmpTitles.size()]);
     }
@@ -334,6 +351,8 @@ class MyAdapter extends FragmentPagerAdapter {
         // Determine if fragment is WM8994
         if (entries[position].equals(WM8994.NAME)) {
             return new WM8994();
+        } else if (entries[position].equals(SoundControl.NAME)) {
+            return new SoundControl();
         } else {
             final DSPScreen dspFragment = new DSPScreen();
             Bundle b = new Bundle();

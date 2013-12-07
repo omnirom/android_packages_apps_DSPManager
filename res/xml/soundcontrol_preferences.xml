@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2013 The OmniROM Project
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/soundcontrol_title"
+    xmlns:dsp="http://schemas.android.com/apk/res/com.bel.android.dspmanager">
+
+    <PreferenceCategory
+        android:title="@string/pref_soundcontrol_presets_title"
+        android:key="sc_presets_cat">
+
+        <ListPreference
+            android:key="sc_presets"
+            android:title="@string/pref_soundcontrol_presets_title"
+            android:entries="@array/sc_presets_entries"
+            android:entryValues="@array/sc_presets_values" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_soundcontrol_headphone_gain_title">
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/pref_soundcontrol_headphone_gain_left"
+            android:key="sc_headphone_left"
+            android:persistent="false"
+            android:summary="@string/empty"
+            android:max="10"
+            dsp:min="-20"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="0" />
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/pref_soundcontrol_headphone_gain_right"
+            android:key="sc_headphone_right"
+            android:persistent="false"
+            android:summary="@string/empty"
+            android:max="10"
+            dsp:min="-20"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_soundcontrol_headphone_poweramp_gain_title">
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/pref_soundcontrol_headphone_poweramp_gain_left"
+            android:key="sc_headphone_pa_left"
+            android:persistent="false"
+            android:summary="@string/empty"
+            android:max="5"
+            dsp:min="-12"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="0" />
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/pref_soundcontrol_headphone_poweramp_gain_right"
+            android:key="sc_headphone_pa_right"
+            android:persistent="false"
+            android:summary="@string/empty"
+            android:max="5"
+            dsp:min="-12"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_soundcontrol_microphone_gain_title">
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/pref_soundcontrol_microphone_handset_gain_title"
+            android:key="sc_microphone_handset"
+            android:persistent="false"
+            android:summary="@string/empty"
+            android:max="10"
+            dsp:min="-20"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="0" />
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/pref_soundcontrol_microphone_camcorder_gain_title"
+            android:key="sc_microphone_camcorder"
+            android:persistent="false"
+            android:summary="@string/empty"
+            android:max="10"
+            dsp:min="-20"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_soundcontrol_speaker_gain_title">
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/pref_soundcontrol_speaker_gain_title"
+            android:key="sc_speaker"
+            android:persistent="false"
+            android:summary="@string/empty"
+            android:max="10"
+            dsp:min="-20"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
+    <Preference
+        android:title="@string/empty"
+        android:key="sc_version"
+        android:summary="@string/empty"
+        android:selectable="false" />
+
+</PreferenceScreen>
