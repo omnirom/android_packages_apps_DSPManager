@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <string name="app_name">Menedżer DSP</string>
     <string name="select_configuration_title">Wybierz konfigurację do edycji</string>
     <string name="headset_title">Zestaw słuchawkowy</string>
@@ -49,7 +48,7 @@
     <string name="eq_preset_treble_reducer">Redukcja tonów wysokich</string>
     <string name="eq_preset_vocal_booster">Podbicie wokalu</string>
     <string name="eq_preset_custom">Własne</string>
-    
+
     <!--  WM8994 -->
     <!--  Categories -->
     <string name="category_wm8994_internal_speaker">Głośnik</string>

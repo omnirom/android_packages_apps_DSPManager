@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    
+<resources>
     <string-array name="microphone_recording_presets">
         <item>Original</item>
         <item>Equilibré</item>
@@ -43,9 +42,8 @@
     </string-array>
 
     <string-array name="stereowide_modes">
-      <item>Léger</item>
-      <item>Moyen</item>
-      <item>Élevé</item>
+        <item>Léger</item>
+        <item>Moyen</item>
+        <item>Élevé</item>
     </string-array>
-
 </resources>

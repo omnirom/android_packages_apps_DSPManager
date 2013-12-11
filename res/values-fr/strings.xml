@@ -14,7 +14,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <string name="app_name">Effets audio</string>
     <string name="select_configuration_title">Choisir la configuration à éditer</string>
     <string name="headset_title">Casque</string>

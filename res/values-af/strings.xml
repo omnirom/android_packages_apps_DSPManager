@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <string name="app_name">DSV Bestuurder</string>
     <string name="select_configuration_title">Kies konfigurasie om te verander</string>
     <string name="headset_title">Oorfone</string>
@@ -101,8 +100,9 @@
     <string name="pref_wm8994_fll_tuning_summary">Gebruik ingestemde WM8994 klank-klok bron &#8212; verhoog kwaliteit van die klank</string>
 
     <string name="help_title">Aangaande</string>
-    <string name="help_text"><b>Wat is DSV Bestuurder?</b> <!-- Translation done by Brand van Sittert  -->
-\n\n
+    <string name="help_text"><b>Wat is DSV Bestuurder?</b>
+        <!-- Translation done by Brand van Sittert  -->
+        \n\n
 DSV Bestuurder is \'n per-uitsettings klank aanpassings program. <i>DSV</i> staan vir Digitale Sein Verwerking
 (\'Digital Signal Processing (DSP)\'), en die <i>Bestuurder</i> gedeelte verwys na die feit dat die DSV in
 werklikheid nie van binne die program self uitgevoer word nie; die bestuurder kan dit slegs in werking

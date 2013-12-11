@@ -13,9 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <string name="app_name">Ses Yöneticisi</string>
     <string name="select_configuration_title">Düzenlemek İçin Yapılandırma Seçin</string>
     <string name="headset_title">Kulaklık</string>
@@ -106,5 +104,4 @@
     <string name="pref_wm8994_adc_osr128_summary">128x örnekleme ile analogdan-dijitale dönüştürücü &#8212; kaydedilen seslerin kalitesini arttırır</string>
     <string name="pref_wm8994_fll_tuning_title">Ayarlı ses frekansı</string>
     <string name="pref_wm8994_fll_tuning_summary">Ayarlı WM8994 ses frekans kaynağını kullan &#8212; sesin kalitesini arttırır</string>
-
 </resources>

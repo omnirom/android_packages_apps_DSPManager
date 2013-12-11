@@ -28,15 +28,12 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
-    <!-- General -->
-    <string name="empty" />
     <string name="app_name">DSP Manager</string>
     <string name="select_configuration_title">Select configuration to edit</string>
     <string name="headset_title">Headset</string>
     <string name="speaker_title">Speaker</string>
     <string name="bluetooth_title">Bluetooth</string>
     <string name="usb_title">USB/Dock</string>
-    <string name="wm8994_title" translatable="false">WM8994</string>
     <string name="audio_effects">Audio effects</string>
     <string name="pref_unavailable">Functionality is not available on your device</string>
     <string name="dsp_settings_headset">DSP settings - Headset</string>
@@ -223,7 +220,7 @@ width. This is controlled by the \'Room type\' control.</string>
     <string name="soundcontrol_title">Sound Control</string>
 
     <!-- Preferences -->
-    <string name="pref_soundcontrol_presets_title">Presets</string>
+    <string name="pref_soundcontrol_presets_title">Sound Control Presets</string>
     <string name="pref_soundcontrol_headphone_gain_title">Headphone Gain</string>
     <string name="pref_soundcontrol_headphone_poweramp_gain_title">Headphone PowerAmp Gain</string>
     <string name="pref_soundcontrol_microphone_gain_title">Microphone Gain</string>
@@ -244,4 +241,11 @@ width. This is controlled by the \'Room type\' control.</string>
     <string name="sc_preset_quiet">Quiet</string>
     <string name="sc_preset_stock">Stock</string>
     <string name="sc_value_changed">Please stop and resume your music to apply the values!</string>
+
+    <!-- Drawer -->
+    <string name="navigation_drawer_toggle">Toggle Drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_toggle_drawer">Switch to Drawer</string>
+    <string name="navigation_toggle_tabbed">Switch to Tabbed</string>
 </resources>

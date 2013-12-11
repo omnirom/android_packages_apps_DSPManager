@@ -15,7 +15,6 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/soundcontrol_title"
     xmlns:dsp="http://schemas.android.com/apk/res/com.bel.android.dspmanager">
 
     <PreferenceCategory
@@ -26,7 +25,8 @@
             android:key="sc_presets"
             android:title="@string/pref_soundcontrol_presets_title"
             android:entries="@array/sc_presets_entries"
-            android:entryValues="@array/sc_presets_values" />
+            android:entryValues="@array/sc_presets_values"
+            android:defaultValue="0" />
 
     </PreferenceCategory>
 

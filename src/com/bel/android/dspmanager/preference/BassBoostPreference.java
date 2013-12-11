@@ -25,31 +25,31 @@ public class BassBoostPreference extends DialogPreference {
 
     public static final String BASS_BOOST_PREF_GAIN = "dsp.wm8994.bassboost.gain";
     public static final String BASS_BOOST_PREF_RANGE = "dsp.wm8994.bassboost.range";
-    public static final String[] BASS_BOOST_FILES = new String[] {
-        "/sys/class/misc/voodoo_sound/digital_gain",
-        "/sys/class/misc/voodoo_sound/headphone_eq_b1_gain",
-        "/sys/class/misc/voodoo_sound/headphone_eq_b2_gain",
+    public static final String[] BASS_BOOST_FILES = new String[]{
+            "/sys/class/misc/voodoo_sound/digital_gain",
+            "/sys/class/misc/voodoo_sound/headphone_eq_b1_gain",
+            "/sys/class/misc/voodoo_sound/headphone_eq_b2_gain",
     };
 
     public static final String[] BASS_BOOST_PREFS = {
-        BASS_BOOST_PREF_GAIN,
-        BASS_BOOST_PREF_RANGE,
+            BASS_BOOST_PREF_GAIN,
+            BASS_BOOST_PREF_RANGE,
     };
     private static final int[] SEEKBAR_ID = {
-        R.id.bass_boost_gain_seekbar,
-        R.id.bass_boost_range_seekbar,
+            R.id.bass_boost_gain_seekbar,
+            R.id.bass_boost_range_seekbar,
     };
     private static final int[] VALUE_DISPLAY_ID = {
-        R.id.bass_boost_gain_value,
-        R.id.bass_boost_range_value,
+            R.id.bass_boost_gain_value,
+            R.id.bass_boost_range_value,
     };
     private static final int[] SEEKBAR_MAX_VALUE = {
-        MAX_VALUE_GAIN,
-        MAX_VALUE_RANGE,
+            MAX_VALUE_GAIN,
+            MAX_VALUE_RANGE,
     };
     private static final String[] SEEKBAR_UOM = {
-        "dB",
-        "%",
+            "dB",
+            "%",
     };
 
     private BassBoostSeekBar[] mSeekBars = new BassBoostSeekBar[2];
@@ -194,7 +194,7 @@ public class BassBoostPreference extends DialogPreference {
             if (mPref.equals(BASS_BOOST_PREF_RANGE)) {
                 mProgress = (mProgress / 5) * 100;
                 mRange = progress;
-            } else{
+            } else {
                 mGain = progress;
             }
 

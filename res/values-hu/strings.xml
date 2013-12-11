@@ -16,7 +16,7 @@
      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
      MA  02110-1301, USA.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <string name="app_name">DSP Beállítások</string>
     <string name="select_configuration_title">Konfiguráció kiválasztása szerkesztésre</string>
     <string name="headset_title">Fejhallgató</string>
@@ -190,5 +190,4 @@ fejhallgatók velejárói, így az effektet ajánlott mindig bekapcsolni, amikor
 fel lehet használni az érzékelt sztereó hatás &#8220;szélességének&#8221; növelésére. Ezt a &#8220;Szoba típusa&#8221; beállítással
 lehet módosítani.
     </string>
-
 </resources>

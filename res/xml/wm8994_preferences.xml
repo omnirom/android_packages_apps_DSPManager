@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-	android:title="@string/dsp_settings_wm8994" >
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--  Speaker options -->
-    <PreferenceCategory android:key="wm8994_internal_speaker_category"
+    <PreferenceCategory
+        android:key="wm8994_internal_speaker_category"
         android:title="@string/category_wm8994_internal_speaker">
 
-        <CheckBoxPreference android:key="pref_wm8994_speaker_tuning"
+        <CheckBoxPreference
+            android:key="pref_wm8994_speaker_tuning"
             android:title="@string/pref_wm8994_speaker_tuning_title"
             android:summary="@string/pref_wm8994_speaker_tuning_summary" />
 
     </PreferenceCategory>
 
     <!--  Headset options -->
-    <PreferenceCategory android:key="wm8994_headphone_amp_category"
+    <PreferenceCategory
+        android:key="wm8994_headphone_amp_category"
         android:title="@string/category_wm8994_headphone_amp">
         <com.bel.android.dspmanager.preference.HeadsetAmplifierPreference
             android:key="headphone_amp"
@@ -24,7 +25,8 @@
     </PreferenceCategory>
 
     <!--  Microphone recording options -->
-    <PreferenceCategory android:key="wm8994_microphone_recording_category"
+    <PreferenceCategory
+        android:key="wm8994_microphone_recording_category"
         android:title="@string/category_wm8994_microphone_recording">
 
         <com.bel.android.dspmanager.preference.SummariedListPreference
@@ -38,10 +40,12 @@
     </PreferenceCategory>
 
     <!-- Signal Processing -->
-    <PreferenceCategory android:key="wm8994_signal_processing_category"
+    <PreferenceCategory
+        android:key="wm8994_signal_processing_category"
         android:title="@string/category_wm8994_signal_processing">
 
-        <CheckBoxPreference android:key="dsp.wm8994.bassboost.enable"
+        <CheckBoxPreference
+            android:key="dsp.wm8994.bassboost.enable"
             android:title="@string/pref_wm8994_bass_boost_enable_title"
             android:summary="@string/pref_wm8994_bass_boost_enable_summary" />
 
@@ -59,39 +63,47 @@
             android:summary="@string/pref_wm8994_bass_boost_summary"
             android:dialogTitle="@string/pref_wm8994_bass_boost_title" />
 
-        <CheckBoxPreference android:key="pref_wm8994_mono_downmix"
+        <CheckBoxPreference
+            android:key="pref_wm8994_mono_downmix"
             android:title="@string/pref_wm8994_mono_downmix_title"
             android:summary="@string/pref_wm8994_mono_downmix_summary" />
 
-        <CheckBoxPreference android:key="pref_wm8994_stereo_expansion"
+        <CheckBoxPreference
+            android:key="pref_wm8994_stereo_expansion"
             android:title="@string/pref_wm8994_stereo_expansion_title"
             android:summary="@string/pref_wm8994_stereo_expansion_summary" />
 
     </PreferenceCategory>
 
     <!--  D/AC, A/DC -->
-    <PreferenceCategory android:key="wm8994_dac_config_category"
+    <PreferenceCategory
+        android:key="wm8994_dac_config_category"
         android:title="@string/category_wm8994_dac_config">
 
-        <CheckBoxPreference android:key="pref_wm8994_dac_direct"
+        <CheckBoxPreference
+            android:key="pref_wm8994_dac_direct"
             android:title="@string/pref_wm8994_dac_direct_title"
             android:summary="@string/pref_wm8994_dac_direct_summary" />
 
-        <CheckBoxPreference android:key="pref_wm8994_dac_osr128"
+        <CheckBoxPreference
+            android:key="pref_wm8994_dac_osr128"
             android:title="@string/pref_wm8994_dac_osr128_title"
             android:summary="@string/pref_wm8994_dac_osr128_summary" />
 
-        <CheckBoxPreference android:key="pref_wm8994_adc_osr128"
+        <CheckBoxPreference
+            android:key="pref_wm8994_adc_osr128"
             android:title="@string/pref_wm8994_adc_osr128_title"
             android:summary="@string/pref_wm8994_adc_osr128_summary" />
 
     </PreferenceCategory>
 
     <!-- Codec settings -->
-    <PreferenceCategory android:key="wm8994_codec_optimization_category"
+    <PreferenceCategory
+        android:key="wm8994_codec_optimization_category"
         android:title="@string/category_wm8994_codec_optimization">
 
-        <CheckBoxPreference android:key="pref_wm8994_fll_tuning"
+        <CheckBoxPreference
+            android:key="pref_wm8994_fll_tuning"
             android:title="@string/pref_wm8994_fll_tuning_title"
             android:summary="@string/pref_wm8994_fll_tuning_summary" />
 

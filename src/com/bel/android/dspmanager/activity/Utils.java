@@ -16,6 +16,7 @@
 
 package com.bel.android.dspmanager.activity;
 
+import android.app.Activity;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -35,7 +36,7 @@ public class Utils {
      * Write a string value to the specified file.
      *
      * @param filename The filename
-     * @param value The value
+     * @param value    The value
      */
     public static void writeValue(String filename, String value) {
         FileOutputStream fos = null;
@@ -70,7 +71,7 @@ public class Utils {
      * Write a string value to the specified file.
      *
      * @param filename The filename
-     * @param value The value
+     * @param value    The value
      */
     public static void writeValue(String filename, boolean value) {
         writeValue(filename, value ? "1" : "0");
@@ -81,7 +82,7 @@ public class Utils {
      * an integer to an unsigned integer by multiplying by 2.
      *
      * @param filename The filename
-     * @param value The value of max value Integer.MAX
+     * @param value    The value of max value Integer.MAX
      */
     public static void writeColor(String filename, int value) {
         writeValue(filename, String.valueOf((long) value * 2));
@@ -114,5 +115,21 @@ public class Utils {
             Log.e(TAG_READ, "Exception when reading /sys/ file", e);
         }
         return sLine;
+    }
+
+    /**
+     * Restart the activity smoothly
+     *
+     * @param activity
+     */
+    public static void restartActivity(final Activity activity) {
+        if (activity == null)
+            return;
+        final int enter_anim = android.R.anim.fade_in;
+        final int exit_anim = android.R.anim.fade_out;
+        activity.overridePendingTransition(enter_anim, exit_anim);
+        activity.finish();
+        activity.overridePendingTransition(enter_anim, exit_anim);
+        activity.startActivity(activity.getIntent());
     }
 }
