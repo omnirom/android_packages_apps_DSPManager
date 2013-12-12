@@ -238,6 +238,7 @@ width. This is controlled by the \'Room type\' control.</string>
     <string name="sc_version_title">Sound Control</string>
     <string name="sc_preset_summary">Choose a preset to load</string>
     <string name="sc_preset_loaded">Preset \"%s\" loaded!</string>
+    <string name="sc_preset_custom">Custom</string>
     <string name="sc_preset_quality">Quality</string>
     <string name="sc_preset_loudness">Loudness</string>
     <string name="sc_preset_quiet">Quiet</string>

@@ -38,6 +38,7 @@ public class SoundControlHelper {
     private static SoundControlHelper soundControlHelper;
     //=========================
     private static final ArrayList<String> mPresets = new ArrayList<String>();
+    private static Context mContext;
     private static SharedPreferences mSharedPrefs;
     private static SharedPreferences.Editor mSharedPrefsEditor;
     //=========================
@@ -67,6 +68,7 @@ public class SoundControlHelper {
     private static final String SC_3X = "/sys/kernel/mm/tabla_mm/scv";
 
     private SoundControlHelper(Context paramContext) {
+        mContext = paramContext;
         switch (getModuleVersion()) {
             default:
             case 0:
@@ -146,7 +148,10 @@ public class SoundControlHelper {
     public void applyValues() {
         if (Utils.fileExists(VERSION)) {
 
-            switchPreset(mSharedPrefs.getString("preset_profile", mPresetsList[0]));
+            switchPreset(mContext.getSharedPreferences(
+                    DSPManager.SHARED_PREFERENCES_BASENAME + ".soundcontrol",
+                    Context.MODE_MULTI_PROCESS)
+                    .getString("preset_profile", mPresetsList[0]));
 
             if (getHeadphone()) {
                 applyHeadphoneLeft(mSharedPrefs.getString("headphone_l",
@@ -248,9 +253,9 @@ public class SoundControlHelper {
      */
     public void applyHeadphoneLeft(String paramString) {
         int i1 = readHeadphoneRight();
-        int i2 = 40 + Integer.parseInt(paramString);
+        int i2 = Integer.parseInt(paramString);
         Utils.writeValue(HEADPHONE_GAIN,
-                Integer.toString(i2) + " " + Integer.toString(i1));
+                Integer.toString(i2 + 40) + " " + Integer.toString(i1));
 
         mSharedPrefsEditor.putString("headphone_l", Integer.toString(i2)).apply();
     }
@@ -262,9 +267,9 @@ public class SoundControlHelper {
      */
     public void applyHeadphoneRight(String paramString) {
         int i1 = readHeadphoneLeft();
-        int i2 = 40 + Integer.parseInt(paramString);
+        int i2 = Integer.parseInt(paramString);
         Utils.writeValue(HEADPHONE_GAIN,
-                Integer.toString(i1) + " " + Integer.toString(i2));
+                Integer.toString(i1) + " " + Integer.toString(i2 + 40));
 
         mSharedPrefsEditor.putString("headphone_r", Integer.toString(i2)).apply();
     }
@@ -275,8 +280,8 @@ public class SoundControlHelper {
      * @param paramString The value of the Handset Microphone gain
      */
     public void applyMicrophoneHandset(String paramString) {
-        int i1 = 40 + Integer.parseInt(paramString);
-        Utils.writeValue(MIC_GAIN, Integer.toString(i1));
+        int i1 = Integer.parseInt(paramString);
+        Utils.writeValue(MIC_GAIN, Integer.toString(i1 + 40));
 
         mSharedPrefsEditor.putString("handset_mic", Integer.toString(i1)).apply();
     }
@@ -287,8 +292,8 @@ public class SoundControlHelper {
      * @param paramString The value of the Camcorder Microphone gain
      */
     public void applyMicrophoneCamcorder(String paramString) {
-        int i1 = 40 + Integer.parseInt(paramString);
-        Utils.writeValue(CAM_GAIN, Integer.toString(i1));
+        int i1 = Integer.parseInt(paramString);
+        Utils.writeValue(CAM_GAIN, Integer.toString(i1 + 40));
 
         mSharedPrefsEditor.putString("camcorder_mic", Integer.toString(i1)).apply();
     }
@@ -299,8 +304,8 @@ public class SoundControlHelper {
      * @param paramString The value of the Speaker gain
      */
     public void applySpeaker(String paramString) {
-        int i1 = 40 + Integer.parseInt(paramString);
-        Utils.writeValue(SPEAKER_GAIN, Integer.toString(i1));
+        int i1 = Integer.parseInt(paramString);
+        Utils.writeValue(SPEAKER_GAIN, Integer.toString(i1 + 40));
 
         mSharedPrefsEditor.putString("speaker", Integer.toString(i1)).apply();
     }
@@ -312,9 +317,9 @@ public class SoundControlHelper {
      */
     public void applyHeadphonePowerampLeft(String paramString) {
         int i1 = readHeadphonePowerampRight();
-        int i2 = 12 + Integer.parseInt(paramString);
+        int i2 = Integer.parseInt(paramString);
         Utils.writeValue(
-                HEADPHONE_PA_GAIN, Integer.toString(i2) + " " + Integer.toString(i1));
+                HEADPHONE_PA_GAIN, Integer.toString(i2 + 12) + " " + Integer.toString(i1));
 
         mSharedPrefsEditor.putString("headphone_pa_l", Integer.toString(i2)).apply();
     }
@@ -326,9 +331,9 @@ public class SoundControlHelper {
      */
     public void applyHeadphonePowerampRight(String paramString) {
         int i1 = readHeadphonePowerampLeft();
-        int i2 = 12 + Integer.parseInt(paramString);
+        int i2 = Integer.parseInt(paramString);
         Utils.writeValue(
-                HEADPHONE_PA_GAIN, Integer.toString(i1) + " " + Integer.toString(i2));
+                HEADPHONE_PA_GAIN, Integer.toString(i1) + " " + Integer.toString(i2 + 12));
 
         mSharedPrefsEditor.putString("headphone_pa_r", Integer.toString(i2)).apply();
     }

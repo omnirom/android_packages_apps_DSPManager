@@ -90,6 +90,7 @@ public class SoundControl extends PreferenceFragment
 
         // Presets
         mPresets = (ListPreference) findPreference(PREF_PRESETS);
+        if (mPresets.getValue() == null) mPresets.setValueIndex(0);
         mPresets.setSummary(R.string.sc_preset_summary);
         mPresets.setOnPreferenceChangeListener(this);
 
@@ -123,7 +124,6 @@ public class SoundControl extends PreferenceFragment
         mSpeaker.setOnPreferenceChangeListener(this);
 
         makeToast(getString(R.string.sc_value_changed));
-
     }
 
     @Override
@@ -156,6 +156,8 @@ public class SoundControl extends PreferenceFragment
             getScHelper().applySpeaker(newValue.toString());
             changed = true;
         }
+
+        getScHelper().switchPreset(0);
 
         return changed;
     }
@@ -249,6 +251,9 @@ public class SoundControl extends PreferenceFragment
         String mPresetName;
         switch (i) {
             default:
+            case 0:
+                mPresetName = getString(R.string.sc_preset_custom);
+                break;
             case 1:
                 mPresetName = getString(R.string.sc_preset_quality);
                 break;
