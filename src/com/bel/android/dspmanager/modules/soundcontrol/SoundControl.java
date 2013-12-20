@@ -230,7 +230,7 @@ public class SoundControl extends PreferenceFragment
      */
     private void updateSpeaker() {
         if (getScHelper().getSpeaker()) {
-            mSpeaker.setValue(getScHelper().readMicrophoneCamcorder() - 40);
+            mSpeaker.setValue(getScHelper().readSpeaker() - 40);
         } else {
             mSpeaker.setEnabled(false);
         }
