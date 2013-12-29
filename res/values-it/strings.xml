@@ -223,7 +223,7 @@ usato per aumentare la larghezza dell\'immagine stereo percepita, quest\'imposta
     <!-- Preferences -->
     <string name="pref_soundcontrol_presets_title">Predefiniti</string>
     <string name="pref_soundcontrol_headphone_gain_title">Miglioramento cuffie</string>
-    <string name="pref_soundcontrol_headphone_poweramp_gain_title">Miglioramanto PowerAmp cuffie</string>
+    <string name="pref_soundcontrol_headphone_poweramp_gain_title">Miglioramento PowerAmp cuffie</string>
     <string name="pref_soundcontrol_microphone_gain_title">Miglioramento microfono</string>
     <string name="pref_soundcontrol_speaker_gain_title">Miglioramento speaker</string>
     <string name="pref_soundcontrol_headphone_gain_left">Cuffia (Sinistra)</string>
