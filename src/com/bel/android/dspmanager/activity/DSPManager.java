@@ -47,6 +47,8 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.bel.android.dspmanager.R;
+import com.bel.android.dspmanager.modules.boefflasoundcontrol.BoefflaSoundControl;
+import com.bel.android.dspmanager.modules.boefflasoundcontrol.BoefflaSoundControlHelper;
 import com.bel.android.dspmanager.modules.soundcontrol.SoundControl;
 import com.bel.android.dspmanager.modules.soundcontrol.SoundControlHelper;
 import com.bel.android.dspmanager.service.HeadsetService;
@@ -392,6 +394,10 @@ public final class DSPManager extends Activity {
                 copy(new File(spDir + packageName + "soundcontrol.xml"),
                         new File(presetDir, packageName + "soundcontrol.xml"));
             }
+            if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(DSPManager.this).getBoefflaSound()) {
+                copy(new File(spDir + packageName + "boefflasoundcontrol.xml"),
+                        new File(presetDir, packageName + "boefflasoundcontrol.xml"));
+            }
             if (WM8994.isSupported(DSPManager.this)) {
                 copy(new File(spDir + packageName + "wm8994.xml"),
                         new File(presetDir, packageName + "wm8994.xml"));
@@ -423,6 +429,11 @@ public final class DSPManager extends Activity {
                 copy(new File(presetDir, packageName + "soundcontrol.xml"),
                         new File(spDir + packageName + "soundcontrol.xml"));
                 SoundControlHelper.getSoundControlHelper(DSPManager.this).applyValues();
+            }
+            if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(DSPManager.this).getBoefflaSound()) {
+                copy(new File(presetDir, packageName + "boefflasoundcontrol.xml"),
+                        new File(spDir + packageName + "boefflasoundcontrol.xml"));
+                BoefflaSoundControlHelper.getBoefflaSoundControlHelper(DSPManager.this).applyValues();
             }
             if (WM8994.isSupported(DSPManager.this)) {
                 copy(new File(presetDir, packageName + "wm8994.xml"),
@@ -573,6 +584,14 @@ public final class DSPManager extends Activity {
             tmpList.add(mTitleMap);
         }
 
+        // Determine if Boeffla Sound is supported
+        if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(this).getBoefflaSound()) {
+            mTitleMap = new HashMap<String, String>();
+            mTitleMap.put("ICON", R.drawable.empty_icon + "");
+            mTitleMap.put("TITLE", getString(R.string.boeffla_sound_control));
+            tmpList.add(mTitleMap);
+        }
+
         return tmpList;
     }
 
@@ -594,6 +613,11 @@ public final class DSPManager extends Activity {
         // Determine if SoundControl is supported
         if (SoundControlHelper.getSoundControlHelper(this).isSupported()) {
             entryString.add(SoundControl.NAME);
+        }
+
+        // Determine if BoefflaSoundControl is supported
+        if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(this).getBoefflaSound()) {
+            entryString.add(BoefflaSoundControl.NAME);
         }
 
         return entryString.toArray(new String[entryString.size()]);
@@ -619,6 +643,8 @@ public final class DSPManager extends Activity {
                 return new WM8994();
             } else if (mEntries[fragmentId].equals(SoundControl.NAME)) {
                 return new SoundControl();
+            } else if (mEntries[fragmentId].equals(BoefflaSoundControl.NAME)) {
+                return new BoefflaSoundControl();
             } else {
                 final DSPScreen dspFragment = new DSPScreen();
                 Bundle b = new Bundle();
@@ -666,6 +692,8 @@ public final class DSPManager extends Activity {
                 return new WM8994();
             } else if (entries[position].equals(SoundControl.NAME)) {
                 return new SoundControl();
+            } else if (entries[position].equals(BoefflaSoundControl.NAME)) {
+                return new BoefflaSoundControl();
             } else {
                 final DSPScreen dspFragment = new DSPScreen();
                 Bundle b = new Bundle();

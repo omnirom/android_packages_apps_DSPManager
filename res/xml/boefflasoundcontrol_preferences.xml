@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2013 The OmniROM Project
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/boeffla_sound_control"
+    xmlns:dsp="http://schemas.android.com/apk/res/com.bel.android.dspmanager">
+
+    <SwitchPreference
+        android:key="boeffla_sound"
+        android:title="@string/boeffla_sound_title"
+        android:summary="@string/boeffla_sound_summary"
+        android:defaultValue="false" />
+
+    <PreferenceCategory android:title="@string/general_title">
+
+        <CheckBoxPreference
+            android:key="dac_direct"
+            android:title="@string/dac_direct_title"
+            android:summary="@string/dac_direct_summary"
+            android:dependency="boeffla_sound" />
+
+        <CheckBoxPreference
+            android:key="dac_oversampling"
+            android:title="@string/dac_oversampling_title"
+            android:summary="@string/dac_oversampling_summary"
+            android:dependency="boeffla_sound" />
+
+        <CheckBoxPreference
+            android:key="fll_tuning"
+            android:title="@string/fll_tuning_title"
+            android:summary="@string/fll_tuning_summary"
+            android:dependency="boeffla_sound" />
+
+        <CheckBoxPreference
+            android:key="mono_downmix"
+            android:title="@string/mono_downmix_title"
+            android:summary="@string/mono_downmix_summary"
+            android:dependency="boeffla_sound" />
+
+        <CheckBoxPreference
+            android:key="over_saturation_suppress"
+            android:title="@string/over_saturation_suppress"
+            android:summary="@string/empty"
+            android:dependency="boeffla_sound" />
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/stereo_expansion_title"
+            android:key="stereo_expansion"
+            android:persistent="true"
+            android:summary="@string/stereo_expansion_summary"
+            android:dependency="boeffla_sound"
+            android:max="31"
+            dsp:min="0"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/speaker_title">
+
+        <CheckBoxPreference
+            android:key="speaker_tuning"
+            android:title="@string/speaker_tuning_title"
+            android:summary="@string/speaker_tuning_summary"
+            android:dependency="boeffla_sound" />
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/speaker_volume_title"
+            android:key="speaker_volume"
+            android:persistent="true"
+            android:dependency="boeffla_sound"
+            android:max="63"
+            dsp:min="20"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="17" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/headphone_title">
+
+        <CheckBoxPreference
+            android:key="privacy_mode"
+            android:title="@string/privacy_mode_title"
+            android:summary="@string/privacy_mode_summary"
+            android:dependency="boeffla_sound" />
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/pref_soundcontrol_headphone_gain_left"
+            android:key="headphone_volume_left"
+            android:persistent="true"
+            android:dependency="boeffla_sound"
+            android:max="63"
+            dsp:min="20"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="10" />
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/pref_soundcontrol_headphone_gain_right"
+            android:key="headphone_volume_right"
+            android:persistent="true"
+            android:dependency="boeffla_sound"
+            android:max="63"
+            dsp:min="20"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="10" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/mic_title">
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/mic_general"
+            android:key="microphone_general"
+            android:persistent="true"
+            android:summary="@string/empty"
+            android:dependency="boeffla_sound"
+            android:max="31"
+            dsp:min="0"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="28" />
+
+        <com.bel.android.dspmanager.preference.SeekBarPreference
+            android:title="@string/mic_call"
+            android:key="microphone_call"
+            android:persistent="true"
+            android:summary="@string/empty"
+            android:dependency="boeffla_sound"
+            android:max="31"
+            dsp:min="0"
+            dsp:unitsLeft=""
+            dsp:unitsRight=""
+            android:defaultValue="23" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

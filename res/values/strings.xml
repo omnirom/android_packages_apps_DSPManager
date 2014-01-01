@@ -248,4 +248,32 @@ width. This is controlled by the \'Room type\' control.</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_toggle_drawer">Switch to Drawer</string>
     <string name="navigation_toggle_tabbed">Switch to Tabbed</string>
+
+    <!-- Boeffla Sound Control -->
+    <string name="boeffla_sound_control">Boeffla sound control</string>
+    <string name="boeffla_sound_title">Boeffla sound</string>
+    <string name="boeffla_sound_summary">Enable boeffla sound</string>
+    <string name="bass_freq_tuning">Bass frequency tuning</string>
+    <string name="dac_direct_summary">Bypass the analog channel</string>
+    <string name="dac_direct_title">DAC direct</string>
+    <string name="dac_oversampling_summary">128x oversampling</string>
+    <string name="dac_oversampling_title">DAC oversampling</string>
+    <string name="fll_tuning_summary">Tune the chip clock for better quality</string>
+    <string name="fll_tuning_title">FLL tuning</string>
+    <string name="general_title">General</string>
+    <string name="headphone_title">Headphone</string>
+    <string name="mic_title">Microphone</string>
+    <string name="mic_call">In call volume</string>
+    <string name="mic_general">General volume</string>
+    <string name="mono_downmix_summary">Convert stereo into mono</string>
+    <string name="mono_downmix_title">Mono downmix</string>
+    <string name="over_saturation_suppress">Over saturation suppress</string>
+    <string name="privacy_mode_summary">Mute the phone speaker while headphones are plugged in</string>
+    <string name="privacy_mode_title">Privacy mode</string>
+    <string name="speaker_tuning_summary">Tune the phone speaker for better bass</string>
+    <string name="speaker_tuning_title">Speaker tuning</string>
+    <string name="speaker_volume_title">Speaker volume</string>
+    <string name="stereo_expansion_summary">Improve sound deepness and clarity</string>
+    <string name="stereo_expansion_title">Stereo expansion</string>
+    <string name="volumes_title">Volumes</string>
 </resources>

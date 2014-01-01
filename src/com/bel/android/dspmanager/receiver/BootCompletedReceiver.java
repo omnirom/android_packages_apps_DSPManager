@@ -18,6 +18,7 @@ import android.content.Intent;
 
 import com.bel.android.dspmanager.activity.WM8994;
 import com.bel.android.dspmanager.modules.soundcontrol.SoundControlHelper;
+import com.bel.android.dspmanager.modules.boefflasoundcontrol.BoefflaSoundControlHelper;
 import com.bel.android.dspmanager.service.HeadsetService;
 
 /**
@@ -36,6 +37,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
         if (SoundControlHelper.getSoundControlHelper(context).isSupported()) {
             SoundControlHelper.getSoundControlHelper(context).applyValues();
+        }
+        if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(context).getBoefflaSound()) {
+            BoefflaSoundControlHelper.getBoefflaSoundControlHelper(context).applyValues();
         }
     }
 }

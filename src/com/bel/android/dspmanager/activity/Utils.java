@@ -24,8 +24,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.InputStream;
 import java.io.IOException;
 import java.io.SyncFailedException;
+import java.util.Scanner;
 
 public class Utils {
     protected static final String TAG = DSPManager.class.getSimpleName();
@@ -131,5 +133,35 @@ public class Utils {
         activity.finish();
         activity.overridePendingTransition(enter_anim, exit_anim);
         activity.startActivity(activity.getIntent());
+    }
+
+    /*
+     * Loose catch block
+     * Enabled aggressive block sorting
+     * Enabled unnecessary exception pruning
+     */
+    public static String getSystemFileString(String string) {
+        try {
+            Process process = new ProcessBuilder(new String[]{"cat", string}).start();
+            String string2 = readAll(process.getInputStream());
+            process.waitFor();
+            process.destroy();
+            return string2;
+        } catch (IOException var3_3) {
+            Log.e((String)("EXCEPTION: "), (String)(var3_3.toString()));
+            return "ERROR";
+        } catch (InterruptedException var1_4) {
+                Log.e((String)("EXCEPTION: "), (String)(var1_4.toString()));
+        }
+        return "ERROR";
+    }
+
+    public static String readAll(InputStream inputStream) {
+        StringBuilder stringBuilder = new StringBuilder();
+        Scanner scanner = new Scanner(inputStream);
+        while (scanner.hasNextLine()) {
+            stringBuilder.append(scanner.nextLine());
+        }
+        return stringBuilder.toString();
     }
 }
