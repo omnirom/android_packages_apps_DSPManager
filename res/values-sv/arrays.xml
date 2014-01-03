@@ -25,4 +25,9 @@
         <item>Måttlig</item>
         <item>Extrem</item>
     </string-array>
+    <string-array name="stereowide_modes">
+        <item>Lätt</item>
+        <item>Måttlig</item>
+        <item>Stark</item>
+    </string-array>
 </resources>
