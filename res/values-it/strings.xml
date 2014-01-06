@@ -241,4 +241,10 @@ usato per aumentare la larghezza dell\'immagine stereo percepita, quest\'imposta
     <string name="sc_preset_quiet">Tranquillo</string>
     <string name="sc_preset_stock">Stock</string>
     <string name="sc_value_changed">Si prega di interrompere e riprendere la musica per applicare i valori corretti!</string>
+    <!-- Drawer -->
+    <string name="navigation_drawer_toggle">Toggle Drawer</string>
+    <string name="navigation_drawer_open">Attiva navigazione drawer</string>
+    <string name="navigation_drawer_close">Disattiva navigazione drawer</string>
+    <string name="navigation_toggle_drawer">Passa al Drawer</string>
+    <string name="navigation_toggle_tabbed">Passa alle Tab</string>
 </resources>
