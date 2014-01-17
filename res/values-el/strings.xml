@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2012-2013 The CyanogenMod Project
+<!-- Copyright (C) 2012-2013 The CyanogenMod Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-         http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Per article 5 of the Apache 2.0 License, some modifications to this code
+were made by the OmniROM Project.
+
+Modifications Copyright (C) 2013 The OmniROM Project
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 3
+of the License, or (at your option) any later version.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
     <string name="app_name">DSP Manager</string>
@@ -33,6 +46,7 @@
     <string name="pref_dsp_summary_off">Συμπίεση απενεργοποιημένη</string>
     <string name="pref_dsp_enable">Ενεργοποίηση</string>
     <string name="pref_effect_title">Επίδραση εφέ</string>
+    <string name="pref_effect_freq_title">Επιλογή κεντρικής συχνότητας εφέ</string>
     <string name="dialog_effect">Επίδραση εφέ</string>
     <string name="pref_equalizer_title">Ισοσταθμιστής</string>
     <string name="pref_equalizer_summary_on">Ισοσταθμιστής ενεργοποιημένος</string>
@@ -51,6 +65,11 @@
     <string name="pref_room_title">Επιλογή τύπου δωματίου</string>
     <string name="dialog_room">Τύπος δωματίου</string>
     <string name="menu_reset">Επαναφορά</string>
+    <string name="pref_headset_stereowide_title">Διευρυμένο Stereo</string>
+    <string name="pref_headset_stereowide_summary_on">Το διευρυμένο Stereo είναι ενεργό</string>
+    <string name="pref_headset_stereowide_summary_off">Το διευρυμένο Stereo είναι ανενεργό</string>
+    <string name="pref_headset_stereowide_enable">Ενεργοποίηση</string>
+    <string name="dialog_stereo">Διευρυμένο Stereo</string>
     <string name="eq_preset_acoustic">Ακουστική</string>
     <string name="eq_preset_bass_booster">Ενίσχυση μπάσου</string>
     <string name="eq_preset_bass_reducer">Μείωση μπάσου</string>
@@ -104,6 +123,9 @@
     <string name="pref_wm8994_adc_osr128_summary">128x oversampling στον ψηφιακό-σε-αναλογικό μετατροπέα &#8212; αυξημένη ποιότητα ηχογραφήσεων</string>
     <string name="pref_wm8994_fll_tuning_title">Βελτιωμένο audio clock</string>
     <string name="pref_wm8994_fll_tuning_summary">Χρήση βελτιωμένου audio clock στο WM8994 &#8212; βελτιώνει την ποιότητα του ήχου</string>
+    <string name="save_preset">Αποθήκευση προκαθορισμένης</string>
+    <string name="load_preset">Φόρτωση προκαθορισμένης</string>
+    <string name="new_preset">Νέα προκαθορισμένη ρύθμιση...</string>
     <string name="help_title">Βοήθεια</string>
     <string name="help_text"><b>Τι είναι το DSP Manager;</b>
 \n\n
@@ -195,4 +217,37 @@
 Επειδή η μίξη μειώνει το στερεοφωνικό διαχωρισμό, υπάρχει ένα εφέ αντήχησης
 το οποίο μπορεί να χρησιμοποιηθεί για να διατηρήσει το στερεοφωνικό εύρος.
 Αυτό ελέγχεται από την επιλογή \'Επιλογή τύπου δωματίου\'.</string>
+
+    <!-- Sound Control -->
+    <string name="soundcontrol_title">Έλεγχος ήχου</string>
+
+    <!-- Preferences -->
+    <string name="pref_soundcontrol_presets_title">Προρυθμίσεις ελέγχου ήχου</string>
+    <string name="pref_soundcontrol_headphone_gain_title">Κέρδος Ακουστικών</string>
+    <string name="pref_soundcontrol_headphone_poweramp_gain_title">Κέρδος Ακουστικών PowerAmp</string>
+    <string name="pref_soundcontrol_microphone_gain_title">Κέρδος Μικροφώνου</string>
+    <string name="pref_soundcontrol_speaker_gain_title">Κέρδος ηχείου</string>
+    <string name="pref_soundcontrol_headphone_gain_left">Ακουστικό (Αριστερά)</string>
+    <string name="pref_soundcontrol_headphone_gain_right">Ακουστικό (Δεξιά)</string>
+    <string name="pref_soundcontrol_headphone_poweramp_gain_left">Ακουστικά PowerAmp (Αριστερά)</string>
+    <string name="pref_soundcontrol_headphone_poweramp_gain_right">Ακουστικά PowerAmp (Δεξιά)</string>
+    <string name="pref_soundcontrol_microphone_handset_gain_title">Handset Microphone</string>
+    <string name="pref_soundcontrol_microphone_camcorder_gain_title">Camcorder Microphone</string>
+
+    <string name="sc_version_title">Έλεγχος ήχου</string>
+    <string name="sc_preset_summary">Επιλέξτε προρύθμιση για φόρτωση</string>
+    <string name="sc_preset_loaded">Η προρύθμιση \"%s\" φορτώθηκε!</string>
+    <string name="sc_preset_custom">Προσαρμοσμένη</string>
+    <string name="sc_preset_quality">Ποιότητα</string>
+    <string name="sc_preset_loudness">Loudness</string>
+    <string name="sc_preset_quiet">Ήσυχο</string>
+    <string name="sc_preset_stock">Stock</string>
+    <string name="sc_value_changed">Παρακαλώ σταματήστε και συνεχίστε τη μουσική σας για να εφαρμοστούν οι τιμές!</string>
+
+    <!-- Drawer -->
+    <string name="navigation_drawer_toggle">Εναλλαγή σε συρτάρι</string>
+    <string name="navigation_drawer_open">Άνοιγμα συρταριού πλοήγησης</string>
+    <string name="navigation_drawer_close">Κλείσιμο συρταριού πλοήγησης</string>
+    <string name="navigation_toggle_drawer">Αλλαγή σε Συρτάρι</string>
+    <string name="navigation_toggle_tabbed">Αλλαγή σε Καρτέλες</string>
 </resources>

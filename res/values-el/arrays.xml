@@ -19,7 +19,7 @@
         <item>Αρχικό</item>
         <item>Ισορροπημένο</item>
         <item>Υψηλή ευαισθησία</item>
-        <item>Loud Environment</item>
+        <item>Θορυβώδες περιβάλλον</item>
     </string-array>
     <string-array name="headphone_modes">
         <item>Studio</item>
@@ -49,5 +49,10 @@
     <string-array name="wm8994_bassboost_modes">
         <item>Κανονική</item>
         <item>Μικρά ηχεία</item>
+    </string-array>
+    <string-array name="stereowide_modes">
+        <item>Μικρό</item>
+        <item>Μεσαίο</item>
+        <item>Μεγάλο</item>
     </string-array>
 </resources>
