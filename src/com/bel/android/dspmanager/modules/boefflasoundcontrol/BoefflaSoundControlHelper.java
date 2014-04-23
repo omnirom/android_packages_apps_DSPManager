@@ -107,12 +107,12 @@ public class BoefflaSoundControlHelper {
             }
 
             if (getHeadphoneVolumeLeft()) {
-                int i = mSharedPrefs.getInt("headphone_volume_left", 50);
+                int i = mSharedPrefs.getInt("headphone_volume_left", 57);
                 applyHeadphoneVolumeLeft(i);
             }
 
             if (getHeadphoneVolumeRight()) {
-                int i = mSharedPrefs.getInt("headphone_volume_right", 50);
+                int i = mSharedPrefs.getInt("headphone_volume_right", 57);
                 applyHeadphoneVolumeRight(i);
             }
 
