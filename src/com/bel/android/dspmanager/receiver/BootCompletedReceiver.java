@@ -38,7 +38,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (SoundControlHelper.getSoundControlHelper(context).isSupported()) {
             SoundControlHelper.getSoundControlHelper(context).applyValues();
         }
-        if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(context).getBoefflaSound() && BoefflaSoundControlHelper.getBoefflaSoundControlHelper(context).readBoefflaSound() != 1) {
+        if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(context).isSupported() &&
+                BoefflaSoundControlHelper.getBoefflaSoundControlHelper(context).getBoefflaSound() &&
+                BoefflaSoundControlHelper.getBoefflaSoundControlHelper(context).readBoefflaSound() != 1) {
             BoefflaSoundControlHelper.getBoefflaSoundControlHelper(context).applyValues();
         }
     }

@@ -42,6 +42,7 @@ public class BoefflaSoundControlHelper {
     //=========================
     // Paths
     //=========================
+    private static String BOEFFLA_SOUND_ROOT = "/sys/devices/virtual/misc/boeffla_sound";
     private static String BOEFFLA_SOUND = "/sys/devices/virtual/misc/boeffla_sound/boeffla_sound";
     private static String DAC_DIRECT = "/sys/devices/virtual/misc/boeffla_sound/dac_direct";
     private static String DAC_OVERSAMPLING = "/sys/devices/virtual/misc/boeffla_sound/dac_oversampling";
@@ -84,7 +85,7 @@ public class BoefflaSoundControlHelper {
      * Applies saved values to kernel
      */
     public void applyValues() {
-        if (getBoefflaSound()) {
+        if (isSupported()) {
 
             if (getBoefflaSound()) {
                 boolean b = mSharedPrefs.getBoolean("boeffla_sound", false);
@@ -390,6 +391,10 @@ public class BoefflaSoundControlHelper {
     //=========================
     // Get
     //=========================
+
+    public boolean isSupported() {
+        return Utils.fileExists(BOEFFLA_SOUND_ROOT);
+    }
 
     /**
      * @return null if not existing
