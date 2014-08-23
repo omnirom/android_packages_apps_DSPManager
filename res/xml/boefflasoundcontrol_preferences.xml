@@ -84,7 +84,7 @@
             android:persistent="true"
             android:dependency="boeffla_sound"
             android:max="63"
-            dsp:min="20"
+            dsp:min="0"
             dsp:unitsLeft=""
             dsp:unitsRight=""
             android:defaultValue="17" />
@@ -105,7 +105,7 @@
             android:persistent="true"
             android:dependency="boeffla_sound"
             android:max="63"
-            dsp:min="20"
+            dsp:min="0"
             dsp:unitsLeft=""
             dsp:unitsRight=""
             android:defaultValue="10" />
@@ -116,7 +116,7 @@
             android:persistent="true"
             android:dependency="boeffla_sound"
             android:max="63"
-            dsp:min="20"
+            dsp:min="0"
             dsp:unitsLeft=""
             dsp:unitsRight=""
             android:defaultValue="10" />

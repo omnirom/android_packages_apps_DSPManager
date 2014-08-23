@@ -253,11 +253,11 @@ public class BoefflaSoundControl extends PreferenceFragment
             bHelper().applyFLLTuning(false);
             mFLLTuning.setChecked(false);
 
-            bHelper().applyHeadphoneVolumeLeft(50);
-            mHeadphoneVolumeLeft.setValue(50);
+            bHelper().applyHeadphoneVolumeLeft(57);
+            mHeadphoneVolumeLeft.setValue(57);
 
-            bHelper().applyHeadphoneVolumeRight(50);
-            mHeadphoneVolumeRight.setValue(50);
+            bHelper().applyHeadphoneVolumeRight(57);
+            mHeadphoneVolumeRight.setValue(57);
 
             bHelper().applyMicrophoneCall(25);
             mMicrophoneCall.setValue(25);
