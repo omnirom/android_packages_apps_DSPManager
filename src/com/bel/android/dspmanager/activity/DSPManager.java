@@ -585,7 +585,7 @@ public final class DSPManager extends Activity {
         }
 
         // Determine if Boeffla Sound is supported
-        if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(this).getBoefflaSound()) {
+        if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(this).isSupported()) {
             mTitleMap = new HashMap<String, String>();
             mTitleMap.put("ICON", R.drawable.empty_icon + "");
             mTitleMap.put("TITLE", getString(R.string.boeffla_sound_control));
