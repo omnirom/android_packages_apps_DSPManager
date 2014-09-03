@@ -394,7 +394,7 @@ public final class DSPManager extends Activity {
                 copy(new File(spDir + packageName + "soundcontrol.xml"),
                         new File(presetDir, packageName + "soundcontrol.xml"));
             }
-            if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(DSPManager.this).getBoefflaSound()) {
+            if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(DSPManager.this).isSupported()) {
                 copy(new File(spDir + packageName + "boefflasoundcontrol.xml"),
                         new File(presetDir, packageName + "boefflasoundcontrol.xml"));
             }
@@ -430,7 +430,7 @@ public final class DSPManager extends Activity {
                         new File(spDir + packageName + "soundcontrol.xml"));
                 SoundControlHelper.getSoundControlHelper(DSPManager.this).applyValues();
             }
-            if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(DSPManager.this).getBoefflaSound()) {
+            if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(DSPManager.this).isSupported()) {
                 copy(new File(presetDir, packageName + "boefflasoundcontrol.xml"),
                         new File(spDir + packageName + "boefflasoundcontrol.xml"));
                 BoefflaSoundControlHelper.getBoefflaSoundControlHelper(DSPManager.this).applyValues();
@@ -616,7 +616,7 @@ public final class DSPManager extends Activity {
         }
 
         // Determine if BoefflaSoundControl is supported
-        if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(this).getBoefflaSound()) {
+        if (BoefflaSoundControlHelper.getBoefflaSoundControlHelper(this).isSupported()) {
             entryString.add(BoefflaSoundControl.NAME);
         }
 
