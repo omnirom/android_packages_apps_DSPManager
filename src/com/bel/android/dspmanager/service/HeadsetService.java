@@ -2,12 +2,14 @@ package com.bel.android.dspmanager.service;
 
 import android.app.Service;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothA2dp;
+import android.bluetooth.BluetoothProfile;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.media.AudioManager;
 import android.media.audiofx.AudioEffect;
 import android.media.audiofx.BassBoost;
 import android.media.audiofx.Equalizer;
@@ -130,7 +132,7 @@ public class HeadsetService extends Service {
         }
     }
 
-    protected static final String TAG = HeadsetService.class.getSimpleName();
+    private static final String TAG = "DSPManager";
 
     public class LocalBinder extends Binder {
         public HeadsetService getService() {
@@ -210,28 +212,46 @@ public class HeadsetService extends Service {
         @Override
         public void onReceive(final Context context, final Intent intent) {
             final String action = intent.getAction();
+            Log.i(TAG, "onReceive " + action);
             final boolean prevUseHeadset = mUseHeadset;
-            final boolean prevUseBluetooth = mUseBluetooth;
             final boolean prevUseUSB = mUseUSB;
-            final AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
             if (action.equals(Intent.ACTION_HEADSET_PLUG)) {
                 mUseHeadset = intent.getIntExtra("state", 0) == 1;
-            } else if (action.equals(BluetoothDevice.ACTION_ACL_CONNECTED)
-                    || action.equals(BluetoothDevice.ACTION_ACL_DISCONNECTED)) {
-                mUseBluetooth = audioManager.isBluetoothA2dpOn();
             } else if (action.equals(Intent.ACTION_ANALOG_AUDIO_DOCK_PLUG)) {
                 mUseUSB = intent.getIntExtra("state", 0) == 1;
-            } else if (action.equals(AudioManager.ACTION_AUDIO_BECOMING_NOISY)) {
-                mUseBluetooth = audioManager.isBluetoothA2dpOn();
-                mUseHeadset = audioManager.isWiredHeadsetOn();
             }
-
-            Log.i(TAG, "Headset=" + mUseHeadset + "; Bluetooth=" + mUseBluetooth +
-                    " ; USB=" + mUseUSB);
+            Log.i(TAG, "Headset=" + mUseHeadset + " ; USB=" + mUseUSB);
             if (prevUseHeadset != mUseHeadset
-                    || prevUseBluetooth != mUseBluetooth
                     || prevUseUSB != mUseUSB) {
                 updateDsp();
+            }
+        }
+    };
+
+    private BluetoothProfile.ServiceListener mBluetoothProfileServiceListener =
+        new BluetoothProfile.ServiceListener() {
+        public void onServiceConnected(int profile, BluetoothProfile proxy) {
+            switch(profile) {
+            case BluetoothProfile.A2DP:
+                mUseBluetooth = true;
+                Log.i(TAG, "Bluetooth=" + mUseBluetooth);
+                updateDsp();
+                break;
+
+            default:
+                break;
+            }
+        }
+        public void onServiceDisconnected(int profile) {
+            switch(profile) {
+            case BluetoothProfile.A2DP:
+                mUseBluetooth = false;
+                Log.i(TAG, "Bluetooth=" + mUseBluetooth);
+                updateDsp();
+                break;
+
+            default:
+                break;
             }
         }
     };
@@ -247,14 +267,17 @@ public class HeadsetService extends Service {
         registerReceiver(mAudioSessionReceiver, audioFilter);
 
         final IntentFilter intentFilter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
-        intentFilter.addAction(BluetoothDevice.ACTION_ACL_CONNECTED);
-        intentFilter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);
         intentFilter.addAction(Intent.ACTION_ANALOG_AUDIO_DOCK_PLUG);
-        intentFilter.addAction(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
         registerReceiver(mRoutingReceiver, intentFilter);
 
         registerReceiver(mPreferenceUpdateReceiver,
                 new IntentFilter(DSPManager.ACTION_UPDATE_PREFERENCES));
+
+        BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
+        if (adapter != null) {
+            adapter.getProfileProxy(this, mBluetoothProfileServiceListener,
+                    BluetoothProfile.A2DP);
+        }
     }
 
     @Override
