@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.media.AudioManager;
 import android.media.audiofx.AudioEffect;
 import android.media.audiofx.BassBoost;
 import android.media.audiofx.Equalizer;
@@ -215,9 +216,9 @@ public class HeadsetService extends Service {
             Log.i(TAG, "onReceive " + action);
             final boolean prevUseHeadset = mUseHeadset;
             final boolean prevUseUSB = mUseUSB;
-            if (action.equals(Intent.ACTION_HEADSET_PLUG)) {
+            if (action.equals(AudioManager.ACTION_HEADSET_PLUG)) {
                 mUseHeadset = intent.getIntExtra("state", 0) == 1;
-            } else if (action.equals(Intent.ACTION_ANALOG_AUDIO_DOCK_PLUG)) {
+            } else if (action.equals(AudioManager.ACTION_ANALOG_AUDIO_DOCK_PLUG)) {
                 mUseUSB = intent.getIntExtra("state", 0) == 1;
             }
             Log.i(TAG, "Headset=" + mUseHeadset + " ; USB=" + mUseUSB);
@@ -266,8 +267,8 @@ public class HeadsetService extends Service {
         audioFilter.addAction(AudioEffect.ACTION_CLOSE_AUDIO_EFFECT_CONTROL_SESSION);
         registerReceiver(mAudioSessionReceiver, audioFilter);
 
-        final IntentFilter intentFilter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
-        intentFilter.addAction(Intent.ACTION_ANALOG_AUDIO_DOCK_PLUG);
+        final IntentFilter intentFilter = new IntentFilter(AudioManager.ACTION_HEADSET_PLUG);
+        intentFilter.addAction(AudioManager.ACTION_ANALOG_AUDIO_DOCK_PLUG);
         registerReceiver(mRoutingReceiver, intentFilter);
 
         registerReceiver(mPreferenceUpdateReceiver,
