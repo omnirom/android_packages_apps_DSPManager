@@ -70,7 +70,7 @@ public class HeadsetService extends Service {
         /**
          * Session-specific stereo widener
          */
-        private final StereoWide mStereoWide;
+        private StereoWide mStereoWide;
 
         protected EffectSet(int sessionId) {
             try {
@@ -87,7 +87,11 @@ public class HeadsetService extends Service {
             mEqualizer = new Equalizer(0, sessionId);
             mBassBoost = new BassBoost(0, sessionId);
             mVirtualizer = new Virtualizer(0, sessionId);
-            mStereoWide = new StereoWide(0, sessionId);
+            try {
+                mStereoWide = new StereoWide(0, sessionId);
+            } catch(java.lang.IllegalArgumentException e) {
+                mStereoWide = null;
+            }
         }
 
         protected void release() {
@@ -95,7 +99,9 @@ public class HeadsetService extends Service {
             mEqualizer.release();
             mBassBoost.release();
             mVirtualizer.release();
-            mStereoWide.release();
+            if (mStereoWide != null) {
+                mStereoWide.release();
+            }
         }
 
         /**
@@ -372,9 +378,10 @@ public class HeadsetService extends Service {
 
         session.mBassBoost.setEnabled(preferences.getBoolean("dsp.bass.enable", false));
         session.mBassBoost.setStrength(Short.valueOf(preferences.getString("dsp.bass.mode", "0")));
-        session.mBassBoost.setCenterFrequency(
-                Short.valueOf(preferences.getString("dsp.bass.freq", "55")));
-
+        if (session.mStereoWide != null) {
+            session.mBassBoost.setCenterFrequency(
+                    Short.valueOf(preferences.getString("dsp.bass.freq", "55")));
+        }
         /* Equalizer state is in a single string preference with all values separated by ; */
         session.mEqualizer.setEnabled(preferences.getBoolean("dsp.tone.enable", false));
         if (mOverriddenEqualizerLevels != null) {
@@ -396,8 +403,10 @@ public class HeadsetService extends Service {
         session.mVirtualizer.setStrength(
                 Short.valueOf(preferences.getString("dsp.headphone.mode", "0")));
 
-        session.mStereoWide.setEnabled(preferences.getBoolean("dsp.stereowide.enable", false));
-        session.mStereoWide.setStrength(
-                Short.valueOf(preferences.getString("dsp.stereowide.mode", "0")));
+        if (session.mStereoWide != null) {
+            session.mStereoWide.setEnabled(preferences.getBoolean("dsp.stereowide.enable", false));
+            session.mStereoWide.setStrength(
+                    Short.valueOf(preferences.getString("dsp.stereowide.mode", "0")));
+        }
     }
 }

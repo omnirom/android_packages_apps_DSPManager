@@ -7,6 +7,10 @@ import android.content.SharedPreferences.Editor;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceCategory;
+import android.preference.PreferenceScreen;
+import android.preference.Preference;
+import android.util.Log;
 
 import com.bel.android.dspmanager.R;
 import com.bel.android.dspmanager.preference.EqualizerPreference;
@@ -73,6 +77,7 @@ public final class DSPScreen extends PreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         String config = getArguments().getString("config");
+        boolean stereoWide = getArguments().getBoolean("stereoWide");
 
         getPreferenceManager().setSharedPreferencesName(
                 DSPManager.SHARED_PREFERENCES_BASENAME + "." + config);
@@ -83,6 +88,21 @@ public final class DSPScreen extends PreferenceFragment {
             addPreferencesFromResource(xmlId);
         } catch (Exception e) {
             throw new RuntimeException(e);
+        }
+
+        final PreferenceCategory stereoWideCategory =
+                (PreferenceCategory) getPreferenceScreen().findPreference("dsp.stereowide");
+        if (stereoWideCategory != null && !stereoWide) {
+            getPreferenceScreen().removePreference(stereoWideCategory);
+        }
+
+        final PreferenceCategory bassBoostCategory =
+                (PreferenceCategory) getPreferenceScreen().findPreference("dsp.bass");
+        if (bassBoostCategory != null && !stereoWide) {
+            Preference centerFreq = bassBoostCategory.findPreference("dsp.bass.freq");
+            if (centerFreq != null) {
+                bassBoostCategory.removePreference(centerFreq);
+            }
         }
 
         getPreferenceManager().getSharedPreferences()
