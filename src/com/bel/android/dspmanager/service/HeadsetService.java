@@ -235,30 +235,22 @@ public class HeadsetService extends Service {
         }
     };
 
-    private BluetoothProfile.ServiceListener mBluetoothProfileServiceListener =
-        new BluetoothProfile.ServiceListener() {
-        public void onServiceConnected(int profile, BluetoothProfile proxy) {
-            switch(profile) {
-            case BluetoothProfile.A2DP:
-                mUseBluetooth = true;
-                Log.i(TAG, "Bluetooth=" + mUseBluetooth);
-                updateDsp();
-                break;
+    private final BroadcastReceiver mBtReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(final Context context, final Intent intent) {
+            final String action = intent.getAction();
+            Log.i(TAG, "onReceive " + action);
+            if (action.equals(BluetoothA2dp.ACTION_CONNECTION_STATE_CHANGED)) {
+                int state = intent.getIntExtra(BluetoothProfile.EXTRA_STATE,
+                    BluetoothProfile.STATE_CONNECTED);
 
-            default:
-                break;
-            }
-        }
-        public void onServiceDisconnected(int profile) {
-            switch(profile) {
-            case BluetoothProfile.A2DP:
-                mUseBluetooth = false;
-                Log.i(TAG, "Bluetooth=" + mUseBluetooth);
-                updateDsp();
-                break;
-
-            default:
-                break;
+                if (state == BluetoothProfile.STATE_CONNECTED) {
+                    mUseBluetooth = true;
+                    updateDsp();
+                } else {
+                    mUseBluetooth = false;
+                    updateDsp();
+                }
             }
         }
     };
@@ -280,11 +272,9 @@ public class HeadsetService extends Service {
         registerReceiver(mPreferenceUpdateReceiver,
                 new IntentFilter(DSPManager.ACTION_UPDATE_PREFERENCES));
 
-        BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
-        if (adapter != null) {
-            adapter.getProfileProxy(this, mBluetoothProfileServiceListener,
-                    BluetoothProfile.A2DP);
-        }
+        final IntentFilter btFilter = new IntentFilter();
+        btFilter.addAction(BluetoothA2dp.ACTION_CONNECTION_STATE_CHANGED);
+        registerReceiver(mBtReceiver, btFilter);
     }
 
     @Override
