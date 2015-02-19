@@ -244,10 +244,18 @@ public class HeadsetService extends Service {
                 int state = intent.getIntExtra(BluetoothProfile.EXTRA_STATE,
                     BluetoothProfile.STATE_CONNECTED);
 
-                if (state == BluetoothProfile.STATE_CONNECTED) {
+                if (state == BluetoothProfile.STATE_CONNECTED && !mUseBluetooth) {
                     mUseBluetooth = true;
                     updateDsp();
-                } else {
+                } else if (mUseBluetooth) {
+                    mUseBluetooth = false;
+                    updateDsp();
+                }
+            } else if (action.equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
+                String stateExtra = BluetoothAdapter.EXTRA_STATE;
+                int state = intent.getIntExtra(stateExtra, -1);
+
+                if (state == BluetoothAdapter.STATE_OFF && mUseBluetooth) {
                     mUseBluetooth = false;
                     updateDsp();
                 }
@@ -274,6 +282,7 @@ public class HeadsetService extends Service {
 
         final IntentFilter btFilter = new IntentFilter();
         btFilter.addAction(BluetoothA2dp.ACTION_CONNECTION_STATE_CHANGED);
+        btFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
         registerReceiver(mBtReceiver, btFilter);
     }
 
