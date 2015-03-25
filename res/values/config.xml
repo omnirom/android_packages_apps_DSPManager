@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2013 The OmniROM Project
+<!--  Copyright (C) 2015 The OmniROM Project
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -20,6 +20,6 @@
     <bool name="config_use_tabbed">false</bool>
 
     <!-- If false, user can't switch between menu_tabbed and menu_drawer mode -->
-    <bool name="config_allow_toggle_tabbed">true</bool>
+    <bool name="config_allow_toggle_tabbed">false</bool>
 
 </resources>

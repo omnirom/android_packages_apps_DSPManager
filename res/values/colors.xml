@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2012-2013 The CyanogenMod Project
+     Copyright (C) 2015 The OmniROM Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -29,4 +30,10 @@
     <color name="cb_shader">#ffccffff</color>
     <color name="cb_shader_alpha">#44ccffff</color>
     <color name="action_bar_color">#ff0d0d0d</color>
+
+    <!-- Material -->
+    <color name="primary">#009688</color>
+    <color name="primary_dark">#00796B</color>
+    <color name="accent">#009688</color>
+    <color name="navigation_drawer">#fff</color>
 </resources>

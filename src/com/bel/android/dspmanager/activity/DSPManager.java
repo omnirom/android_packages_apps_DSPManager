@@ -497,7 +497,7 @@ public final class DSPManager extends Activity {
         mDrawerToggle = new ActionBarDrawerToggle(
                 this,
                 mDrawerLayout,
-                R.drawable.ic_drawer,
+                R.drawable.ic_drawer_white,
                 R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close
         ) {

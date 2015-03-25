@@ -18,7 +18,7 @@
     android:title="@string/boeffla_sound_control"
     xmlns:dsp="http://schemas.android.com/apk/res/com.bel.android.dspmanager">
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:key="boeffla_sound"
         android:title="@string/boeffla_sound_title"
         android:summary="@string/boeffla_sound_summary"

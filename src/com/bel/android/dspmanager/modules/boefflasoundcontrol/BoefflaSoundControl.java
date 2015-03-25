@@ -23,7 +23,7 @@ import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.preference.SwitchPreference;
+import android.preference.CheckBoxPreference;
 
 import com.bel.android.dspmanager.R;
 import com.bel.android.dspmanager.activity.DSPManager;
@@ -41,7 +41,7 @@ public class BoefflaSoundControl extends PreferenceFragment
     // Fields
     //=========================
     public static final String NAME = "BoefflaSoundControl";
-    private SwitchPreference mBoefflaSound;
+    private CheckBoxPreference mBoefflaSound;
     // General
     private CheckBoxPreference mDACDirect;
     private CheckBoxPreference mDACOversampling;
@@ -92,7 +92,7 @@ public class BoefflaSoundControl extends PreferenceFragment
         addPreferencesFromResource(R.xml.boefflasoundcontrol_preferences);
 
 
-        mBoefflaSound = (SwitchPreference) findPreference(BOEFFLA_SOUND);
+        mBoefflaSound = (CheckBoxPreference) findPreference(BOEFFLA_SOUND);
         updateBoefflaSound();
         mBoefflaSound.setOnPreferenceChangeListener(this);
 

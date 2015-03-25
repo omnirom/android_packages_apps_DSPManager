@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2013 The OmniROM Project
+<!--  Copyright (C) 2015 The OmniROM Project
 
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@
     <ListView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/dsp_navigation_drawer"
-        android:background="@drawable/pager_background"
+        android:background="@color/navigation_drawer"
         android:layout_width="260dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
