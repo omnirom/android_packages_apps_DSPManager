@@ -64,4 +64,9 @@
     <item>Standardní</item>
     <item>Malé reproduktury</item>
   </string-array>
+  <string-array name="stereowide_modes">
+    <item>Malý</item>
+    <item>Střední</item>
+    <item>Velký</item>
+  </string-array>
 </resources>
