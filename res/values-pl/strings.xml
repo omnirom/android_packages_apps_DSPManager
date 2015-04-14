@@ -34,11 +34,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="headset_title">Zestaw słuchawkowy</string>
   <string name="speaker_title">Głośnik</string>
   <string name="bluetooth_title">Urządzenie Bluetooth</string>
+  <string name="usb_title">USB/Dok</string>
   <string name="audio_effects">Efekty dźwiękowe</string>
   <string name="pref_unavailable">Funkcjonalność niedostępna dla urządzenia</string>
   <string name="dsp_settings_headset">Ustawienia DSP - Zestaw słuchawkowy</string>
   <string name="dsp_settings_speaker">Ustawienia DSP - Głośnik</string>
   <string name="dsp_settings_bluetooth">Ustawienia DSP - Bluetooth</string>
+  <string name="dsp_settings_usb">Ustawienia DSP - urządzenie USB</string>
   <string name="dsp_settings_wm8994">Ustawienia DSP - WM8994</string>
   <string name="pref_dsp_title">Kompresja zakresu dynamiki</string>
   <string name="pref_dsp_summary_on">Kompresja jest włączona</string>
@@ -63,6 +65,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_room_title">Wybierz typ pokoju</string>
   <string name="dialog_room">Typ pokoju</string>
   <string name="menu_reset">Przywróć domyślne</string>
+  <string name="pref_headset_stereowide_title">Rozszerzenie stereo</string>
+  <string name="pref_headset_stereowide_summary_on">Rozszerzenie stereo jest włączone</string>
+  <string name="pref_headset_stereowide_summary_off">Rozszerzenie stereo jest wyłączone</string>
+  <string name="pref_headset_stereowide_enable">Aktywuj</string>
+  <string name="dialog_stereo">Rozszerzenie stereo</string>
   <string name="eq_preset_acoustic">Akustyczna</string>
   <string name="eq_preset_bass_booster">Podbicie basu</string>
   <string name="eq_preset_bass_reducer">Redukcja basu</string>
@@ -116,5 +123,93 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_wm8994_adc_osr128_summary">128-krotne nadpróbkowanie przetwornika analogowo-cyfrowego - poprawia jakość nagrywania</string>
   <string name="pref_wm8994_fll_tuning_title">Regulacja zegara przetwornika</string>
   <string name="pref_wm8994_fll_tuning_summary">Użyj wyregulowanych źródeł zegara WM8994 - poprawia jakość dźwięku</string>
+  <string name="save_preset">Zapisz ustawienie</string>
+  <string name="load_preset">Załaduj ustawienie</string>
+  <string name="new_preset">Nowe ustawienie...</string>
   <string name="help_title">Pomoc</string>
+  <string name="help_text"><b>Czym jest Menedżer DSP?</b>
+\n\n
+Menedżer DSP jest aplikacją pozwalającą dostosować dźwięk dla każdego wyjścia audio. <i>DSP</i> oznacza Digital Singal Processing (Cyfrowe Przetwarzania Dźwięku), a <i>Menedżer</i> odnosi się do faktu, że DSP nie działa wewnątrz tej aplikacji. Menedżer działa tylko z aplikacjami zgodnymi ze specyfikacją efektów dźwiękowych Androida, np. odtwarzacze muzyki.
+\n\n\n
+<b>Zasada działania</b>
+Przetwarzanie dźwięku w CyanogenMod wspiera cztery różne urządzenia wyjścia: przewodowy zestaw słuchawkowy, USB, głośnik telefonu oraz zestaw słuchawkowy Bluetooth. Dla każdego urządzenia wyjścia dostępny jest oddzielny panel konfiguracyjny. Menedżer DSP ma na celu poprawę dźwięku dla każdego urządzenia wyjścia oraz osiągnięcie jak najlepszego brzmienia na każdym z nich.
+\n\n
+<b>Cechy</b>
+\n\n
+1. <b>Kompresja zakresu dynamiki</b>
+\n\n
+Ten efekt ocenia głośność dźwięku ustawioną przez słuchacza i podbija dźwięk na jej podstawie. Głównymi przypadkami, w których przydaje się ta funkcja jest przebywanie w miejscach, gdzie panuje szczególny hałas, jak np. na ulicy czy w samochodzie, gdzie najcichsze elementy muzyki narażone są na zagłuszenie.
+\n\n
+Ustawienie określa jak mocno DSP Manager ma utrzymywać dźwięk na określonym poziomie głośności. W źródłach AOSP nie ma odpowiednika tej funkcji.
+\n\n\n
+2. <b>Podbicie basów</b>
+\n\n
+Podbicie basów to prosty filtr, który może zostać użyty do zwiększania nacisku na częstotliwościach równych i niższych niż 55 Hz. Podbicie wynosi około 6 dB i jest modyfikowane przez parametr siły, który dodaje filtr rezonujący na częstotliwości 55 Hz. Ten efekt dźwiękowy przeznaczony jest do zwalczania zjawiska utraty basu głównie podczas korzystania z małych głośników i słuchawek, które nie przylegają dobrze do uszu słuchającego.
+\n\n\n
+3. <b>Korektor dźwięku</b>
+\n\n
+Jest to  sześciopasmowy korektor dźwięku działający w częstotliwościach 16, 64, 250, 1000, 4000 i 16000 Hz. Dostępnych jest kilka gotowych konfiguracji, a pasmo przenoszenia można zmieniać przesuwając palcem po grafie. Efekt ten powinien być stosowany do dostrajania pasma przenoszenia do preferencji użytkownika, a także stosowanych słuchawek lub głośników.
+\n\n
+Korektor dźwięku zawiera również filtr wyrównania głośności, który wyrównuje zmiany w częstotliwościach odbieranych przez ucho na podstawie poziomu ciśnienia akustycznego, które dociera do użytkownika. Wymagane jest tutaj użycie przewodowego zestawu słuchawkowego, a wartość parametru musi być ustawiona prawidłowo zanim efekt zacznie działać tak, jak został zaprojektowany.
+\n\n
+Aby wybrać odpowiednią wartość wyrównania głośności należy ustawić jak najciszej głośność muzyki i wybrać utwór z szerokim spektrum hałasu (najlepiej z gatunku rock lub metal). Warto znaleźć ustawienie, gdzie bas jest wzmocniony z powrotem do słyszalności i wydaje się wyrównany z resztą dźwięków. Po prawidłowym skonfigurowaniu wyrównania głośności dźwięków bas powinien pozostać na tym samym poziomie jak reszta instrumentów bez względu na wybrany poziom głośności. Z drugiej strony, jeśli znaczna ilość basu będzie słyszalna na wyższych poziomach głośności, wyrównanie poziomów prawdopodobnie nie jest ustawione prawidłowo i powinno zostać zredukowane.
+\n\n
+Wyrównanie głośności jest dodawane do wybranych ustawień użytkownika. Jeśli pożądane jest tylko wyrównanie głośności, to korektor dźwięków powinien zostać ustawiony na \"płaskie\".
+\n\n\n
+6. <b>Filtr zestawu słuchawkowego</b>
+\n\n
+Filtr został zainspirowany słynnym obwodem analogowym bs2b. Efekt pozostawia dźwięk mono bez zmian i reguluje różnice sygnału przez filtr tworząc w odczuciu dla użytkownika efekt akustyczny pomieszczenia. Intencją jest zapobieganie męczeniu uszu słuchającego wynikającemu z rozdzielania sygnału stereo w prawie wszystkich rodzajach słuchawek. Efekt powinien być włączony zawsze podczas korzystania ze słuchawek stereo.
+\n\n
+Ponieważ miksowanie redukuje rozdzielenie dźwięku, występuje efekt pogłosu, który może być stosowany w celu poprawienia zakresu brzmienia stereo. Można to zrobić poprzez opcję \"Typ pokoju\".</string>
+  <string name="soundcontrol_title">Kontrola dźwięku</string>
+  <string name="pref_soundcontrol_presets_title">Kontrola ustawień dźwięku</string>
+  <string name="pref_soundcontrol_headphone_gain_title">Wzmocnienie słuchawek</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_title">Podbicie wzmacniacza słuchawek</string>
+  <string name="pref_soundcontrol_microphone_gain_title">Wzmocnienie mikrofonu</string>
+  <string name="pref_soundcontrol_speaker_gain_title">Wzmocnienie głośnika</string>
+  <string name="pref_soundcontrol_headphone_gain_left">Słuchawka (Lewa)</string>
+  <string name="pref_soundcontrol_headphone_gain_right">Słuchawka (Prawa)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_left">Wzmacniacz słuchawkowy (z lewej)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_right">Wzmacniacz słuchawkowy (z prawej)</string>
+  <string name="pref_soundcontrol_microphone_handset_gain_title">Mikrofon słuchawkowy</string>
+  <string name="pref_soundcontrol_microphone_camcorder_gain_title">Mikrofon kamery</string>
+  <string name="sc_version_title">Kontrola dźwięku</string>
+  <string name="sc_preset_summary">Wybierz ustawienie, aby załadować</string>
+  <string name="sc_preset_loaded">Ustawienie \"%s\" załadowane!</string>
+  <string name="sc_preset_custom">Niestandardowe</string>
+  <string name="sc_preset_quality">Jakość</string>
+  <string name="sc_preset_loudness">Głośny</string>
+  <string name="sc_preset_quiet">Cichy</string>
+  <string name="sc_preset_stock">Domyślny</string>
+  <string name="sc_value_changed">Proszę zatrzymać i wznowić muzykę by zastosować wartości!</string>
+  <string name="navigation_drawer_toggle">Przełącznik menu</string>
+  <string name="navigation_drawer_open">Otwórz wysuwane menu</string>
+  <string name="navigation_drawer_close">Zamknij wysuwane menu</string>
+  <string name="navigation_toggle_drawer">Przełącz się do menu</string>
+  <string name="navigation_toggle_tabbed">Przełącz się do kart</string>
+  <string name="boeffla_sound_control">Zarządzanie dźwiękiem Boeffla</string>
+  <string name="boeffla_sound_title">Dźwięk Boeffla</string>
+  <string name="boeffla_sound_summary">Włącz dźwięk Boeffla</string>
+  <string name="bass_freq_tuning">Strojenie częstotliwości basu</string>
+  <string name="dac_direct_summary">Ominięcie kanału analogowego</string>
+  <string name="dac_direct_title">Bezpośrednie DAC</string>
+  <string name="dac_oversampling_summary">Próbkowanie 128x</string>
+  <string name="dac_oversampling_title">Próbkowanie DAC</string>
+  <string name="fll_tuning_summary">Dostrój zegar czipu dla lepszej jakości</string>
+  <string name="fll_tuning_title">Strojenie FLL</string>
+  <string name="general_title">Ogólne</string>
+  <string name="headphone_title">Słuchawki</string>
+  <string name="mic_title">Mikrofon</string>
+  <string name="mic_call">Głośność połączenia przychodzącego</string>
+  <string name="mic_general">Ogólna głośność</string>
+  <string name="mono_downmix_summary">Konwersja stereo do mono</string>
+  <string name="over_saturation_suppress">Tłumienie przesycenia</string>
+  <string name="privacy_mode_summary">Wycisz głośnik telefonu, gdy słuchawki są podłączone</string>
+  <string name="privacy_mode_title">Tryb prywatny</string>
+  <string name="speaker_tuning_summary">Dostrój głośnik telefonu dla lepszego basu</string>
+  <string name="speaker_tuning_title">Dostrajanie głośnika</string>
+  <string name="speaker_volume_title">Głośność głośnika</string>
+  <string name="stereo_expansion_summary">Ulepsz głębokość i czystość dźwięku</string>
+  <string name="stereo_expansion_title">Rozszerzenie Stereo</string>
+  <string name="volumes_title">Głośności</string>
 </resources>

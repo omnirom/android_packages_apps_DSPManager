@@ -64,4 +64,9 @@
     <item>Standardowe</item>
     <item>Małe głośniki</item>
   </string-array>
+  <string-array name="stereowide_modes">
+    <item>Lekki</item>
+    <item>Umiarkowany</item>
+    <item>Wysoki</item>
+  </string-array>
 </resources>
