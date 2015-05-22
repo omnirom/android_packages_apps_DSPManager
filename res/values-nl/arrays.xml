@@ -64,4 +64,9 @@
     <item>Standaard</item>
     <item>Kleine speakers</item>
   </string-array>
+  <string-array name="stereowide_modes">
+    <item>Licht</item>
+    <item>Gemiddeld</item>
+    <item>Hoog</item>
+  </string-array>
 </resources>

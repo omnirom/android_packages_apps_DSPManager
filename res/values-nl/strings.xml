@@ -47,6 +47,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_dsp_summary_off">Dynamisch bereikcompressie uitgeschakeld</string>
   <string name="pref_dsp_enable">Inschakelen</string>
   <string name="pref_effect_title">Effectsterkte</string>
+  <string name="pref_effect_freq_title">Selecteer centrale effect frequentie</string>
   <string name="dialog_effect">Effectsterkte</string>
   <string name="pref_equalizer_title">Equalizer</string>
   <string name="pref_equalizer_summary_on">Equalizer ingeschakeld</string>
@@ -65,6 +66,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_room_title">Type ruimte</string>
   <string name="dialog_room">Type ruimte</string>
   <string name="menu_reset">Herstellen</string>
+  <string name="pref_headset_stereowide_title">Stereo widener</string>
+  <string name="pref_headset_stereowide_summary_on">Stereo widener is ingeschakeld</string>
+  <string name="pref_headset_stereowide_summary_off">Stereo widener is uitgeschakeld</string>
+  <string name="pref_headset_stereowide_enable">Inschakelen</string>
+  <string name="dialog_stereo">Stereo widener</string>
   <string name="eq_preset_acoustic">Akoestiek</string>
   <string name="eq_preset_bass_booster">Basversterker</string>
   <string name="eq_preset_bass_reducer">Basverzwakker</string>
@@ -118,6 +124,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_wm8994_adc_osr128_summary">Analoog-naar-digitaal-omzetter 128 keer overbemonsteren (verbetert opnamekwaliteit)</string>
   <string name="pref_wm8994_fll_tuning_title">Afgestemde geluidsklok</string>
   <string name="pref_wm8994_fll_tuning_summary">Gebruik afgestemde bron van WM8994-geluidsklok (verbetert geluidskwaliteit)</string>
+  <string name="save_preset">Voorkeursinstellingen opslaan</string>
+  <string name="load_preset">Voorkeurinstelling laden</string>
+  <string name="new_preset">Nieuwe voorkeurinstelling...</string>
   <string name="help_title">Help</string>
   <string name="help_text"><b>Wat is DSP Manager?</b>
 \n
@@ -208,4 +217,25 @@ Het effect moet worden ingeschakeld indien een stereoheadset wordt gebruikt.
 galm ontstaan, die kan worden gebruikt om de waargenomen breedte van het stereobeeld te
 verhogen. Dit kan worden afgestemd door de \'Type ruimte\'-instelling.
     </string>
+  <string name="soundcontrol_title">Geluidscontrole</string>
+  <string name="pref_soundcontrol_presets_title">Geluidscontrole voorkeurinstellingen</string>
+  <string name="pref_soundcontrol_headphone_gain_title">Hoofdtelefoon voorvesterking</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_title">Hoofdtelefoon PowerAmp versterking</string>
+  <string name="pref_soundcontrol_microphone_gain_title">Microfoon versterking</string>
+  <string name="pref_soundcontrol_speaker_gain_title">Spreker versterking</string>
+  <string name="pref_soundcontrol_headphone_gain_left">Hoofdtelefoon (Links)</string>
+  <string name="pref_soundcontrol_headphone_gain_right">Hoofdtelefoon (Rechts)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_left">Hoofdtelefoon PowerAmp (Links)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_right">Hoofdtelefoon PowerAmp (Rechts)</string>
+  <string name="pref_soundcontrol_microphone_handset_gain_title">Microfoon van de telefoon</string>
+  <string name="pref_soundcontrol_microphone_camcorder_gain_title">Videocamera microfoon</string>
+  <string name="sc_version_title">Geluidscontrole</string>
+  <string name="sc_preset_summary">Kies een voorkeurinstelling om te laden</string>
+  <string name="sc_preset_loaded">Voorkeuzeinstelling \"%s\" is geladen!</string>
+  <string name="sc_preset_custom">Aangepast</string>
+  <string name="sc_preset_quality">Kwaliteit</string>
+  <string name="sc_preset_loudness">Loudness</string>
+  <string name="sc_preset_quiet">Stil</string>
+  <string name="sc_preset_stock">Standaard</string>
+  <string name="sc_value_changed">Stop en herstart de muziek om de waarden toe te passen!</string>
 </resources>
