@@ -30,7 +30,7 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.support.v13.app.FragmentPagerAdapter;
-import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
@@ -159,6 +159,13 @@ public final class DSPManager extends Activity {
         startService(serviceIntent);
 
         setUpUi();
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        // Sync the toggle state after onRestoreInstanceState has occurred.
+        mDrawerToggle.syncState();
     }
 
     @Override
@@ -497,7 +504,6 @@ public final class DSPManager extends Activity {
         mDrawerToggle = new ActionBarDrawerToggle(
                 this,
                 mDrawerLayout,
-                R.drawable.ic_drawer_white,
                 R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close
         ) {
@@ -532,6 +538,7 @@ public final class DSPManager extends Activity {
             }
         });
 
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         selectItem(mCurrentSelectedPosition);
