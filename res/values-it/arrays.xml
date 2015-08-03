@@ -42,7 +42,7 @@
     <item>Palco</item>
   </string-array>
   <string-array name="equalizer_loudness_modes">
-    <item>Non attivo</item>
+    <item>Disattivato</item>
     <item>Molto debole</item>
     <item>Più debole</item>
     <item>Debole</item>

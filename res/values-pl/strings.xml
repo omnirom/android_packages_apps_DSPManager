@@ -47,6 +47,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_dsp_summary_off">Kompresja jest wyłączona</string>
   <string name="pref_dsp_enable">Włącz</string>
   <string name="pref_effect_title">Wybierz siłę efektu</string>
+  <string name="pref_effect_freq_title">Wybierz częstotliwość środkową efektu</string>
   <string name="dialog_effect">Siła efektu</string>
   <string name="pref_equalizer_title">Equalizer</string>
   <string name="pref_equalizer_summary_on">Equalizer jest aktywny</string>
@@ -203,6 +204,7 @@ Ponieważ miksowanie redukuje rozdzielenie dźwięku, występuje efekt pogłosu,
   <string name="mic_call">Głośność połączenia przychodzącego</string>
   <string name="mic_general">Ogólna głośność</string>
   <string name="mono_downmix_summary">Konwersja stereo do mono</string>
+  <string name="mono_downmix_title">Konwertuj do mono</string>
   <string name="over_saturation_suppress">Tłumienie przesycenia</string>
   <string name="privacy_mode_summary">Wycisz głośnik telefonu, gdy słuchawki są podłączone</string>
   <string name="privacy_mode_title">Tryb prywatny</string>
