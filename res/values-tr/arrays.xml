@@ -64,4 +64,9 @@
     <item>Normal</item>
     <item>Küçük hoparlörler</item>
   </string-array>
+  <string-array name="stereowide_modes">
+    <item>Düşük</item>
+    <item>Orta</item>
+    <item>Yüksek</item>
+  </string-array>
 </resources>
