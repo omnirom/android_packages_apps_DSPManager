@@ -34,7 +34,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="headset_title">Hörlurar</string>
   <string name="speaker_title">Telefonhögtalare</string>
   <string name="bluetooth_title">Bluetoothenhet</string>
-  <string name="usb_title">USB/Docka</string>
   <string name="audio_effects">Ljudeffekter</string>
   <string name="pref_unavailable">Funktionen är inte tillgänglig på din enhet</string>
   <string name="dsp_settings_headset">Ljudinställningar - Hörlurar</string>

@@ -34,7 +34,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="headset_title">Fejhallgató</string>
   <string name="speaker_title">Telefon hangszóró</string>
   <string name="bluetooth_title">Bluetooth-eszköz</string>
-  <string name="usb_title">USB/Dokkoló</string>
   <string name="audio_effects">Hangeffektek</string>
   <string name="pref_unavailable">A funkció nem elérhető ezen az eszközön.</string>
   <string name="dsp_settings_headset">DSP Beállítások - Fejhallgató</string>

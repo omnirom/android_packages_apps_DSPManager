@@ -34,7 +34,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="headset_title">耳机</string>
   <string name="speaker_title">扬声器</string>
   <string name="bluetooth_title">蓝牙</string>
-  <string name="usb_title">USB/基座</string>
   <string name="audio_effects">音效</string>
   <string name="pref_unavailable">此功能在您的设备上不可用</string>
   <string name="dsp_settings_headset">DSP 设置 - 耳机</string>
