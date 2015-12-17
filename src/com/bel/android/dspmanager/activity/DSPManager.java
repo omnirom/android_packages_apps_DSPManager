@@ -286,7 +286,7 @@ public final class DSPManager extends Activity {
             });
 
             mDrawerListView.setAdapter(new SimpleAdapter(
-                    getActionBar().getThemedContext(),
+                    this,
                     mTitles,
                     R.layout.drawer_item,
                     new String[]{"ICON", "TITLE"},

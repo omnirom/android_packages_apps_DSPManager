@@ -30,7 +30,7 @@
     <ListView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/dsp_navigation_drawer"
-        android:background="@color/navigation_drawer"
+        android:background="@drawable/drawer_background"
         android:layout_width="260dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"

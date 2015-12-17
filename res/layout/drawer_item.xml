@@ -36,13 +36,13 @@
         android:id="@+id/drawer_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#111"
-        android:textSize="15sp"
-        android:background="?android:attr/activatedBackgroundIndicator"
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
         android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
         android:gravity="center_vertical"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp" />
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="?android:attr/textColorPrimary" />
 
 </RelativeLayout>
