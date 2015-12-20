@@ -29,6 +29,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
+  <string name="app_name">Equalizador</string>
   <string name="select_configuration_title">Seleccione a Configuração Para Editar</string>
   <string name="headset_title">Auriculares</string>
   <string name="speaker_title">Coluna do Telemóvel</string>

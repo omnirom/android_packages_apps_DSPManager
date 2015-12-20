@@ -29,20 +29,25 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
-  <string name="app_name">Менеджер ЦОС</string>
+  <string name="app_name">Еквалайзер</string>
   <string name="select_configuration_title">Виберіть конфігурацію для редагування</string>
   <string name="headset_title">Гарнітура</string>
-  <string name="speaker_title">Динамік телефону</string>
-  <string name="bluetooth_title">Пристрій Bluetooth</string>
+  <string name="speaker_title">Динамік</string>
+  <string name="bluetooth_title">Bluetooth</string>
+  <string name="usb_title">USB/Док-станція</string>
   <string name="audio_effects">Аудіо ефекти</string>
-  <string name="dsp_settings_headset">Налаштування ЦОС гарнітури</string>
+  <string name="pref_unavailable">Функція не підтримується на вашому пристрої</string>
+  <string name="dsp_settings_headset">Налаштування DSP - Гарнітура</string>
   <string name="dsp_settings_speaker">Налаштування ЦОС динаміка телефону</string>
   <string name="dsp_settings_bluetooth">Налаштування ЦОС пристрою Bluetooth</string>
+  <string name="dsp_settings_usb">Налаштування DSP - USB-пристрою</string>
+  <string name="dsp_settings_wm8994">Налаштування DSP - WM8994</string>
   <string name="pref_dsp_title">Стиснення динамічного діапазону</string>
   <string name="pref_dsp_summary_on">Стиснення ввімкнено</string>
   <string name="pref_dsp_summary_off">Стиснення вимкнено</string>
   <string name="pref_dsp_enable">Увімкнути</string>
   <string name="pref_effect_title">Інтенсивність ефекту</string>
+  <string name="pref_effect_freq_title">Вибрати центральну частоту ефекту</string>
   <string name="dialog_effect">Інтенсивність ефекту</string>
   <string name="pref_equalizer_title">Еквалайзер</string>
   <string name="pref_equalizer_summary_on">Еквалайзер увімкнено</string>
@@ -61,16 +66,157 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_room_title">Віртуальне оточення</string>
   <string name="dialog_room">Віртуальне оточення</string>
   <string name="menu_reset">Скинути</string>
+  <string name="pref_headset_stereowide_title">Розширення стерео</string>
+  <string name="pref_headset_stereowide_summary_on">Розширення стерео увімкнено</string>
+  <string name="pref_headset_stereowide_summary_off">Розширення стерео вимкнено</string>
+  <string name="pref_headset_stereowide_enable">Увімкнути</string>
+  <string name="dialog_stereo">Розширення стерео</string>
   <string name="eq_preset_acoustic">Акустика</string>
   <string name="eq_preset_bass_booster">Підсилені НЧ</string>
   <string name="eq_preset_bass_reducer">Послаблені НЧ</string>
   <string name="eq_preset_classical">Класика</string>
   <string name="eq_preset_deep">Глибина</string>
   <string name="eq_preset_flat">Оригінал</string>
+  <string name="eq_preset_r_and_b">R &amp; B</string>
   <string name="eq_preset_rock">Рок</string>
   <string name="eq_preset_small_speakers">Маленькі динаміки</string>
   <string name="eq_preset_treble_booster">Підсилені ВЧ</string>
   <string name="eq_preset_treble_reducer">Послаблені ВЧ</string>
   <string name="eq_preset_vocal_booster">Підсилений вокал</string>
   <string name="eq_preset_custom">Користувацьке налаштування</string>
+  <string name="category_wm8994_internal_speaker">Динамік</string>
+  <string name="category_wm8994_signal_processing">Обробка сигналу</string>
+  <string name="category_wm8994_headphone_amp">Гарнітура</string>
+  <string name="category_wm8994_codec_optimization">Оптимізація кодеку</string>
+  <string name="category_wm8994_dac_config">Налаштування ЦАП</string>
+  <string name="category_wm8994_analog_path">Налаштування аналогового шляху</string>
+  <string name="category_wm8994_mic_settings">Налаштування мікрофона</string>
+  <string name="category_wm8994_microphone_recording">Мікрофон</string>
+  <string name="wm8994_settings_title_head">Налаштування звуку</string>
+  <string name="wm8994_settings_title_subhead">Налаштування звуку</string>
+  <string name="wm8994_settings_summary_head">Розширені налаштування звукового процесору WM8994</string>
+  <string name="pref_wm8994_microphone_recording_title">Запис пресету</string>
+  <string name="pref_wm8994_headphone_amp_title">Рівень підсилювача</string>
+  <string name="pref_wm8994_headphone_amp_summary">Налаштування аналогового підсилення</string>
+  <string name="pref_wm8994_headphone_amp_dlg_title">Рівень підсилювача гарнітури</string>
+  <string name="pref_wm8994_headphone_amp_dlg_desc">Аналогове підсилення</string>
+  <string name="pref_wm8994_bass_boost_enable_title">Підчилення НЧ</string>
+  <string name="pref_wm8994_bass_boost_enable_summary">Розширені налаштування підсилення НЧ</string>
+  <string name="pref_wm8994_bass_boost_title">Діапазон підсилення НЧ</string>
+  <string name="pref_wm8994_bass_boost_summary">Розширені налаштування динамічного діапазону</string>
+  <string name="pref_wm8994_bass_boost_preset_title">Пресет підсилення НЧ</string>
+  <string name="pref_wm8994_bass_boost_dlg_title">Підсилення НЧ</string>
+  <string name="pref_wm8994_bass_boost_gain_dlg_desc">Підсилення</string>
+  <string name="pref_wm8994_bass_boost_range_dlg_desc">Діапазон підсилення НЧ</string>
+  <string name="pref_wm8994_control_enable_title">Увімкнути керування WM8994</string>
+  <string name="pref_wm8994_control_enable_summary">Розширені налаштування звукового процесору WM8994</string>
+  <string name="pref_wm8994_speaker_tuning_title">Налаштування для музики</string>
+  <string name="pref_wm8994_speaker_tuning_summary">Переналаштовує апаратний еквалайзер для підсилених НЧ та збалансованого звуку</string>
+  <string name="pref_wm8994_mono_downmix_title">Конверт. в моно</string>
+  <string name="pref_wm8994_mono_downmix_summary">Конвертує стерео в моно (для стерео виходу, напр. гарнітури)</string>
+  <string name="pref_wm8994_stereo_expansion_title">Розширення стерео</string>
+  <string name="pref_wm8994_stereo_expansion_summary">\'Розширення\' стерео завдяки цифровій обробці сигналу</string>
+  <string name="pref_wm8994_dac_direct_title">Прямий доступ до ЦАП</string>
+  <string name="pref_wm8994_dac_direct_summary">Прямий доступ до цифро-аналогового перетворювача, минаючи канальний мікшер. Досягається чистий звук (більш низьке співвідношення сигнал-шум)</string>
+  <string name="pref_wm8994_dac_osr128_title">Hi-fi відтворення</string>
+  <string name="pref_wm8994_dac_osr128_summary">128-передискретизація цифрово-аналогового перетворювача — чистий звук при відтворенні музики</string>
+  <string name="pref_wm8994_adc_osr128_title">Hi-fi запис</string>
+  <string name="pref_wm8994_adc_osr128_summary">128-передискретизація аналого-цифрового перетворювача — підвищує якість запису</string>
+  <string name="pref_wm8994_fll_tuning_title">Налаштування аудіо-частот</string>
+  <string name="pref_wm8994_fll_tuning_summary">Використовувати налаштовані аудіо-частоти WM8994 — покращує якість звуку</string>
+  <string name="save_preset">Зберегти пресет</string>
+  <string name="load_preset">Завантажити пресет</string>
+  <string name="new_preset">Новий пресет...</string>
+  <string name="help_title">Довідка</string>
+  <string name="help_text"><b>Що таке DSP Manager?</b>
+\n\n
+DSP Manager — це додаток, призначений для налаштування кожного із звукових виходів. Назва додатку складається з двох частин: \"DSP\" та \"Manager\". <i>DSP</i> є абревіатурою Digital Signal Processing, що в перекладі означає "Цифрова обробка сигналу". <i>Manager</i> означає, що обробка проводиться не всередині цього додатку, воно лише є інтерфейсом для налаштування. DSP Manager дозволяє налаштувати та увімкнути обробку звуку для додатків, сумісних зі специфікаціями звукових ефектів в системі Android, тобто для більшості музичних програвачів.
+\n\n\n
+<b>Філософія</b>
+\n\n
+Звукова обробка в CyanogenMod підтримується для чотирьох звукових виходів: дротових навушників (роз\'єму mini-jack), USB-пристроїв, динаміка та бездротової гарнітури bluetooth. Для кожного з них передбачена своя панель налаштувань. Філософія DSP Manager полягає в тому, щоб коригувати недоліки, властиві конкретним виходам, для досягнення максимальної якості звучання на кожному з них.
+\n\n
+На відміну від \"звукових ефектів\" в оригінальних вихідниках Android (AOSP), в DSP Manager немає налаштувань для конкретних додатків, встановлених в системі. Це принциповий вибір: нам важливі конкретні звукові виходи, а не створюючі звуковий потік додатки.
+\n\n\n
+<b>Можливості</b>
+\n\n
+Далі наводиться опис кожного зі звукових ефектів і передбачуваний сценарій їх використання.
+\n\n
+1. <b>Стиснення динамічного діапазону (DRC)</b>
+\n\n
+Даний ефект оцінює гучність звуку як середньостатистичний слухач і керує посиленням на основі даної оцінки. Основний сценарій використання даного ефекту - галасливі місця, де тихі звуки можуть заглушуватись оточуючим шумом.
+\n\n
+Сила ефекту визначає, наскільки наполегливо DSP Manager буде намагатись підтримувати гучність на заданому рівні. У AOSP немає подібного звукового ефекту.
+\n\n\n
+2. <b>Підсилення басу</b>
+\n\n
+Підсилювач басу — це простий фільтр низьких частот, що використовується для додавання акценту на 55 Гц і більш низьких частотах. Рівень підсилення приблизно дорівнює 6 дБ і регулюється параметр \"Сила ефекту \", який додає резонанс в смузі 55 Гц, що додатково акцентує дану частоту. Ефект \"Підсилення басу \" покликаний боротися з втратою басів внаслідок використання динаміків малих розмірів або нещільно прилеглих навушників.
+\n\n\n
+3. <b>Еквалайзер</b>
+\n\n
+Це 6-ти смуговий еквалайзер зі смугами на 16 , 64, 250 , 1000, 4000 і 16000 Гц і декількома найбільш популярними пресетами. Частотна характеристика може бути змінена за допомогою натискання на графік еквалайзера. Еквалайзер призначений для налаштування звучання відповідно до переваг конкретного слухача або можливостями використовуваних навушників (динаміків) .
+\n\n
+Еквалайзер також містить фільтр тонкомпенсації, який компенсує удаваний недолік низьких і високих частот, змінюючи частотну характеристику звуку на основі рівня звукового тиску на вухо слухача.
+\n\n
+Для правильного налаштування сили ефекту тонкомпенсації, необхідно включити гучну музику з широким спектром частот (наприклад, рок або метал) на мінімальній гучності. Далі необхідно знайти таке значення сили ефекту фільтра, при якому баси будуть виразно чутні і збалансовані з іншими частотами музичної композиції. Якщо фільтр налаштований правильно, баси будуть залишатися на незмінній гучності по відношенню до решти інструментів в незалежності від рівня гучності прослуховування. Якщо ж при зростанні гучності прослуховування баси перекривають інші частоти композиції, фільтр налаштований неправильно, сила його ефекту повинна бути зменшена.
+\n\n
+Сила ефекту тонкомпенсації зберігається разом з користувацьким пресетом еквалайзера. Якщо необхідно використовувати тільки фільтр тонкомпенсації, виберіть установку еквалайзера \"Оригінал\".
+\n\n\n
+4. <b>Фільтр для навушників</b>
+\n\n
+Ефект \"Фільтр для навушників\" використовує алгоритми знаменитої аналогової мікросхеми bs2b (Bauer stereophonic-to-binaural DSP). Спочатку музичні композиції призначаються для прослуховування на стереосистемах, при використанні яких звуки кожного з каналів звучання чутні кожному з вух, однак з різною силою і затримкою. При прослуховуванні композицій з використанням навушників дане явище відсутнє (\"суперстерео-ефект\"), що призводить до втоми слухача. Принцип роботи ефекту такий: моно-складова музичної композиції, однакова для обох каналів звучання, не зачіпається фільтром, а відмінності в лівому і правому каналах звучання змінюються за допомогою частотного фільтра, одночасно розраховує акустичну тінь голови і внутрішньовушну затримку проходження сигналу. Результатом роботи фільтра є створення правильної психоакустичної моделі для слухача. Даний ефект повинен бути включений кожен раз при використанні стереонавушників для прослуховування музики.
+\n\n
+Операція мікшування зменшує ступінь поділу лівого і правого каналів. Для розширення сприймаючої стерео картини додано ефект ревербації Хааса. Робота ефекту налаштовується опцією \"Тип ефекту\".</string>
+  <string name="soundcontrol_title">Керування звуком</string>
+  <string name="pref_soundcontrol_presets_title">Пресети керування звуком</string>
+  <string name="pref_soundcontrol_headphone_gain_title">Підсилення навушників</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_title">PowerAmp підсилення навушників</string>
+  <string name="pref_soundcontrol_microphone_gain_title">Підсилення мікрофона</string>
+  <string name="pref_soundcontrol_speaker_gain_title">Підсилення динаміка</string>
+  <string name="pref_soundcontrol_headphone_gain_left">Навушники (лівий)</string>
+  <string name="pref_soundcontrol_headphone_gain_right">Навушники (правий)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_left">Навушники PowerAmp (лівий)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_right">Навушники PowerAmp (правий)</string>
+  <string name="pref_soundcontrol_microphone_handset_gain_title">Гарнітурний мікрофон</string>
+  <string name="pref_soundcontrol_microphone_camcorder_gain_title">Мікрофон відеокамери</string>
+  <string name="sc_version_title">Керування звуком</string>
+  <string name="sc_preset_summary">Оберіть пресет для завантаження</string>
+  <string name="sc_preset_loaded">Пресет \"%s\" завантажено!</string>
+  <string name="sc_preset_custom">Користувацький</string>
+  <string name="sc_preset_quality">Якість</string>
+  <string name="sc_preset_loudness">Гучність</string>
+  <string name="sc_preset_quiet">Тихо</string>
+  <string name="sc_preset_stock">Внутрішній</string>
+  <string name="sc_value_changed">Будь ласка, зупиніть та відновіть відтворення музики, щоб застосувати зміни!</string>
+  <string name="navigation_drawer_toggle">Меню</string>
+  <string name="navigation_drawer_open">Відкрити меню</string>
+  <string name="navigation_drawer_close">Закрити меню</string>
+  <string name="navigation_toggle_drawer">Перемкнутись на меню</string>
+  <string name="navigation_toggle_tabbed">Режим вкладок</string>
+  <string name="boeffla_sound_control">Керування звуком Boeffla</string>
+  <string name="boeffla_sound_title">звук Boeffla</string>
+  <string name="boeffla_sound_summary">Увімкнути звук boeffla</string>
+  <string name="bass_freq_tuning">Налаштування низьких частот</string>
+  <string name="dac_direct_summary">Обхід аналогового каналу</string>
+  <string name="dac_direct_title">Прямий ЦАП</string>
+  <string name="dac_oversampling_summary">128x передискретизація</string>
+  <string name="dac_oversampling_title">ЦАП передискретизація</string>
+  <string name="fll_tuning_summary">Покращити частоту чіпу для кращої якості</string>
+  <string name="fll_tuning_title">FLL налаштування</string>
+  <string name="general_title">Загальні</string>
+  <string name="headphone_title">Навушники</string>
+  <string name="mic_title">Мікрофон</string>
+  <string name="mic_call">Гучність при розмові</string>
+  <string name="mic_general">Загальна гучність</string>
+  <string name="mono_downmix_summary">Перетворити стерео в моно</string>
+  <string name="mono_downmix_title">Конверт. в моно</string>
+  <string name="over_saturation_suppress">Придушення надмірної насиченості</string>
+  <string name="privacy_mode_summary">Відключати динамік телефону, якщо підключені навушники</string>
+  <string name="privacy_mode_title">Режим конфіденційності</string>
+  <string name="speaker_tuning_summary">Поліпшити бас на телефонному динаміку</string>
+  <string name="speaker_tuning_title">Налаштування динаміка</string>
+  <string name="speaker_volume_title">Гучність динаміка</string>
+  <string name="stereo_expansion_summary">Поліпшення глибини та чіткості звуку</string>
+  <string name="stereo_expansion_title">Розширення стерео</string>
+  <string name="volumes_title">Гучність</string>
 </resources>

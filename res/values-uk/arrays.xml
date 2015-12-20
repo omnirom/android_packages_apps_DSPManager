@@ -29,6 +29,12 @@
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string-array name="microphone_recording_presets">
+    <item>Оригінал</item>
+    <item>Збалансований</item>
+    <item>Висока чутливість</item>
+    <item>Гучне оточення</item>
+  </string-array>
   <string-array name="headphone_modes">
     <item>Студія</item>
     <item>Кімната</item>
@@ -53,5 +59,14 @@
     <item>Слабка</item>
     <item>Помірна</item>
     <item>Надмірна</item>
+  </string-array>
+  <string-array name="wm8994_bassboost_modes">
+    <item>Стандартний</item>
+    <item>Маленькі динаміки</item>
+  </string-array>
+  <string-array name="stereowide_modes">
+    <item>Світлий</item>
+    <item>Помірний</item>
+    <item>Високий</item>
   </string-array>
 </resources>
