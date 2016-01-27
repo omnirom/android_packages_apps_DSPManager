@@ -95,9 +95,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
     <string name="category_wm8994_microphone_recording">Microphone</string>
 
     <!-- Titles/Summaries -->
-    <string name="wm8994_settings_title_head">Sound settings</string>
-    <string name="wm8994_settings_title_subhead">Sound settings</string>
-    <string name="wm8994_settings_summary_head">Advanced control of the WM8994 sound processor</string>
     <string name="pref_wm8994_microphone_recording_title">Recording preset</string>
     <string name="pref_wm8994_headphone_amp_title">Amplifier level</string>
     <string name="pref_wm8994_headphone_amp_summary">Customize the analog gain</string>
@@ -143,7 +140,7 @@ specification, i.e. most music players.
 \n\n\n
 <b>Philosophy</b>
 \n\n
-CyanogenMod\'s audio processing supports four different output categories:
+CyanogenMod\'s audio processing supports different output categories:
 wired headset, phone speaker and bluetooth headset. There is a separate
 configuration panel for each output category. DSP Manager\'s philosophy is to
 correct each audio output\'s particular deficiencies in order to reach the most
