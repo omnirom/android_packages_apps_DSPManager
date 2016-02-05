@@ -29,7 +29,6 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
-  <string name="app_name">Ecualizador</string>
   <string name="select_configuration_title">Seleccionar configuración a editar</string>
   <string name="headset_title">Auriculares</string>
   <string name="speaker_title">Altavoz</string>
@@ -39,7 +38,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="dsp_settings_headset">Ajustes - Auriculares</string>
   <string name="dsp_settings_speaker">Ajustes - Altavoces</string>
   <string name="dsp_settings_bluetooth">Ajustes - Bluetooth</string>
-  <string name="dsp_settings_usb">Ajustes - Dispositivo USB</string>
   <string name="dsp_settings_wm8994">Ajustes - WM8994</string>
   <string name="pref_dsp_title">Rango de Compresión Dinámica</string>
   <string name="pref_dsp_summary_on">Compresión activada</string>
@@ -85,9 +83,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">Configuración de ruta analógica</string>
   <string name="category_wm8994_mic_settings">Ajustes de micrófono</string>
   <string name="category_wm8994_microphone_recording">Micrófono</string>
-  <string name="wm8994_settings_title_head">Ajustes de sonido</string>
-  <string name="wm8994_settings_title_subhead">Ajustes de sonido</string>
-  <string name="wm8994_settings_summary_head">Ajustes avanzados del procesador de sonido WM8994</string>
   <string name="pref_wm8994_microphone_recording_title">Grabación predefinida</string>
   <string name="pref_wm8994_headphone_amp_title">Nivel del amplificador</string>
   <string name="pref_wm8994_headphone_amp_summary">Personalizar ganancia analógica</string>
@@ -118,99 +113,4 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_wm8994_fll_tuning_title">Reloj de audio ajustado</string>
   <string name="pref_wm8994_fll_tuning_summary">Usar reloj de audio WM8994 ajustado (mejora la calidad del sonido)</string>
   <string name="help_title">Ayuda</string>
-  <string name="help_text"><b>¿Qué es DSP Manager?</b>
-\n\n
-DSP Manager (Ecualizador) es una aplicación para el ajuste del sonido.
-<i>DSP</i> significa Digital Signal Processing (Procesamiento de Señal Digital),
-y <i>Manager</i> (gestor o administrador) se refiere al hecho de que el DSP no
-funciona actualmente dentro de la aplicación en sí misma, y deberá ser el gestor
-el que habilite su uso para otras aplicaciones que sean compatibles con la
-especificación de audio de Android, como por ejemplo la mayoría de los
-reproductores de música.
-\n\n\n
-<b>Filosofía</b>
-\n\n
-El procesamiento de audio de CyanogenMod soporta cuatro categorías diferentes
-de salida de audio: Auriculares cableados, altavoces internos del teléfono,
-audio USB y auriculares Bluetooth. Hay un panel de configuración separado para
-cada categoría de salida de audio. La filosofía de DSP Manager es corregir en
-la salida de audio las deficiencias particulares, con objeto de conseguir
-la más óptima experiencia de sonido en cada una de ellas.
-\n\n
-A diferencia de los efectos de audio AOSP, aquí no existen ajustes por aplicación.
-Esta es una decisión deliberada: tratar de centrarse en la salida de audio y no
-en las aplicaciones que generan audio en las que DSP Manager deba funcionar.
-\n\n\n
-<b>Características</b>
-\n\n
-El resto de este documento describe cada efecto de audio y su uso en cada
-escenario.
-\n\n
-1. <b>Rango de compresión dinámica (DRC)</b>
-\n\n
-Este efecto estima la reducción de ruido percibida como una media del oyente
-y dirige un control de ganancia basada en esta estimación. El uso principal
-es para entornos con un alto nivel de ruido, tales como coches o la calle,
-donde las partes con volumen bajo de la música están en riesgo de no ser
-percibidas debido al ruido de fondo.
-\n\n
-Los ajustes determinarán la fuerza con la que DSP Manager tratará de mantener
-la reducción de audio en los niveles seleccionados. No existe equivalente en
-AOSP para este efecto DSP.
-\n\n
-2. <b>Bass Boost</b>
-\n\n
-Bass Boost es un filtro simple a bajo nivel que puede ser usado para agregar
-énfasis a frecuencias de 55 Hz y menores. La mejora es del alrededor de 6 dB,
-y modificada por el parámetro \u00ABIntensidad\u00BB, el cual añade un filtro
-de resonancia en la banda de 55 Hz, dando a dicha frecuencia un énfasis
-adicional. El efecto es diseñado para combatir la pérdida de la frecuencia de
-bajos en los altavoces y auriculares supra-aurales, los cuales no se acoplan
-totalmente con canal auditivo del usuario.
-\n\n
-3. <b>Ecualizador</b>
-\n\n
-Este es un ecualizador a seis bandas, con bandas a 16, 64, 250, 1000, 4000
-y 16000 Hz. Se proveen algunos ajustes predeterminados, y la frecuencia de
-respuesta puede ser personalizada también, tocando sobre el gráfico del
-ecualizador. El efecto debe ser usado para ajustar la frecuencia de respuesta
-según el gusto personal del usuario, o para ajustarse a las características
-y capacidades de los auriculares y altavoces disponibles.
-\n\n
-El ecualizador también contiene un filtro de compensación sonora, que iguala
-el cambio en la frecuencia de respuesta en el oído, basado en el nivel
-presión del sonido generado en el oído del usuario. El uso de auriculares
-cableados es necesario, y el valor de su intensidad deberá ser ajustado
-correctamente para que el efecto pueda trabajar tal y como fue diseñado.
-\n\n
-Para seleccionar el valor correcto en la compensación sonora, escucha
-música con un nivel de volumen bajo, y escoge algún tipo de música con un
-amplio espectro de sonido, como el rock o el metal. Prueba entonces a encontrar
-un ajuste donde los bajos sean potenciados de nuevo a niveles audibles y parezcan
-balanceados con el resto de sonidos. Después de que la compensación haya sido
-correctamente configurada los bajos deberían permanecer en los mismos
-niveles relativos al del resto de otros instrumentos, independientemente del
-nivel de sonido. Por otra parte, si la música comienza a oírse con frecuencias
-bajas excesivamente fuertes en niveles altos de sonido, probablemente la
-compensación haya sido establecida demasiado fuerte, y deberá ser reducida.
-\n\n
-La compensación ha sido añadida dentro de los ajustes de usuario. Si solo se
-desea utilizar compensación, entonces el ecualizador debe ser establecido
-al tipo de ajuste \u00ABPlano\u00BB.
-\n\n
-4. <b>Filtro de auriculares</b>
-\n\n
-El filtro de auriculares es un diseño inspirado en el famoso circuito
-analógico \u00ABbs2b\u00BB. El efecto deja sin cambios el sonido mono, y ajusta
-la diferencia de señal a través del filtro de bajo nivel, el cual aproxima
-tanto el audio en la cabeza como el retardo interaural a la vez, dando el
-correcto efecto psicoacústico al oído del usuario. La intención es prevenir
-la creciente fatiga auditiva por la increíble separación estéreo, inherente
-a todos los auriculares. El efecto debe de ser habilitado cuando se utilicen
-auriculares estéreo.
-\n\n
-A consecuencia del mezclado, se reduce algo la separación estéreo, teniendo
-un efecto de reverberación Haas, el cual puede ser utilizado para incrementar
-el ancho de la imagen estéreo percibida. Esto es controlado por el
-ajuste \u00ABTipo de habitación\u00BB.\n</string>
 </resources>

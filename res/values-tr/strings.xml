@@ -29,7 +29,6 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
-  <string name="app_name">Ses Yöneticisi</string>
   <string name="select_configuration_title">Düzenlemek İçin Yapılandırma Seçin</string>
   <string name="headset_title">Kulaklık</string>
   <string name="speaker_title">Hoparlör</string>
@@ -84,9 +83,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">Analog Kanal Yapılandırması</string>
   <string name="category_wm8994_mic_settings">Mikrofon Ayarları</string>
   <string name="category_wm8994_microphone_recording">Mikrofon</string>
-  <string name="wm8994_settings_title_head">Ses Ayarları</string>
-  <string name="wm8994_settings_title_subhead">Ses Ayarları</string>
-  <string name="wm8994_settings_summary_head">WM8994 ses işlemcisinin gelişmiş ayarları</string>
   <string name="pref_wm8994_microphone_recording_title">Kaydetme önayarı</string>
   <string name="pref_wm8994_headphone_amp_title">Yükseltici seviyesi</string>
   <string name="pref_wm8994_headphone_amp_summary">Analog yükselticiyi özelleştir</string>

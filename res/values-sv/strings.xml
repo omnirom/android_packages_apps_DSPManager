@@ -29,7 +29,6 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
-  <string name="app_name">Ljudeffekter</string>
   <string name="select_configuration_title">Välj konfiguration att ändra</string>
   <string name="headset_title">Hörlurar</string>
   <string name="speaker_title">Telefonhögtalare</string>
@@ -39,7 +38,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="dsp_settings_headset">Ljudinställningar - Hörlurar</string>
   <string name="dsp_settings_speaker">Ljudinställningar - Telefonhögtalare</string>
   <string name="dsp_settings_bluetooth">Ljudinställningar - Bluetoothenhet</string>
-  <string name="dsp_settings_usb">Ljudinställningar - USB-enhet</string>
   <string name="pref_dsp_title">Dynamikkompression</string>
   <string name="pref_dsp_summary_on">Kompression är aktiverad</string>
   <string name="pref_dsp_summary_off">Kompression är inaktiverad</string>

@@ -29,7 +29,6 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
-  <string name="app_name">DSP Manager</string>
   <string name="select_configuration_title">Zvolte nastavení ke změně</string>
   <string name="headset_title">Sluchátka</string>
   <string name="speaker_title">Reproduktor</string>
@@ -39,7 +38,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="dsp_settings_headset">Nastavení DSP - sluchátka</string>
   <string name="dsp_settings_speaker">Nastavení DSP - reproduktor</string>
   <string name="dsp_settings_bluetooth">Nastavení DSP - zařízení Bluetooth</string>
-  <string name="dsp_settings_usb">Nastavení DSP - USB zařízení</string>
   <string name="dsp_settings_wm8994">Nastavení DSP - WM8994</string>
   <string name="pref_dsp_title">Komprese dynamiky signálu (DRC)</string>
   <string name="pref_dsp_summary_on">Komprese povolena</string>
@@ -91,9 +89,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">Nastavení analogové trasy</string>
   <string name="category_wm8994_mic_settings">Nastavení mikrofonu</string>
   <string name="category_wm8994_microphone_recording">Mikrofon</string>
-  <string name="wm8994_settings_title_head">Nastavení zvuku</string>
-  <string name="wm8994_settings_title_subhead">Nastavení zvuku</string>
-  <string name="wm8994_settings_summary_head">Pokročilé ovládání zvukového procesoru WM8994</string>
   <string name="pref_wm8994_microphone_recording_title">Předvolba nahrávání</string>
   <string name="pref_wm8994_headphone_amp_title">Úroveň zesilovače</string>
   <string name="pref_wm8994_headphone_amp_summary">Upravit analogové zesílení</string>
@@ -127,72 +122,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="load_preset">Načíst předvolbu</string>
   <string name="new_preset">Nová předvolba...</string>
   <string name="help_title">Uživatelská příručka</string>
-  <string name="help_text"><b>Co je DSPManager?</b>\n\nDSPManager je aplikace
-na nastavení efektů zvukového výstupu. <i>DSP</i> znamená digitální signálové
-zpracování (Digital Signal Processing) a <i>Manager</i> znamená, že ono DSP
-není součástí vlastní aplikace, která vytváří zvuk; tento správce může pouze
-toto DSP aktivovat pro Android aplikace, které jsou vytvořeny v souladu se
-specifikací zvukového subsystému Androidu - což splňuje většina přehrávačů.\n
-\n<b>Filozofie</b>\n
-\nZvukové zpracování v CyanogenModu podporuje tři různé výstupní kategorie:
-drátová sluchátka, telefonní reproduktor a sluchátka připojené pomocí
-Bluetooth. Pro každou tuto kategorii je vlastní konfigurační panel. Filozofie
-DSPManagera je upravit jednotlivý zvukový výstup tak, aby bylo docíleno
-nejlepšího poslechu.\n
-\nNa rozdíl od zvukových efektů AOSP není toto nastavení rozlišeno na
-jednotlivé aplikace, což byl hlavní záměr této aplikace: upravuje se konkrétní
-zvukový výstup a je jedno, která aplikace do tohoto výstupu generuje zvuk.\n
-\n<b>Vlastnosti</b>\n
-\nVe zbytku tohoto dokumentu jsou popsány jednotlivé zvukové efekty a jejich
-zamýšlené použití v konkrétních situacích.\n
-\n1. <b>Komprese dynamiky (DRC)</b>\n
-\nTento efekt upravuje hlasitost výstupního zvuku na základě úrovně hlasitosti
-zvuku vstupního s možností využití proměnného zisku. Primární využití je v
-hlučném prostředí, jako například v autech nebo na ulici, kde tiché pasáže
-hudby mohou při poslechu zaniknout právě v okolním hluku.\n
-\nJe možné nastavit, jakým způsobem se bude bude DSPManager snažit udržet
-zvukovou hlasitost na cílové úrovni. Pro tento DSP efekt není ekvivalent v
-AOSP.\n
-\n2. <b>Zvýraznění basů</b>\n
-\nEfekt zvýraznění basů je jednoduchá dolní propust (low-pass filtr), která
-přidává důraz na frekvencích do 55 Hz. Zvýraznění je přibližně 6 dB a je možné
-jej modifikovat parametrem \u201esíla\u201c, který přidává rezonanci v pásmu
-55 Hz, což způsobí větší změny v důrazu efektu. Tento efekt je navržen pro
-opětovné získání důrazu basů při malých reproduktorech či sluchátkách, která
-pouze leží na uších (supraaurální sluchátka) a nejsou uvnitř zvukovodu ucha.\n
-\n3. <b>Ekvalizér</b>\n
-\nJe šesti pásmový ekvalizér s pásmy na 16, 64, 250, 1000, 4000 a 16000 Hz.
-Dostupné jsou některé běžné předvolby a je pochopitelně možné provést vlastní
-nastavení klepnutím na graf ekvalizéru. Tento efekt je využit pro zisk či
-potlačení konkrétního frekvenčního pásma tak, aby to posluchači bylo příjemné
-či aby bylo docíleno optimálního využití frekvenčního rozsahu sluchátek či
-reproduktorů.\n
-\nEkvalizér také obsahuje kompenzační filtr hlasitosti, který vyrovnává změny
-frekvence v uchu v závislosti na úrovni zvukového tlaku, vznikající v uchu.
-Pro tuto vlastnost je nutné použít drátová sluchátka a hodnota parametru
-určující sílu efektu musí být správně nastavena, aby efekt pracoval tak, jak
-byl navržen.\n
-\nPro zvolení správné hodnoty síly kompenzace použijte co možná nejtišší
-hlasitost a pusťte hudbu s velkým rozpětím frekvencí - rock nebo metal jsou
-ideální. Pokuste se najít takové nastavení, kdy jsou basy slyšitelné a zároveň
-přibližně ve stejné úrovni k ostatním nástrojům. Po správném nastavení
-kompenzace zůstanou basy stále ve stejné úrovni k ostatním nástrojům bez
-ohledu na nastavené hlasitosti. Pokud ale dojde při vyšších hlasitostech k
-přílišnému zesílení basů, je úroveň kompenzace veliká a měla by být snížena.\n
-\nKompenzace je přidána do uživatelských změn a pokud chcete použít pouze tuto
-kompenzaci, je nutné, aby ekvalizér byl nastaven na předvolbu \u201eplochý\u201c.\n
-\n4. <b>Filtr sluchátek</b>\n
-\nFiltr sluchátek je filtr křížového mixování inspirovaný slavným analogovým
-obvodem bs2b. Monofonní zvuk je propuštěn beze změn, ale je upraven rozdíl
-signálů pomocí dolní propusti, který aproximuje stín a zpoždění ve vnitřním
-uchu současně, což způsobuje určitý druh psychoakustického poslechu. Tento
-efekt je určen pro zabránění striktní separace stereofonní hudby při použití
-sluchátek. Tento efekt by měl být použit vždy, když jsou použita stereofonní
-sluchátka.\n
-\nProtože mixování sníží separaci stereofonního zvuku, je možné použít efektu
-ozvěny Haas, který je použit pro zvýšení vnímání šířky stereo vjemu. Toto je
-možné změnit v nastavení \u201etypu prostoru\u201c.
-  </string>
   <string name="soundcontrol_title">Nastavení zvuku</string>
   <string name="pref_soundcontrol_presets_title">Předvolby nastavení</string>
   <string name="pref_soundcontrol_headphone_gain_title">Zisk sluchátek</string>

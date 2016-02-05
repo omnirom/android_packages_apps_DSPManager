@@ -29,7 +29,6 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
-  <string name="app_name">DSP Manager</string>
   <string name="select_configuration_title">Kies configuratie om te bewerken</string>
   <string name="headset_title">Headset</string>
   <string name="speaker_title">Speaker</string>
@@ -39,7 +38,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="dsp_settings_headset">DSP-instellingen - Headset</string>
   <string name="dsp_settings_speaker">DSP-instellingen - Telefoonspeaker</string>
   <string name="dsp_settings_bluetooth">DSP-instellingen - Bluetoothapparaat</string>
-  <string name="dsp_settings_usb">DSP-instellingen - USB-apparaat</string>
   <string name="dsp_settings_wm8994">DSP-instellingen - WM8994</string>
   <string name="pref_dsp_title">Dynamisch bereikcompressie</string>
   <string name="pref_dsp_summary_on">Dynamisch bereikcompressie ingeschakeld</string>
@@ -91,9 +89,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">Analoge padenconfiguratie</string>
   <string name="category_wm8994_mic_settings">Microfooninstellingen</string>
   <string name="category_wm8994_microphone_recording">Microfoon</string>
-  <string name="wm8994_settings_title_head">Geluidsinstellingen</string>
-  <string name="wm8994_settings_title_subhead">Geluidsinstellingen</string>
-  <string name="wm8994_settings_summary_head">Geavanceerd beheer van de WM8994-geluidsprocessor</string>
   <string name="pref_wm8994_microphone_recording_title">Preset voor opnemen</string>
   <string name="pref_wm8994_headphone_amp_title">Versterkerniveau</string>
   <string name="pref_wm8994_headphone_amp_summary">Analoge gain wijzigen</string>
@@ -127,95 +122,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="load_preset">Voorkeurinstelling laden</string>
   <string name="new_preset">Nieuwe voorkeurinstelling...</string>
   <string name="help_title">Help</string>
-  <string name="help_text"><b>Wat is DSP Manager?</b>
-\n
-\nDSP Manager is een geluidsmanipulatie-app. <i>DSP</i> staat
-voor \'Digital Signal Processing\' (digitale signalenverwerking) en het
-<i>\'Manager\'</i>-deel staat voor het feit dat de verwerking niet
-gebeurt in de app zelf; de beheerder kan dit alleen inschakelen voor apps die
-compatibel zijn met de geluidseffectenspecificaties van Android, zoals de meeste
-muziekspelers.
-\n
-\n<b>Filosofie</b>
-\n
-\nDe mogelijkheden van het geluidsverwerkingssysteem van CyanogenMod biedt
-ondersteuning voor vier uitvoersoorten: bedrade headset,
-telefoonluidspreker, USB-apparaat en bluetoothheadset. Voor elke categorie bestaat er
-een configuratiepaneel. De filosofie van DSP Manager is om de geluidsuitvoer zo
-te manipuleren, dat het geluid het best beleefd kan worden.
-\n
-\nIn tegenstelling tot de standaard geluidseffecten van Android zijn er geen aparte
-instellingen per app. Dit is opzettelijk gedaan: het is de uitvoer die belangrijk
-is, niet welke app geluid maakt.
-\n
-\n<b>Functies</b>
-\n
-\nDe rest van dit document beschrijft elk geluidseffect en de situatie waarvoor
-het bedoeld is.
-\n
-\n1. <b>Dynamisch bereik compressie (DRC)</b>
-\n
-\nDit effect schat het geluidsniveau van het geluid in zoals door de gemiddelde
-luisteraar gehoord zou worden en stuurt een geluidsversterker aan die gebaseerd is op
-die inschatting. Dit wordt meestal gebruikt in luidruchtige omgevingen zoals bij
-auto\'s op de weg, waarbij rustige delen van het geluid overstemd zouden kunnen
-worden door de geluiden op de achtergrond.
-\n
-\n
-Het enige wat handmatig gewijzigd kan worden is hoe hard DSP Manager moet
-proberen om het geluidsniveau te behouden op het beoogde niveau. Iets soortgelijks
-van Google is niet beschikbaar.
-\n
-\n2. <b>Basversterker</b>
-\n
-\nDe basversterker is een simpel laagdoorlatend filter dat gebruikt kan worden om de
-nadruk te leggen op frequenties tot 55 Hz. De versterking is ongeveer 6 dB en kan
-worden aangepast met de \'sterkte\'-parameter, die bijdraagt aan de respons beneden de
-55 Hz, waardoor deze frequenties extra benadrukt worden. Het effect is ontworpen om
-het verlies van lage frequenties te bestrijden zoals dat optreedt bij kleine
-luidsprekers en in-oor headsets die niet goed aansluiten op het gehoorkanaal van
-de gebruiker.
-\n
-\n3. <b>Equalizer</b>
-\n
-\nDit is een 6-bands equalizer met banden op 16, 64, 250, 1000, 4000 en 16000 Hz.
-Enkele veel voorkomende instellingen zijn kant-en-klaar beschikbaar, maar de
-frequentierespons kan ook op maat worden ingesteld door te tikken op de
-equalizergrafiek. Het effect wordt gebruikt voor het afstemmen van de frequentie
-naar de wens van de gebruiker of de specifieke mogelijkheden van de beschikbare
-headset/luidsprekers.
-\n
-\nDe equalizer bevat ook een luidheidscompensatiefilter, dat veranderingen van de
-frequentie in het oor egaliseert op basis van de geluidsdruk die het oor van de
-gebruiker bereikt. Het gebruik van een bedrade headset is noodzakelijk en de
-compensatiewaarde moet correct worden afgestemd voordat het effect werkt zoals
-ontworpen.
-\n
-\nOm de luidheidscompensatie correct af te stemmen, dient u het laagste muziekvolume
-te kiezen en breed-spectrum lawaaierige muziek, zoals rock of metal, af te spelen.
-Probeer een compensatie-instelling te vinden waarbij de bas voldoende is versterkt om
-hoorbaar te zijn en waarbij de muziek goed in balans lijkt te zijn. De compensatiewaarde
-is correct afgestemd indien de bas op hetzelfde niveau ten opzichte van de andere
-instrumenten ligt, ongeacht het volumeniveau. Als muziek een te sterke bas heeft bij hoge
-niveaus, is de compensatiewaarde waarschijnlijk te sterk en moet deze worden verminderd.
-\n
-\nDe ingestelde compensatie wordt toegevoegd aan de gekozen instelling van de
-equalizer. Als enkel compensatie nodig is, moet de equalizer op \'vlak\' blijven ingesteld.
-\n
-\n4. <b>Headsetfilter</b>
-\n
-\nHet headsetfilter is een crossfeed-ontwerp, geïnspireerd door het beroemde bs2b
-analoge circuit. Het filter laat monogeluid ongewijzigd door en laat het
-verschil in signaal door een laagdoorlaatfilter gaan dat zowel hoofdschaduw als
-in-oor-vertraging nabootst, wat het juiste psychologische effect voor de oren van de
-gebruiker oplevert. Het is de bedoeling te voorkomen dat de luisteraar vermoeid wordt
-als gevolg van de onwaarschijnlijke stereoscheiding die inherent is aan alle headsets.
-Het effect moet worden ingeschakeld indien een stereoheadset wordt gebruikt.
-\n
-\nOmdat het mengen het stereobeeld enigszins vermindert, kan er een Haas-effect
-galm ontstaan, die kan worden gebruikt om de waargenomen breedte van het stereobeeld te
-verhogen. Dit kan worden afgestemd door de \'Type ruimte\'-instelling.
-    </string>
   <string name="soundcontrol_title">Geluidscontrole</string>
   <string name="pref_soundcontrol_presets_title">Geluidscontrole voorkeurinstellingen</string>
   <string name="pref_soundcontrol_headphone_gain_title">Hoofdtelefoon voorvesterking</string>
@@ -237,4 +143,35 @@ verhogen. Dit kan worden afgestemd door de \'Type ruimte\'-instelling.
   <string name="sc_preset_quiet">Stil</string>
   <string name="sc_preset_stock">Standaard</string>
   <string name="sc_value_changed">Stop en herstart de muziek om de waarden toe te passen!</string>
+  <string name="navigation_drawer_toggle">Schakel scherm</string>
+  <string name="navigation_drawer_open">Open navigatiescherm</string>
+  <string name="navigation_drawer_close">Sluit navigatiescherm</string>
+  <string name="navigation_toggle_drawer">Wisselen naar navigatiescherm</string>
+  <string name="navigation_toggle_tabbed">Wisselen naar tabbladen</string>
+  <string name="boeffla_sound_control">Boeffla geluidscontrole</string>
+  <string name="boeffla_sound_title">Boeffla geluid</string>
+  <string name="boeffla_sound_summary">Boeffla sound inschakelen</string>
+  <string name="bass_freq_tuning">Bass frequentie afstemming</string>
+  <string name="dac_direct_summary">Sla het analoge kanaal over</string>
+  <string name="dac_direct_title">DAC direct</string>
+  <string name="dac_oversampling_summary">128x oversampling</string>
+  <string name="dac_oversampling_title">DAC oversampling</string>
+  <string name="fll_tuning_summary">De chip klok afstemmen voor een betere kwaliteit</string>
+  <string name="fll_tuning_title">FLL afstemmen</string>
+  <string name="general_title">Algemeen</string>
+  <string name="headphone_title">Hoofdtelefoon</string>
+  <string name="mic_title">Microfoon</string>
+  <string name="mic_call">Volume gedurende het bellen</string>
+  <string name="mic_general">Algemene volume</string>
+  <string name="mono_downmix_summary">Stereo omzetten in mono</string>
+  <string name="mono_downmix_title">Downmixen naar mono</string>
+  <string name="over_saturation_suppress">Oversaturatie onderdrukken</string>
+  <string name="privacy_mode_summary">Demp de speaker zodra een hoofdtelefoon aangesloten is</string>
+  <string name="privacy_mode_title">Privacy modus</string>
+  <string name="speaker_tuning_summary">Telefoon speaker afstemmen voor een beter basgeluid</string>
+  <string name="speaker_tuning_title">Speaker afstemmen</string>
+  <string name="speaker_volume_title">Luidsprekervolume</string>
+  <string name="stereo_expansion_summary">Verbeter geluidsdiepte en helderheid</string>
+  <string name="stereo_expansion_title">Stereo uitbreiding</string>
+  <string name="volumes_title">Volumes</string>
 </resources>
