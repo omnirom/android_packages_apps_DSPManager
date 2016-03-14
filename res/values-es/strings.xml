@@ -75,6 +75,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">Reducir agudos</string>
   <string name="eq_preset_vocal_booster">Potenciador vocal</string>
   <string name="eq_preset_custom">Personalizado</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
   <string name="category_wm8994_internal_speaker">Altavoz</string>
   <string name="category_wm8994_signal_processing">Procesamiento de señal</string>
   <string name="category_wm8994_headphone_amp">Auriculares</string>
@@ -83,6 +85,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">Configuración de ruta analógica</string>
   <string name="category_wm8994_mic_settings">Ajustes de micrófono</string>
   <string name="category_wm8994_microphone_recording">Micrófono</string>
+  <!-- Titles/Summaries -->
   <string name="pref_wm8994_microphone_recording_title">Grabación predefinida</string>
   <string name="pref_wm8994_headphone_amp_title">Nivel del amplificador</string>
   <string name="pref_wm8994_headphone_amp_summary">Personalizar ganancia analógica</string>
@@ -113,4 +116,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_wm8994_fll_tuning_title">Reloj de audio ajustado</string>
   <string name="pref_wm8994_fll_tuning_summary">Usar reloj de audio WM8994 ajustado (mejora la calidad del sonido)</string>
   <string name="help_title">Ayuda</string>
+  <!-- Sound Control -->
+  <!-- Preferences -->
+  <!-- Drawer -->
+  <!-- Boeffla Sound Control -->
 </resources>

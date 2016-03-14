@@ -75,6 +75,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">Mindre diskant</string>
   <string name="eq_preset_vocal_booster">Mere vokal</string>
   <string name="eq_preset_custom">Brugerdefineret</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
   <string name="category_wm8994_internal_speaker">Højttaler</string>
   <string name="category_wm8994_signal_processing">Signalbehandling</string>
   <string name="category_wm8994_headphone_amp">Hovedtelefoner</string>
@@ -83,6 +85,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">Analog kanalkonfigurering</string>
   <string name="category_wm8994_mic_settings">Mikrofonindstillinger</string>
   <string name="category_wm8994_microphone_recording">Mikrofon</string>
+  <!-- Titles/Summaries -->
   <string name="pref_wm8994_microphone_recording_title">Forudindstilling for optagelse</string>
   <string name="pref_wm8994_headphone_amp_title">Forstærkerniveau</string>
   <string name="pref_wm8994_headphone_amp_summary">Tilpasse analog forstærkning</string>
@@ -113,4 +116,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_wm8994_fll_tuning_title">Afstemt lydfrekvens</string>
   <string name="pref_wm8994_fll_tuning_summary">Anvend afstemt WM8994-lydfrekvens — forbedrer lydkvaliteten</string>
   <string name="help_title">Brugervejledning</string>
+  <!-- Sound Control -->
+  <!-- Preferences -->
+  <!-- Drawer -->
+  <!-- Boeffla Sound Control -->
 </resources>

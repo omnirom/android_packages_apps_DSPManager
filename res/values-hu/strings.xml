@@ -81,6 +81,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">Magas csökkentés</string>
   <string name="eq_preset_vocal_booster">Ének kiemelés</string>
   <string name="eq_preset_custom">Egyéni</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
   <string name="category_wm8994_internal_speaker">Hangszóró</string>
   <string name="category_wm8994_signal_processing">Jelfeldolgozás</string>
   <string name="category_wm8994_headphone_amp">Fülhallgató</string>
@@ -89,6 +91,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">Analóg útvonal beállítások</string>
   <string name="category_wm8994_mic_settings">Mikrofonbeállítások</string>
   <string name="category_wm8994_microphone_recording">Mikrofon</string>
+  <!-- Titles/Summaries -->
   <string name="pref_wm8994_microphone_recording_title">Felvételi profil</string>
   <string name="pref_wm8994_headphone_amp_title">Erősítő szint</string>
   <string name="pref_wm8994_headphone_amp_summary">Analóg erősítés beállítása</string>
@@ -122,7 +125,49 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="load_preset">Hangzás betöltése</string>
   <string name="new_preset">Új hangzás...</string>
   <string name="help_title">Felhasználói segédlet</string>
+  <string name="help_text"><b>Mi is a DSP Manager?</b>
+\n\n
+A DSP Manager egy a kiadott hangok módosítására szolgáló alkalmazás. A <i>DSP</i> a Digital Signal Processing, vagyis digitális jelfeldolgozás rövidítése, a <i>Manager</i> (kezelő) rész pedig arra utal, hogy a DSP valójában nem az alkalmazásban fut - a kezelő csak engedélyezni tudja olyan alkalmazások számára, melyek képesek együttműködni az Android hangeffekt-specifikációjával. Ilyenek például a különféle zenelejátszók.
+\n\n\n
+<b>Filozófia</b>
+\n\n
+A CyanogenMod hangfeldolgozó programja három különböző kimenetet támogat:
+vezetékes fejhallgatókat, az eszköz beépített hangszóróit, valamint Bluetooth hangeszközöket (autós kihangosító, headset, stb.). Mindegyik eszköztípus számára külön vezérlőpanel
+áll rendelkezésre. A DSP Manager célja ezen eszközök sajátos hibáinak kiküszöbölése az optimális zenehallgatási élmény elérése érdekében.
+\n\n
+Az AOSP hangeffektektől eltérően nincsenek alkalmazásokhoz rendelhető beállítások. Ez szándékos tervezés eredménye: nem az számít, hogy mi adja ki a hangot, hanem az a lényeges, hogy a kiadott hang jól szóljon.
+\n\n\n
+<b>Funkciók</b>
+\n\n
+1. <b>Dinamikus tömörítési tartomány (DRC)</b>
+\n\n
+Ez az effekt megpróbálja megbecsülni azt a hangosságot, amit egy átlagos hallgató érzékel és az erősítés szabályozását ennek megfelelően végzi. Elsősorban zajos környezetben, például autóban, vagy utcán érdemes használni, ahol a zene halk részeit a környező zaj elnyomhatja.
+\n\n
+Az egyetlen beállítási lehetőség azt adja meg, hogy a DSP Manager milyen erősen próbálja a hangosságot szinten tartani. Ennek az effektnek nincs AOSP megfelelője.
+\n\n\n
+2. <b>Mélyhangkiemelés</b>
+\n\n
+A mélyhangkiemelés technikailag egy egyszerű aluláteresztő szűrő, amit az 55 Hz és az alatti frekvenciájú hangok nyomatékosítására lehet használni. A kiemelés nagyjából 6 dB értékű és hat rá az “erősség” paraméter, ami szűrési rezonanciát ad az 55 Hz-es sávnak, így az a frekvencia még inkább kiemelésre kerül. Az effektet arra tervezték, hogy a kis hangszórókra és fülön ülő fejhallgatókra (melyek a hallgató hallójáratához nem illeszkednek szorosan) jellemző gyenge mélyhangokat élvezhető szintűre erősítse.
+\n\n\n
+3. <b>Hangszínszabályzó</b>
+\n\n
+Ez egy hatsávos hangszínszabályzó, melynek sávjai 16, 64, 250, 1000, 4000 és 16000 Hz-nél vannak. Adott néhány gyakori hangprofil, valamint a frekvenciaválasz (a különféle magasságú hangok erőssége) személyre szabható a szabályzó grafikonját megérintve. Az effekt arra lett tervezve, hogy a kiadott zene hangzása megfeleljen a felhasználó ízlésének és a fejhallgató vagy hangszóró képességeinek.
+\n\n
+A hangszínszabályzó tartalmaz még egy hangosságkompenzáló szűrőt is, ami a felhasználó fülét elérő hangnyomásból származó hatásokat küszöböli ki. Használatához vezetékes fejhallgatóra van szükség, a paraméter értékét pedig helyesen kell beállítani ahhoz, hogy a tervezett hatást elérhesse.
+\n\n
+A kompenzáció helyes értékének kiválasztásához használja a leghalkabb hangerőt és hozzá valami széles spektrumú, zajos zenét, pl. rock, vagy metál zenét. Próbáljon meg olyan beállítást találni, ami a mélyhangokat hallható szintre viszi vissza és azok az anyag többi részével egyensúlyba kerülnek. Miután a kompenzációt helyesen beállította, a mélyhangoknak a többi hangszerhez képest a hangerőtől függetlenül azonos szinten kell lennie. Amennyiben hangosabbra állítva a zenében túl erőssé válnának a mélyhangok, a kompenzáció valószínűleg túl erős, azt csökkenteni kell.
+\n\n
+A kompenzáció hozzáadódik a felhasználó beállításaihoz. Ha csak a kompenzációt kívánja alkalmazni, a hangszínszabályzót állítsa “Lapos” profilra.
+\n\n\n
+4. <b>Fejhallgató szűrő</b>
+\n\n
+A fejhallgató szűrő crossfeed tervezésű, melyet a híres bs2b analóg áramkör ihletett.
+Az effekt a mono hangot változatlanul hagyja és a sztereó hang sávjainak különbségét egy aluláteresztő szűrőn engedi át, ami mind a fej árnyékolását, mind a hallójáratok késleltetését közelíti, így a felhasználó fülei számára egy természetesebb hangzást biztosít. A szűrő célja megelőzni a hallgató kifáradását, ami a valószínűtlen, a két különböző hangsáv okozta hanghatásokból fakadhat. Ezek a hatások a fejhallgatók velejárói, így az effektet ajánlott mindig bekapcsolni, amikor sztereó fejhallgatót használ.
+\n\n
+Mivel a keverés valamelyest csökkenti a sztereó sávok szétválasztását, Haas-visszhang alakul ki, melyet fel lehet használni az érzékelt sztereó hatás “szélességének” növelésére. Ezt a “Szoba típusa” beállítással lehet módosítani.</string>
+  <!-- Sound Control -->
   <string name="soundcontrol_title">Hangvezérlő</string>
+  <!-- Preferences -->
   <string name="pref_soundcontrol_presets_title">Hangvezérlő hangzások</string>
   <string name="pref_soundcontrol_headphone_gain_title">Fejhallgató erősítés</string>
   <string name="pref_soundcontrol_headphone_poweramp_gain_title">Fejhallgató PowerAmp erősítés</string>
@@ -143,11 +188,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="sc_preset_quiet">Csendes</string>
   <string name="sc_preset_stock">Gyári</string>
   <string name="sc_value_changed">Kérjük, a változtatások életbe lépéséhez állítsa meg, majd indítsa újra a zenét!</string>
+  <!-- Drawer -->
   <string name="navigation_drawer_toggle">Fiók váltása</string>
   <string name="navigation_drawer_open">Navigáció megnyitása</string>
   <string name="navigation_drawer_close">Navigáció bezárása</string>
   <string name="navigation_toggle_drawer">Váltás fiók nézetre</string>
   <string name="navigation_toggle_tabbed">Váltás fül nézetre</string>
+  <!-- Boeffla Sound Control -->
   <string name="boeffla_sound_control">Boeffla hangvezérlő</string>
   <string name="boeffla_sound_title">Boeffla hang</string>
   <string name="boeffla_sound_summary">Boeffla hang engedélyezése</string>

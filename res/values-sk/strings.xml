@@ -33,14 +33,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="headset_title">Headset</string>
   <string name="speaker_title">Reproduktor Telefónu</string>
   <string name="bluetooth_title">Zariadenie Bluetooth</string>
+  <string name="audio_effects">Zvukové efekty</string>
+  <string name="pref_unavailable">Funkcia nie je dostupná vo vašom zariadení</string>
   <string name="dsp_settings_headset">DSP Nastavenia - Headset</string>
   <string name="dsp_settings_speaker">DSP Nastavenia - Reproduktor Telefónu</string>
   <string name="dsp_settings_bluetooth">DSP Nastavenia - Zariadenie Bluetooth</string>
+  <string name="dsp_settings_wm8994">Nastavenia DSP - WM8994</string>
   <string name="pref_dsp_title">Dynamická Kompresia Rozsahu</string>
   <string name="pref_dsp_summary_on">Kompresia je povolená</string>
   <string name="pref_dsp_summary_off">Kompresia je zakázaná</string>
   <string name="pref_dsp_enable">Povoliť</string>
   <string name="pref_effect_title">Vyberte Silu Efektu</string>
+  <string name="pref_effect_freq_title">Vyberte efekt strednej frekvencie</string>
   <string name="dialog_effect">Sila Efektu</string>
   <string name="pref_equalizer_title">Ekvalizér</string>
   <string name="pref_equalizer_summary_on">Ekvalizér je povolený</string>
@@ -59,6 +63,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_room_title">Vyberte Typ Miestnosti</string>
   <string name="dialog_room">Typ Miestnosti</string>
   <string name="menu_reset">Obnoviť</string>
+  <string name="pref_headset_stereowide_title">Rozšírenie sterea</string>
+  <string name="pref_headset_stereowide_summary_on">Rozšírenie sterea je zapnuté</string>
+  <string name="pref_headset_stereowide_summary_off">Rozšírenie sterea je vypnuté</string>
+  <string name="pref_headset_stereowide_enable">Povoliť</string>
+  <string name="dialog_stereo">Rozšírenie sterea</string>
   <string name="eq_preset_acoustic">Akustika</string>
   <string name="eq_preset_bass_booster">Zosilnenie Bassov</string>
   <string name="eq_preset_bass_reducer">Zoslabenie Bassov</string>
@@ -72,4 +81,170 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">Zoslabenie Výšok</string>
   <string name="eq_preset_vocal_booster">Zosilnenie Hlasu</string>
   <string name="eq_preset_custom">Vlastný</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
+  <string name="category_wm8994_internal_speaker">Reproduktor</string>
+  <string name="category_wm8994_signal_processing">Spracovanie signálu</string>
+  <string name="category_wm8994_headphone_amp">Slúchadlá</string>
+  <string name="category_wm8994_codec_optimization">Optimalizácia kodeku</string>
+  <string name="category_wm8994_dac_config">Nastavenia D/A prevodníka</string>
+  <string name="category_wm8994_analog_path">Nastavenie analógovej cesty</string>
+  <string name="category_wm8994_mic_settings">Nastavenia mikrofónu</string>
+  <string name="category_wm8994_microphone_recording">Mikrofón</string>
+  <!-- Titles/Summaries -->
+  <string name="pref_wm8994_microphone_recording_title">Predvoľba nahrávania</string>
+  <string name="pref_wm8994_headphone_amp_title">Úroveň zosilňovača</string>
+  <string name="pref_wm8994_headphone_amp_summary">Upraviť analógové zosilnenie</string>
+  <string name="pref_wm8994_headphone_amp_dlg_title">Úroveň zosilňovača pre slúchadlá</string>
+  <string name="pref_wm8994_headphone_amp_dlg_desc">Analógové zosilnenie</string>
+  <string name="pref_wm8994_bass_boost_enable_title">Zvýraznenie basov</string>
+  <string name="pref_wm8994_bass_boost_enable_summary">Pokročilé ovládanie pre zvýraznenie basov</string>
+  <string name="pref_wm8994_bass_boost_title">Rozsah zvýraznenia basov</string>
+  <string name="pref_wm8994_bass_boost_summary">Pokročilé ovládanie dynamického rozsahu</string>
+  <string name="pref_wm8994_bass_boost_preset_title">Predvoľba zvýraznenia basov</string>
+  <string name="pref_wm8994_bass_boost_dlg_title">Zvýraznenie basov</string>
+  <string name="pref_wm8994_bass_boost_gain_dlg_desc">Zisk</string>
+  <string name="pref_wm8994_bass_boost_range_dlg_desc">Rozsah zvýraznenia basov</string>
+  <string name="pref_wm8994_control_enable_title">Povoliť ovládanie WM8994</string>
+  <string name="pref_wm8994_control_enable_summary">Pokročilé ovládanie zvukového procesora WM8994</string>
+  <string name="pref_wm8994_speaker_tuning_title">Prispôsobiť pre hudbu</string>
+  <string name="pref_wm8994_speaker_tuning_summary">Vykoná prednastavenie HW ekvalizéru pre viac basov a vyvážené počúvanie hudby</string>
+  <string name="pref_wm8994_mono_downmix_title">Previesť na mono</string>
+  <string name="pref_wm8994_mono_downmix_summary">Prevedie stereofónny zvuk na monofónny (pre stereo výstup, napr. slúchadlá)</string>
+  <string name="pref_wm8994_stereo_expansion_title">Priestorové stereo</string>
+  <string name="pref_wm8994_stereo_expansion_summary">\'Rozšíriť\' stereo zvuk cez digitálne spracovanie zvuku</string>
+  <string name="pref_wm8994_dac_direct_title">D/AC priamo</string>
+  <string name="pref_wm8994_dac_direct_summary">Pristupovať k Digital/Analog prevodníku priamo, obísť mixér kanálov. Prinesie to čistejší zvuk (vyšší pomer signálu k šumu)</string>
+  <string name="pref_wm8994_dac_osr128_title">Hi-Fi prehrávanie</string>
+  <string name="pref_wm8994_dac_osr128_summary">Digital/Analog prevodník so 128x prevzorkovaním — čistejší zvuk pri prehrávaní hudby</string>
+  <string name="pref_wm8994_adc_osr128_title">Hi-Fi nahrávanie</string>
+  <string name="pref_wm8994_adc_osr128_summary">Anológovo-digitálny prevodník s 128x prevzorkovaním — zvýši kvalitu nahrávaného zvuku</string>
+  <string name="pref_wm8994_fll_tuning_title">Vyladené časovanie</string>
+  <string name="pref_wm8994_fll_tuning_summary">Použiť vyladený WM8994 ako zdroj času audia — vyššia kvalita zvuku</string>
+  <string name="save_preset">Uložiť predvoľbu</string>
+  <string name="load_preset">Načítať predvoľbu</string>
+  <string name="new_preset">Nová predvoľba...</string>
+  <string name="help_title">Nápoveda</string>
+  <string name="help_text"><b>Čo je DSP Manažér?</b>
+\n\n
+DSP Manažér je aplikácia na vylepšenie zvuku na výstupe <i>DSP</i> znamená
+Digitálny signálny procesor, <i>Manažér</i> sa odkazuje na fakt, že
+DSP nie je súčasťou tejto aplikácie; Manažér umožnuje jeho použitie
+aplikáciami, ktoré sú kompatibilné so špecifikáciou zvukových efektov pre Android.
+Napríklad väčšina prehrávačov hudby.
+\n\n\n
+<b>Filozofia</b>
+\n\n
+Spracovanie zvuku v CyanogenMode podporuje rozdielne kategórie výstupu:
+drôtové sluchátka, reproduktor telefónu a bluetoth sluchátka. Každá kategória má
+svoj vlastný konfiguračný panel. Filozofiou DSP Manažéra je opraviť určité nedostatky
+zvukového výstupu a dosiahnuť optimálny hudobný zážitok.
+\n\n
+Narozdiel od AOSP audio efektov sa tu nepoužívajú nastavenia pre každú aplikáciu.
+Zámer dizajnu je: staráme sa o výstup, a nie o to, ktorá aplikácia bude poseilať zvuk
+do DSP Manažéra
+\n\n\n
+<b>Vlastnosti</b>
+\n\n
+1. <b>Kompresia dynamiky zvukového signálu (DRC)</b>
+\n\n
+Kompresor dynamiky upravuje spracovávaný zvuk zmenou výstupnej hlasitosti
+závisle na vstupnej hlasitosti. Týmto spôsobom sa znižuje príliš veľká dynamika
+pôvodného signálu a zosilňujú sa tiché pasáže, ktoré by pri bežnej hlasitosti
+boli potlačené hlukom okolia, napr. automobily na na ulici.
+\n\n
+Jediný laditeľný parameter určuje intenzitu ktorou sa DSP Manažér pokúsi udržať hlasitosť zvuku na cieľovej úrovni. Neexistuje žiadny AOSP ekvivalent pre tento efekt DSP.
+\n\n\n
+2. <b>Zvýraznenie basov</b>
+\n\n
+Funkcia zvýraznenie basov, sa používa na zlepšenie reprodukcie nízkych frekvencií na princípe psychoakustiky. Jej cieľom je presun obsahu frekvencií nižších ako 55Hz, ktoré reproduktor zariadenia
+nedokáže prehrať, na vyššie frekvencie ktoré sú pre ľudské ucho a mozog výraznejšie.
+\n\n\n
+3. <b>Ekvalizér</b>
+\n\n
+Ide o 6-pásmový ekvalizér s pásmami 16, 64, 250, 1000, 4000 a 16000 Hz.
+Poskytuje niekoľko bežných prednastavení a frekvenčná odozva môže byť zároveň
+prispôsobená dotykmi v grafe ekvalizéra. Nastavenie efektu závisí na osobnom vkuse
+používateľa, alebo na základe možností dostupných sluchátok alebo reproduktorov.
+\n\n
+Ekvalizér tiež obsahuje kompenzačný filter hlasitosti, ktorý na základe odozvy akustického
+tlaku v uchu vyrovnáva hladinu zvuku. Odporúča sa používať klasické sluchátka (nie bezdrôtové)
+a sila kompenzácie musí byť správne nastavená aby tento efekt fungoval tak, ako bol navrhnutý.
+\n\n
+Pre voľbu správnej kopmenzačnej sily, použite najtichšie nastavenie hlasitosti a zároveň
+prehrávajte nejakú širokospektrálnu hlasnú hudbu ako rock alebo metal. Nájdite nastavenie, kde sú vyrazné basy a zároveň sú vyvážené aj daľšie pasáže. Po tom, čo je kompenzácia správne nastavená,
+basy by mali zostať na rovnakej úrovni voči ostatným nástrojom bez ohľadu na nastavenú hlasitosť.
+Na druhej strane, ak má hudba priiš veľa basov pri vyššej hlasitosti, kompenzácia je príliš vyoká
+a mala by sa zredukovať.
+\n\n
+Kompenzácia sa pridá k úpravám užívateľa. Pokiaľ je žiadúca len kompenzácia, ekvalizér by mal zostať
+v nastavení \'Flat\'
+\n\n\n
+4. <b>Headset Filter</b>
+\n\n
+Dizajn Headset filtra je inšpirovaný slávnym analógovým obvodom bs2b.
+Štúdiové stereofónne nahrávky sú obvykle optimalizované pre počúvanie reproduktormi.
+V praxi to znamená, že zvukár prispôsobí mixovanie nahrávky faktu, že kanály znejúce z reproduktorov nebudú úplne oddelené a dôjde k ich vzájomnému prelínaniu. Pri počúvaní cez sluchátka sú stereofónne
+kanály naopak úplne izolované. To mení charakter nahrávky oproti pôvodne zmýšľanému a môže byť dôvodom únavy pri dlhodobom počúvaní cez sluchátka.
+Headset filter sa snaží tento problém vyriešiť tak, že vzájomné prelínanie kanálov simuluje sofvérovo,
+čo môže v niektorých prípadoch významne zlepšiť subjektívny dojem z nahrávky. Ide o pomerne sofistikovaný algoritmus, ktorého odozva je závislá na frekvenčnom spektre zvuku. Pri počúvaní kvalitnymi sluchátkami zvuk spracovaný Headset filtrom subjektívne znie, akoby vychádzal z okolitého priestoru, nie zo sluchátok samotných. Najväčšmi je rozdiel viditeľný pri počúvaní vážnej hudby.
+\n\n
+Pretože mixovanie redukuje rozdelenie sterea, môžeme použiť Haasov efekt, pomocou ktorého 
+môžeme zlepšiť vnímanie stereofónneho obrazu. Tento efekt sa nastavuje pomocou \'Room type\'.</string>
+  <!-- Sound Control -->
+  <string name="soundcontrol_title">Ovládanie zvuku</string>
+  <!-- Preferences -->
+  <string name="pref_soundcontrol_presets_title">Predvoľby ovládania zvuku</string>
+  <string name="pref_soundcontrol_headphone_gain_title">Zisk sluchátok</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_title">PowerAmp zisk sluchátok</string>
+  <string name="pref_soundcontrol_microphone_gain_title">Zisk mikrofónu</string>
+  <string name="pref_soundcontrol_speaker_gain_title">Zisk reproduktorov</string>
+  <string name="pref_soundcontrol_headphone_gain_left">Sluchátka (ľavé)</string>
+  <string name="pref_soundcontrol_headphone_gain_right">Sluchátka (pravé)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_left">PowerAmp sluchátka (ľavé)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_right">PowerAmp sluchátka (pravé)</string>
+  <string name="pref_soundcontrol_microphone_handset_gain_title">Mikrofón telefónu</string>
+  <string name="pref_soundcontrol_microphone_camcorder_gain_title">Mikrofón videa</string>
+  <string name="sc_version_title">Ovládanie zvuku</string>
+  <string name="sc_preset_summary">Zvoľte predvoľbu</string>
+  <string name="sc_preset_loaded">Predvoľba \"%s\" načítaná!</string>
+  <string name="sc_preset_custom">Vlastné</string>
+  <string name="sc_preset_quality">Kvalita</string>
+  <string name="sc_preset_loudness">Hlasitosť</string>
+  <string name="sc_preset_quiet">Tichý</string>
+  <string name="sc_preset_stock">Továrenské</string>
+  <string name="sc_value_changed">Pre aplikáciu zmien zastavte a spustite prehávanie!</string>
+  <!-- Drawer -->
+  <string name="navigation_drawer_toggle">Zobraziť panel</string>
+  <string name="navigation_drawer_open">Otvoriť navigačný panel</string>
+  <string name="navigation_drawer_close">Zavrieť navigačný panel</string>
+  <string name="navigation_toggle_drawer">Prepnúť do navigácie</string>
+  <string name="navigation_toggle_tabbed">Prepnúť do tabuľky</string>
+  <!-- Boeffla Sound Control -->
+  <string name="boeffla_sound_control">Boeffla ovládánie zvuku</string>
+  <string name="boeffla_sound_title">Boeffla zvuk</string>
+  <string name="boeffla_sound_summary">Povoliť boeffla zvuk</string>
+  <string name="bass_freq_tuning">Ladenie basovej frekvencie</string>
+  <string name="dac_direct_summary">Vynechanie analógového kanála</string>
+  <string name="dac_direct_title">D/AC priamo</string>
+  <string name="dac_oversampling_summary">128x prevzorkovanie</string>
+  <string name="dac_oversampling_title">DAC prevzorkovanie</string>
+  <string name="fll_tuning_summary">Doladiť hodiny čipu pre lepšiu kvalitu</string>
+  <string name="fll_tuning_title">FLL ladenie</string>
+  <string name="general_title">Všeobecné</string>
+  <string name="headphone_title">Slúchadlá</string>
+  <string name="mic_title">Mikrofón</string>
+  <string name="mic_call">Hlasitosť hovoru</string>
+  <string name="mic_general">Všeobecná hlasitosť</string>
+  <string name="mono_downmix_summary">Previesť stereo na mono</string>
+  <string name="mono_downmix_title">Previesť na mono</string>
+  <string name="over_saturation_suppress">Potlačenie presýtenia</string>
+  <string name="privacy_mode_summary">Po pripojení sluchátok stlmiť reproduktor telefónu</string>
+  <string name="privacy_mode_title">Inkognito režim</string>
+  <string name="speaker_tuning_summary">Vyladiť reproduktor pre lepšie basy</string>
+  <string name="speaker_tuning_title">Ladenie reproduktora</string>
+  <string name="speaker_volume_title">Hlasitosť reproduktora</string>
+  <string name="stereo_expansion_summary">Vylepšiť hĺbku a čistotu zvuku</string>
+  <string name="stereo_expansion_title">Priestorové stereo</string>
+  <string name="volumes_title">Hlasitosti</string>
 </resources>

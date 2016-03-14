@@ -29,6 +29,13 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
+  <!-- WM8994 -->
+  <!-- Categories -->
   <string name="category_wm8994_codec_optimization">Optimiranje Codec-a</string>
   <string name="category_wm8994_dac_config">Postavke za digitalno/analogni pretvarač</string>
+  <!-- Titles/Summaries -->
+  <!-- Sound Control -->
+  <!-- Preferences -->
+  <!-- Drawer -->
+  <!-- Boeffla Sound Control -->
 </resources>

@@ -81,6 +81,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">高音弱化</string>
   <string name="eq_preset_vocal_booster">人声强化</string>
   <string name="eq_preset_custom">自定义</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
   <string name="category_wm8994_internal_speaker">扬声器</string>
   <string name="category_wm8994_signal_processing">信号处理</string>
   <string name="category_wm8994_headphone_amp">耳机</string>
@@ -89,6 +91,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">模拟路径设置</string>
   <string name="category_wm8994_mic_settings">麦克风设置</string>
   <string name="category_wm8994_microphone_recording">麦克风</string>
+  <!-- Titles/Summaries -->
   <string name="pref_wm8994_microphone_recording_title">录音预先调整</string>
   <string name="pref_wm8994_headphone_amp_title">扩音级别</string>
   <string name="pref_wm8994_headphone_amp_summary">自定义模拟增益</string>
@@ -122,7 +125,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="load_preset">加载预设</string>
   <string name="new_preset">新建预设\u2026</string>
   <string name="help_title">用户手册</string>
+  <!-- Sound Control -->
   <string name="soundcontrol_title">声音控制</string>
+  <!-- Preferences -->
   <string name="pref_soundcontrol_presets_title">声音控制预设</string>
   <string name="pref_soundcontrol_headphone_gain_title">耳机增益</string>
   <string name="pref_soundcontrol_headphone_poweramp_gain_title">PowerAmp 耳机增益</string>
@@ -143,11 +148,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="sc_preset_quiet">安静</string>
   <string name="sc_preset_stock">内置</string>
   <string name="sc_value_changed">请停止并重新开始您的音乐来应用设置 ！</string>
+  <!-- Drawer -->
   <string name="navigation_drawer_toggle">开/关抽屉</string>
   <string name="navigation_drawer_open">打开导航抽屉</string>
   <string name="navigation_drawer_close">关闭导航抽屉</string>
   <string name="navigation_toggle_drawer">切换到抽屉</string>
   <string name="navigation_toggle_tabbed">切换到选项卡</string>
+  <!-- Boeffla Sound Control -->
   <string name="boeffla_sound_control">Boeffla 声音控制</string>
   <string name="boeffla_sound_title">Boeffla 声控</string>
   <string name="boeffla_sound_summary">启用 boeffla 声控</string>

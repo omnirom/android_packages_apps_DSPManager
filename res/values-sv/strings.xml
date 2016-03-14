@@ -80,10 +80,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">Diskantreduktion</string>
   <string name="eq_preset_vocal_booster">Sångförstärkning</string>
   <string name="eq_preset_custom">Anpassad</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
+  <!-- Titles/Summaries -->
   <string name="save_preset">Spara förinställning</string>
   <string name="load_preset">Ladda förinställning</string>
   <string name="new_preset">Ny förinställning...</string>
   <string name="help_title">Hjälp</string>
+  <!-- Sound Control -->
+  <!-- Preferences -->
+  <!-- Drawer -->
   <string name="navigation_toggle_drawer">Byt till lådvy</string>
   <string name="navigation_toggle_tabbed">Byt till flikvy</string>
+  <!-- Boeffla Sound Control -->
 </resources>

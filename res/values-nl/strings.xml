@@ -81,6 +81,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">Hoge tonenverzwakker</string>
   <string name="eq_preset_vocal_booster">Stemversterker</string>
   <string name="eq_preset_custom">Aangepast</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
   <string name="category_wm8994_internal_speaker">Speaker</string>
   <string name="category_wm8994_signal_processing">Signaalverwerking</string>
   <string name="category_wm8994_headphone_amp">Headset</string>
@@ -89,6 +91,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">Analoge padenconfiguratie</string>
   <string name="category_wm8994_mic_settings">Microfooninstellingen</string>
   <string name="category_wm8994_microphone_recording">Microfoon</string>
+  <!-- Titles/Summaries -->
   <string name="pref_wm8994_microphone_recording_title">Preset voor opnemen</string>
   <string name="pref_wm8994_headphone_amp_title">Versterkerniveau</string>
   <string name="pref_wm8994_headphone_amp_summary">Analoge gain wijzigen</string>
@@ -122,7 +125,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="load_preset">Voorkeurinstelling laden</string>
   <string name="new_preset">Nieuwe voorkeurinstelling...</string>
   <string name="help_title">Help</string>
+  <!-- Sound Control -->
   <string name="soundcontrol_title">Geluidscontrole</string>
+  <!-- Preferences -->
   <string name="pref_soundcontrol_presets_title">Geluidscontrole voorkeurinstellingen</string>
   <string name="pref_soundcontrol_headphone_gain_title">Hoofdtelefoon voorvesterking</string>
   <string name="pref_soundcontrol_headphone_poweramp_gain_title">Hoofdtelefoon PowerAmp versterking</string>
@@ -143,11 +148,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="sc_preset_quiet">Stil</string>
   <string name="sc_preset_stock">Standaard</string>
   <string name="sc_value_changed">Stop en herstart de muziek om de waarden toe te passen!</string>
+  <!-- Drawer -->
   <string name="navigation_drawer_toggle">Schakel scherm</string>
   <string name="navigation_drawer_open">Open navigatiescherm</string>
   <string name="navigation_drawer_close">Sluit navigatiescherm</string>
   <string name="navigation_toggle_drawer">Wisselen naar navigatiescherm</string>
   <string name="navigation_toggle_tabbed">Wisselen naar tabbladen</string>
+  <!-- Boeffla Sound Control -->
   <string name="boeffla_sound_control">Boeffla geluidscontrole</string>
   <string name="boeffla_sound_title">Boeffla geluid</string>
   <string name="boeffla_sound_summary">Boeffla sound inschakelen</string>

@@ -33,21 +33,182 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="headset_title">Auriculars</string>
   <string name="speaker_title">Altaveu del telèfon</string>
   <string name="bluetooth_title">Dispositiu Bluetooth</string>
+  <string name="audio_effects">Efectes d\'àudio</string>
+  <string name="pref_unavailable">Funció no disponible en aquest dispositiu</string>
+  <string name="dsp_settings_headset">Configuració DSP - Auriculars</string>
+  <string name="dsp_settings_speaker">Configuració DSP - Altaveu del telèfon</string>
+  <string name="dsp_settings_bluetooth">Configuració DSP - Dispositiu Bluetooth</string>
+  <string name="dsp_settings_wm8994">Configuració DSP - WM8994</string>
   <string name="pref_dsp_title">Compressió del rang dinàmic</string>
   <string name="pref_dsp_summary_on">La compressió està habilitada</string>
-  <string name="pref_dsp_summary_off">La compressió està deshabilitada</string>
+  <string name="pref_dsp_summary_off">La compressió està inhabilitada</string>
   <string name="pref_dsp_enable">Habilita</string>
   <string name="pref_effect_title">Seleccioneu la potència dels efectes</string>
+  <string name="pref_effect_freq_title">Selecció de la freqüència central de l\'efecte</string>
   <string name="dialog_effect">Potència dels efectes</string>
   <string name="pref_equalizer_title">Equalitzador</string>
-  <string name="pref_equalizer_summary_on">L\'equalitzador està activat</string>
-  <string name="pref_equalizer_summary_off">L\'equalitzador està desactivat</string>
+  <string name="pref_equalizer_summary_on">L\'equalitzador està habilitat</string>
+  <string name="pref_equalizer_summary_off">L\'equalitzador està inhabilitat</string>
   <string name="pref_equalizer_enable">Habilita</string>
+  <string name="pref_equalizer_preset_title">Selecció de predefinits</string>
+  <string name="pref_equalizer_loudness_title">Compensació de sonoritat</string>
+  <string name="pref_bassboost_title">Potenciació de baixos</string>
+  <string name="pref_bassboost_summary_on">La potenciació de baixos està habilitada</string>
+  <string name="pref_bassboost_summary_off">La potenciació de baixos està inhabilitada</string>
+  <string name="pref_bassboost_enable">Habilita</string>
   <string name="pref_headset_virtual_title">Efecte d\'habitació virtual per als auriculars</string>
   <string name="pref_headset_virtual_summary_on">Efecte d\'habitació virtual habilitat</string>
-  <string name="pref_headset_virtual_summary_off">Efecte d\'habitació virtual deshabilitat</string>
+  <string name="pref_headset_virtual_summary_off">Efecte d\'habitació virtual inhabilitat</string>
   <string name="pref_headset_virtual_enable">Habilita</string>
   <string name="pref_room_title">Seleccioneu el tipus d\'habitació</string>
   <string name="dialog_room">Tipus d\'habitació</string>
   <string name="menu_reset">Reestableix</string>
+  <string name="pref_headset_stereowide_title">Ampliador d\'estèreo</string>
+  <string name="pref_headset_stereowide_summary_on">Ampliació d\'estèreo habilitada</string>
+  <string name="pref_headset_stereowide_summary_off">Ampliació d\'estèreo inhabilitada</string>
+  <string name="pref_headset_stereowide_enable">Habilita</string>
+  <string name="dialog_stereo">Ampliador d\'estèreo</string>
+  <string name="eq_preset_acoustic">Acústic</string>
+  <string name="eq_preset_bass_booster">Potenciador de baixos</string>
+  <string name="eq_preset_bass_reducer">Atenuador de baixos</string>
+  <string name="eq_preset_classical">Clàssica</string>
+  <string name="eq_preset_deep">Fonda</string>
+  <string name="eq_preset_flat">Plana</string>
+  <string name="eq_preset_r_and_b">R&amp;B</string>
+  <string name="eq_preset_rock">Rock</string>
+  <string name="eq_preset_small_speakers">Altaveus petits</string>
+  <string name="eq_preset_treble_booster">Potenciador d\'aguts</string>
+  <string name="eq_preset_treble_reducer">Atenuador d\'aguts</string>
+  <string name="eq_preset_vocal_booster">Potenciador vocal</string>
+  <string name="eq_preset_custom">Personalitzat</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
+  <string name="category_wm8994_internal_speaker">Altaveu</string>
+  <string name="category_wm8994_signal_processing">Processament de senyal</string>
+  <string name="category_wm8994_headphone_amp">Auriculars</string>
+  <string name="category_wm8994_codec_optimization">Optimització del còdec</string>
+  <string name="category_wm8994_dac_config">Configuració del convertidor digital/analògic</string>
+  <string name="category_wm8994_analog_path">Configuració del camí analògic</string>
+  <string name="category_wm8994_mic_settings">Configuració del micròfon</string>
+  <string name="category_wm8994_microphone_recording">Micròfon</string>
+  <!-- Titles/Summaries -->
+  <string name="pref_wm8994_microphone_recording_title">Predefinits de gravació</string>
+  <string name="pref_wm8994_headphone_amp_title">Nivell d\'amplificador</string>
+  <string name="pref_wm8994_headphone_amp_summary">Personalitza el guany analògic</string>
+  <string name="pref_wm8994_headphone_amp_dlg_title">Nivell d\'amplificador dels auriculars</string>
+  <string name="pref_wm8994_headphone_amp_dlg_desc">Guany analògic</string>
+  <string name="pref_wm8994_bass_boost_enable_title">Potenciació de baixos</string>
+  <string name="pref_wm8994_bass_boost_enable_summary">Controls avançats de la potenciació de baixos</string>
+  <string name="pref_wm8994_bass_boost_title">Interval de potenciació de baixos</string>
+  <string name="pref_wm8994_bass_boost_summary">Gestió avançada de l\'interval dinàmic</string>
+  <string name="pref_wm8994_bass_boost_preset_title">Potenciació de baixos predefinida</string>
+  <string name="pref_wm8994_bass_boost_dlg_title">Potenciació de baixos</string>
+  <string name="pref_wm8994_bass_boost_gain_dlg_desc">Guany</string>
+  <string name="pref_wm8994_bass_boost_range_dlg_desc">Interval de potenciació de baixos</string>
+  <string name="pref_wm8994_control_enable_title">Habilita el control WM8994</string>
+  <string name="pref_wm8994_control_enable_summary">Controls avançats del processador de so WM8994</string>
+  <string name="pref_wm8994_speaker_tuning_title">Ajustos per a música</string>
+  <string name="pref_wm8994_speaker_tuning_summary">Configura l\'equalitzador del maquinari per a un so amb més baixos i més equilibrat</string>
+  <string name="pref_wm8994_mono_downmix_title">Mescla de so mono</string>
+  <string name="pref_wm8994_mono_downmix_summary">Mescla el so estèreo a mono (per a sortides estèreo, com uns auriculars)</string>
+  <string name="pref_wm8994_stereo_expansion_title">Expansió estèreo</string>
+  <string name="pref_wm8994_stereo_expansion_summary">«Expansió» del so estèreo mitjançant processament del senyal digital</string>
+  <string name="pref_wm8994_dac_direct_title">D/AC directe</string>
+  <string name="pref_wm8994_dac_direct_summary">Accés directe al convertidor digital/analògic, evitant el mesclador de canals. S\'obté un àudio més net (relació senyal/soroll més alta)</string>
+  <string name="pref_wm8994_dac_osr128_title">Reproducció hi-fi</string>
+  <string name="pref_wm8994_dac_osr128_summary">Sobremostreig a 128x del convertidor digital a analògic — so més net en reproduir música</string>
+  <string name="pref_wm8994_adc_osr128_title">Gravació hi-fi</string>
+  <string name="pref_wm8994_adc_osr128_summary">Sobremostreig a 128x del convertidor digital a analògic — augmenta la qualitat de les gravacions</string>
+  <string name="pref_wm8994_fll_tuning_title">Rellotge d\'àudio personalitzat</string>
+  <string name="pref_wm8994_fll_tuning_summary">Utilitza un origen de rellotge d\'àudio WM8994 personalitzat — millora la qualitat del so</string>
+  <string name="save_preset">Desa el predefinit</string>
+  <string name="load_preset">Carrega un predefinit</string>
+  <string name="new_preset">Predefinit nou...</string>
+  <string name="help_title">Ajuda</string>
+  <string name="help_text"><b>Què és el DSP Manager?</b> \n\n El DSP Manager és una app d\'ajustament d\'àudio per sortida. <i>DSP</i> ve de processament de senyal digital, i <i>Manager</i> es refereix al fet que el DSP en realitat no s\'executa dins de l\'app mateixa; el Manager només ho pot habilitar per a apps que compleixen les especificacions d\'efectes d\'àudio d\'Android, és a dir, la majoria dels reproductors de música. 
+\n\n\n <b>Filosofia</b> 
+\n\n El processament d\'àudio de CyanogenMod és compatible amb diferents tipus de sortida: auriculars amb cable, altaveu del telèfon i auriculars per bluetooth. Hi ha un panell de configuració separat per a cada tipus de sortida. La filosofia del DSP Manager és corregir les deficiències particulars de cada sortida d\'àudio per arribar a la experiència d\'audició òptima per cadascuna.
+ \n\n A diferència amb efectes d\'àudio de AOSP, hi ha cap configuració per app. Això és una elecció deliberada del disseny: és la sortida el que ens preocupa, no que l\'aplicació que genera l\'àudio per al qual treballa el DSP Manager.
+\n\n\n <b>Característiques</b>
+\n\n
+1. <b>Compressíó del rang dinàmic (RDC)</b>
+\n\n
+Aquest efecte estima la sonoritat de l\'àudio percebuda per un oient mitjà i impulsa un control de guany basat en aquesta estimació. La situació d\'ús principal és en ambients sorollosos com ara cotxes o al carrer, on parts de música fluixa estan en risc de ser ofegades pel soroll de fons. 
+\n\n
+L\'únic ajustament determina la força que el DSP Manager intentarà mantenir el volum d\'àudio al nivell objectiu. No hi ha cap equivalent d\'AOSP per a aquest efecte DSP.
+\n\n\n
+2. <b>Potenciació de baixos</b>
+\n\n
+La potenciació de baixos és un filtre simple de baix nivell que es pot utilitzar per afegir un èmfasi a freqüències de 55 Hz i menors. La potenciació és del voltant de 6 dB i es modifica pel paràmetre «força», que afegeix un filtre de ressonància a la banda dels 55 Hz, donant un èmfasi addicional a aquesta freqüència. L\'efecte està dissenyat per combatre la pèrdua de freqüències baix habitual als altaveus petits i als auriculars supra-aurals que no encaixen bé amb el canal auricular de l\'usuari.
+\n\n\n
+3. <b>Equalitzador</b>
+\n\n
+És un equalitzador de 6 bandes de 16, 64, 250, 1000, 4000 i 16000 Hz. Hi ha algunes configuracions generals, i també es pot personalitzar la resposta de freqüència fent tocs al gràfic de l\'equalitzador. L\'efecte s\'hauria d\'utilitzar per ajustar la resposta de freqüència al gust personal de l\'usuari, o a les capacitats particulars dels auriculars o altaveus disponibles.
+\n\n
+L\'equalitzador també conté un filtre de compensació de sonoritat, que equalitza els canvis en la resposta de freqüència de l\'oïda basada en el nivell de pressió sonora que arriba a l\'oïda de l\'usuari. Cal uns auriculars amb cable, i el valor del paràmetre força s\'ha d\'ajustar correctament per tal que l\'efecte funcioni tal i com està dissenyat.
+\n\n
+Per seleccionar el valor adequat per la força de compensació, utilitzeu el volum de música més baix, i trieu un espectre ample de música sorollosa com rock o metal. Intenteu trobar un punt on el baix es potencia fins a ser audible i sembli equilibrat amb la resta del material. Un cop que la compensació s\'ha configurat correctament, el baix s\'ha de mantenir al mateix nivell en relació als altres instruments independentment del nivell d\'audició. D\'altra banda, si la música comença a sonar amb massa baixos a nivells més alts d\'audició, la compensació que s\'ha establert és excessiva i s\'ha de reduir.
+\n\n
+La compensació s\'afegeix als ajustaments escollits per l\'usuari. Si només es desitja compensació, l\'equalitzador s\'ha de deixar al perfil «Pla». \n\n\n
+4. <b>Filtre auriculars</b>
+\n\n
+El filtra auriculars és un disseny de retroalimentació inspirat en el famós circuit bs2b analògic. L\'efecte passa so mono sense modificar i ajusta la diferència de senyal senyal a través d\'un filtre de baix nivell acosta conjuntament l\'ombra del cap i el retard interaural, donant el tipus adequat de pistes psicoacústiques per a les oïdes de l\'usuari. La intenció és impedir la fatiga de l\'oient derivada de la separació inversemblant de l\'estèreo inherent a tots els auriculars. L\'efecte s\'ha d\'activar sempre que s\'utilitzin auriculars estèreo.
+\n\n
+Com que la mescla reduieix una mica la separació estèreo, hi ha un efecte de reverberació Haas, que es pot utilitzar per augmentar l\'amplada de la imatge estèreo percebuda. Això ho controla el paràmetre «Tipus d\'habitació».</string>
+  <!-- Sound Control -->
+  <string name="soundcontrol_title">Control de so</string>
+  <!-- Preferences -->
+  <string name="pref_soundcontrol_presets_title">Controls de so predefinits</string>
+  <string name="pref_soundcontrol_headphone_gain_title">Guany dels auriculars</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_title">Guany PowerAmp dels auriculars</string>
+  <string name="pref_soundcontrol_microphone_gain_title">Guany del micròfon</string>
+  <string name="pref_soundcontrol_speaker_gain_title">Guany de l\'altaveu</string>
+  <string name="pref_soundcontrol_headphone_gain_left">Auricular (esquerra)</string>
+  <string name="pref_soundcontrol_headphone_gain_right">Auricular (dreta)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_left">Auricular PowerAmp (esquerra)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_right">Auricular PowerAmp (dreta)</string>
+  <string name="pref_soundcontrol_microphone_handset_gain_title">Micròfon del receptor</string>
+  <string name="pref_soundcontrol_microphone_camcorder_gain_title">Micròfon de la càmera</string>
+  <string name="sc_version_title">Control de so</string>
+  <string name="sc_preset_summary">Trieu un predefinit per carregar</string>
+  <string name="sc_preset_loaded">S\'ha carregat el predefinit \"%s\"!</string>
+  <string name="sc_preset_custom">Personalitzat</string>
+  <string name="sc_preset_quality">Qualitat</string>
+  <string name="sc_preset_loudness">Sonoritat</string>
+  <string name="sc_preset_quiet">Silenciós</string>
+  <string name="sc_preset_stock">De fàbrica</string>
+  <string name="sc_value_changed">Atureu i repreneu la música per aplicar els valors!</string>
+  <!-- Drawer -->
+  <string name="navigation_drawer_toggle">Commuta el calaix</string>
+  <string name="navigation_drawer_open">Obre el calaix de navegació</string>
+  <string name="navigation_drawer_close">Tanca el calaix de navegació</string>
+  <string name="navigation_toggle_drawer">Canvia a calaix</string>
+  <string name="navigation_toggle_tabbed">Canvia a pestanyes</string>
+  <!-- Boeffla Sound Control -->
+  <string name="boeffla_sound_control">Control de so Boeffla</string>
+  <string name="boeffla_sound_title">So Boeffla</string>
+  <string name="boeffla_sound_summary">Habilita el so Boeffla</string>
+  <string name="bass_freq_tuning">Ajustament de la freqüència de baixos</string>
+  <string name="dac_direct_summary">Evita el canal analògic</string>
+  <string name="dac_direct_title">DAC directe</string>
+  <string name="dac_oversampling_summary">Sobremostreig 128x</string>
+  <string name="dac_oversampling_title">Sobremostreig DAC</string>
+  <string name="fll_tuning_summary">Ajusta el rellotge del xip per millorar la qualitat</string>
+  <string name="fll_tuning_title">Ajustament FLL</string>
+  <string name="general_title">General</string>
+  <string name="headphone_title">Auricular</string>
+  <string name="mic_title">Micròfon</string>
+  <string name="mic_call">Volum durant les trucades</string>
+  <string name="mic_general">Volum general</string>
+  <string name="mono_downmix_summary">Converteix estèreo en mono</string>
+  <string name="mono_downmix_title">Mescla de so mono</string>
+  <string name="over_saturation_suppress">Supressió de sobresaturació</string>
+  <string name="privacy_mode_summary">Silencia l\'altaveu del telèfon si els auriculars estan connectats</string>
+  <string name="privacy_mode_title">Mode privacitat</string>
+  <string name="speaker_tuning_summary">Ajusta l\'altaveu del telèfon per millorar els baixos</string>
+  <string name="speaker_tuning_title">Ajustament de l\'altaveu</string>
+  <string name="speaker_volume_title">Volum de l\'altaveu</string>
+  <string name="stereo_expansion_summary">Millora la profunditat i claredat del so</string>
+  <string name="stereo_expansion_title">Expansió estèreo</string>
+  <string name="volumes_title">Volums</string>
 </resources>

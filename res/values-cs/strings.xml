@@ -81,6 +81,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">Potlačení výšek</string>
   <string name="eq_preset_vocal_booster">Zvýraznění řeči</string>
   <string name="eq_preset_custom">Vlastní</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
   <string name="category_wm8994_internal_speaker">Reproduktor</string>
   <string name="category_wm8994_signal_processing">Zpracování signálu</string>
   <string name="category_wm8994_headphone_amp">Sluchátka</string>
@@ -89,6 +91,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">Nastavení analogové trasy</string>
   <string name="category_wm8994_mic_settings">Nastavení mikrofonu</string>
   <string name="category_wm8994_microphone_recording">Mikrofon</string>
+  <!-- Titles/Summaries -->
   <string name="pref_wm8994_microphone_recording_title">Předvolba nahrávání</string>
   <string name="pref_wm8994_headphone_amp_title">Úroveň zesilovače</string>
   <string name="pref_wm8994_headphone_amp_summary">Upravit analogové zesílení</string>
@@ -122,7 +125,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="load_preset">Načíst předvolbu</string>
   <string name="new_preset">Nová předvolba...</string>
   <string name="help_title">Uživatelská příručka</string>
+  <string name="help_text"><b>Co je DSP Manager?</b> \n\n DSP Manager je předvýstupová úprava zvuku. <i>DSP</i> je zkratka pro digitální zpracování signálu, a <i>manažer</i> část odkazuje na skutečnost, že DSP není ve skutečnosti spuštěn uvnitř samotné aplikace; manažer se může pouze povolit pro aplikace, které jsou kompatibilní se specifikací Android je zvukovými efekty, tedy většina hudebních přehrávačů. \n\n\n <b>filozofie</b> \n\n CyanogenMod zpracování zvuku podporuje různé kategorie výstupu: drátová sluchátka, reproduktor telefonu a sluchátka. Pro každou kategorii výstupu je samostatný konfigurační panel. Filozofie DSP Manageru je opravit konkrétní nedostatky každého zvukového výstupu s cílem dosáhnout nejoptimálnějšího zážitku z poslechu. \n\n Na rozdíl od AOSP zvukových efektů, neexistují žádná nastavení aplikace. Je to záměrná designová volba: Staráme se primárně o výstup, ne která aplikace generuje zvuk pro DSP Manager. \n\n\n <b>funkce</b> \n\n 1. <b>Komprese dynamiky (KDR)</b> \n\n tento účinek odhaduje hlasitost zvuku podle průměrného posluchače a jednotky řízení zisku na základě tohoto odhadu. Hlavní použití je s hlučném prostředí, jako například v autě nebo na ulici, kde klidné části hudby jsou v riziko, že přehlušil hluk v pozadí. \n\n laditelné jediný určuje, jak moc DSP Manager bude snažit udržovat audio hlasitosti na cílové úrovni. Neexistuje žádný AOSP ekvivalentní tohoto DSP efekt. \n\n\n 2. <b>Zdůraznění basů</b> \n\n, bass boost je jednoduchý lowpass filtr, který lze použít k přidání důrazu na 55 Hz a nižší frekvence. Podporu je asi 6 dB a změnit parametrem "sílu", který přidává rezonance filtru v pásmu 55 Hz, což frekvenci zvláštní důraz. Účinek je navržen tak, aby boj proti ztrátě společného s malými a supra sluchová reproduktorech, které nejsou pevně pár s uživatele zvukovodu basové frekvence. \n\n\n 3. <b>Ekvalizér</b> \n\n je 6pásmový ekvalizér s pásem na 16, 64, 250, 1000, 4000 a 16000 Hz. Některé společné předvolby jsou k dispozici, a frekvenční lze upravit poklepáním na graf ekvalizéru. Účinek by měl využít k ladění frekvenční uživatele osobního vkusu, nebo na konkrétní možnosti dostupné sluchátka nebo reproduktory. \n\n ekvalizéru obsahuje také hlasitost vyrovnání filtr, který vyrovnává změny v ucho frekvenční rozsah založené na hladinu akustického tlaku, která dosahuje uživatele ucho. Drátová sluchátka je požadováno, a hodnotu parametru síly musí správně naladěn, než účinek bude pracovat správně. \n\n Vyberte správnou hodnotu pro kompenzaci sílu, nejtišší hlasitost hudby a zvolit nějakou hudbu nahlas široký spektrum rocku nebo metalu. Pokuste se najít prostředí, kde bass je posílen zpět do slyšitelnost a zdá se, že vyvážená a zbytkem materiálu. Po vyrovnání je správně nakonfigurována, baskytara by měla zůstat na stejné úrovni vzhledem k jiné nástroje, bez ohledu na úroveň poslechu. Na druhé straně když hudba začne zvuk basové těžké ve vyšších hladinách poslechu, kompenzace je zřejmě nastavena příliš silný a by měla být snížena. \n\n kompenzace je přidán do zvolené nastavení uživatele. Jen kdyby odškodnění, je žádoucí, ekvalizér mělo být ponecháno v "Plochý" nastavení. \n\n\n 4. <b>Headset filtr</b> \n\n sluchátka filtr je bateriového design inspirovaný slavnou bs2b analogových obvodů. Účinek prochází mono zvuk beze změny a upraví rozdíl signál prostřednictvím lowpass filtr, který pohybuje hlavou stín a interaural zpoždění najednou, což správný druh přednost vyššímu psychoakustickému stopy pro uživatelské ušima. Záměrem je, aby posluchač únava z nepravděpodobné spojená s všechny Sluchátka stereo oddělení. Účinek by měla být povolena, kdykoliv pomocí stereo sluchátka s mikrofonem. \n\n protože míchání poněkud snižuje počet stereo oddělení, je efekt reverb Haas, který lze použít ke zvýšení šířku vnímané stereo obrazu. To je řízen ovládacím \"Typ pokoje\".</string>
+  <!-- Sound Control -->
   <string name="soundcontrol_title">Nastavení zvuku</string>
+  <!-- Preferences -->
   <string name="pref_soundcontrol_presets_title">Předvolby nastavení</string>
   <string name="pref_soundcontrol_headphone_gain_title">Zisk sluchátek</string>
   <string name="pref_soundcontrol_headphone_poweramp_gain_title">PowerAmp zisk sluchátek</string>
@@ -143,11 +149,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="sc_preset_quiet">Ticho</string>
   <string name="sc_preset_stock">Stock</string>
   <string name="sc_value_changed">Abyste použili tuto hodnotu, zastavte a znovu spusťte hudbu!</string>
+  <!-- Drawer -->
   <string name="navigation_drawer_toggle">Přepnout zobrazení</string>
   <string name="navigation_drawer_open">Otevřít navigační lištu</string>
   <string name="navigation_drawer_close">Zavřít navigační panel</string>
   <string name="navigation_toggle_drawer">Přepnout do navigace</string>
   <string name="navigation_toggle_tabbed">Přepnout do tabulky</string>
+  <!-- Boeffla Sound Control -->
   <string name="boeffla_sound_control">Boeffla ovládání zvuku</string>
   <string name="boeffla_sound_title">Boeffla zvuk</string>
   <string name="boeffla_sound_summary">Povolit boeffla zvuk</string>

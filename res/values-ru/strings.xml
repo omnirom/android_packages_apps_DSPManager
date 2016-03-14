@@ -81,6 +81,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">Пониженные ВЧ</string>
   <string name="eq_preset_vocal_booster">Усиленный вокал</string>
   <string name="eq_preset_custom">Пользовательские настройки</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
   <string name="category_wm8994_internal_speaker">Динамик</string>
   <string name="category_wm8994_signal_processing">Обработка сигнала</string>
   <string name="category_wm8994_headphone_amp">Наушники</string>
@@ -89,6 +91,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">Настройки аналогового пути</string>
   <string name="category_wm8994_mic_settings">Настройки микрофона</string>
   <string name="category_wm8994_microphone_recording">Микрофон</string>
+  <!-- Titles/Summaries -->
   <string name="pref_wm8994_microphone_recording_title">Предустановки записи</string>
   <string name="pref_wm8994_headphone_amp_title">Уровень усилителя</string>
   <string name="pref_wm8994_headphone_amp_summary">Настройка аналогового усиления</string>
@@ -122,7 +125,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="load_preset">Загрузить предустановку</string>
   <string name="new_preset">Новая предустановка...</string>
   <string name="help_title">Руководство пользователя</string>
+  <!-- Sound Control -->
   <string name="soundcontrol_title">Управление звуком</string>
+  <!-- Preferences -->
   <string name="pref_soundcontrol_presets_title">Предустановки управления звуком</string>
   <string name="pref_soundcontrol_headphone_gain_title">Усиление наушников</string>
   <string name="pref_soundcontrol_headphone_poweramp_gain_title">PowerAmp - усиление наушников</string>
@@ -143,11 +148,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="sc_preset_quiet">Тихо</string>
   <string name="sc_preset_stock">Сток</string>
   <string name="sc_value_changed">Пожалуйста, остановите и возобновите проигрывание музыки, чтобы применить значения!</string>
+  <!-- Drawer -->
   <string name="navigation_drawer_toggle">Переключить панель</string>
   <string name="navigation_drawer_open">Открыть панель навигации</string>
   <string name="navigation_drawer_close">Закрыть панель навигации</string>
   <string name="navigation_toggle_drawer">Режим общего меню</string>
   <string name="navigation_toggle_tabbed">Режим вкладок</string>
+  <!-- Boeffla Sound Control -->
   <string name="boeffla_sound_control">управления звуком Boeffla</string>
   <string name="boeffla_sound_title">звук Boeffla</string>
   <string name="boeffla_sound_summary">Включить звук boeffla</string>

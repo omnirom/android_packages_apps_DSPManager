@@ -55,6 +55,11 @@
     <item>Mitjà</item>
     <item>Extrem</item>
   </string-array>
+  <string-array name="bassboost_modes">
+    <item>Lleuger</item>
+    <item>Moderat</item>
+    <item>Extrem</item>
+  </string-array>
   <string-array name="wm8994_bassboost_modes">
     <item>Estàndard</item>
     <item>Altaveus petits</item>

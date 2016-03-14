@@ -75,6 +75,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">高音弱化</string>
   <string name="eq_preset_vocal_booster">人聲強化</string>
   <string name="eq_preset_custom">自訂</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
   <string name="category_wm8994_internal_speaker">手機喇叭</string>
   <string name="category_wm8994_signal_processing">訊號處理</string>
   <string name="category_wm8994_headphone_amp">有線耳機</string>
@@ -83,6 +85,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">類比路徑設定</string>
   <string name="category_wm8994_mic_settings">麥克風設定</string>
   <string name="category_wm8994_microphone_recording">麥克風</string>
+  <!-- Titles/Summaries -->
   <string name="pref_wm8994_microphone_recording_title">錄音設置</string>
   <string name="pref_wm8994_headphone_amp_title">擴音器水平</string>
   <string name="pref_wm8994_headphone_amp_summary">自訂類比增益</string>
@@ -113,4 +116,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_wm8994_fll_tuning_title">調整音訊時脈</string>
   <string name="pref_wm8994_fll_tuning_summary">使用已調整的音訊時脈源 — 改善聲音品質</string>
   <string name="help_title">說明</string>
+  <!-- Sound Control -->
+  <!-- Preferences -->
+  <!-- Drawer -->
+  <!-- Boeffla Sound Control -->
 </resources>

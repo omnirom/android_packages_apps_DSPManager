@@ -81,6 +81,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">Redukcja tonów wysokich</string>
   <string name="eq_preset_vocal_booster">Podbicie wokalu</string>
   <string name="eq_preset_custom">Własne</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
   <string name="category_wm8994_internal_speaker">Głośnik</string>
   <string name="category_wm8994_signal_processing">Przetwarzanie sygnału</string>
   <string name="category_wm8994_headphone_amp">Zestaw słuchawkowy</string>
@@ -89,6 +91,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="category_wm8994_analog_path">Konfiguracja ścieżki analogowej</string>
   <string name="category_wm8994_mic_settings">Ustawienia mikrofonu</string>
   <string name="category_wm8994_microphone_recording">Mikrofon</string>
+  <!-- Titles/Summaries -->
   <string name="pref_wm8994_microphone_recording_title">Ustawienie nagrywania</string>
   <string name="pref_wm8994_headphone_amp_title">Poziom wzmacniacza</string>
   <string name="pref_wm8994_headphone_amp_summary">Dopasuj wzmocnienie analogowe</string>
@@ -122,7 +125,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="load_preset">Załaduj ustawienie</string>
   <string name="new_preset">Nowe ustawienie...</string>
   <string name="help_title">Pomoc</string>
+  <!-- Sound Control -->
   <string name="soundcontrol_title">Kontrola dźwięku</string>
+  <!-- Preferences -->
   <string name="pref_soundcontrol_presets_title">Kontrola ustawień dźwięku</string>
   <string name="pref_soundcontrol_headphone_gain_title">Wzmocnienie słuchawek</string>
   <string name="pref_soundcontrol_headphone_poweramp_gain_title">Podbicie wzmacniacza słuchawek</string>
@@ -143,11 +148,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="sc_preset_quiet">Cichy</string>
   <string name="sc_preset_stock">Domyślny</string>
   <string name="sc_value_changed">Proszę zatrzymać i wznowić muzykę by zastosować wartości!</string>
+  <!-- Drawer -->
   <string name="navigation_drawer_toggle">Przełącznik menu</string>
   <string name="navigation_drawer_open">Otwórz wysuwane menu</string>
   <string name="navigation_drawer_close">Zamknij wysuwane menu</string>
   <string name="navigation_toggle_drawer">Przełącz się do menu</string>
   <string name="navigation_toggle_tabbed">Przełącz się do kart</string>
+  <!-- Boeffla Sound Control -->
   <string name="boeffla_sound_control">Zarządzanie dźwiękiem Boeffla</string>
   <string name="boeffla_sound_title">Dźwięk Boeffla</string>
   <string name="boeffla_sound_summary">Włącz dźwięk Boeffla</string>

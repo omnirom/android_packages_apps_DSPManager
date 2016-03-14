@@ -73,4 +73,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="eq_preset_treble_reducer">Diskantin vaimennus</string>
   <string name="eq_preset_vocal_booster">Laulun korostus</string>
   <string name="eq_preset_custom">Muokattu</string>
+  <!-- WM8994 -->
+  <!-- Categories -->
+  <!-- Titles/Summaries -->
+  <!-- Sound Control -->
+  <!-- Preferences -->
+  <!-- Drawer -->
+  <!-- Boeffla Sound Control -->
 </resources>
