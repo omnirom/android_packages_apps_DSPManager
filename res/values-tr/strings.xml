@@ -44,6 +44,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_dsp_summary_off">Sıkıştırma etkin değil</string>
   <string name="pref_dsp_enable">Etkinleştir</string>
   <string name="pref_effect_title">Efekt Şiddetini Seçin</string>
+  <string name="pref_effect_freq_title">Merkez frekans efektini şeç</string>
   <string name="dialog_effect">Efekt Şiddeti</string>
   <string name="pref_equalizer_title">Ekolayzer</string>
   <string name="pref_equalizer_summary_on">Ekolayzer etkin</string>
@@ -62,6 +63,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_room_title">Oda Tipini Seçin</string>
   <string name="dialog_room">Oda Tipi</string>
   <string name="menu_reset">Sıfırla</string>
+  <string name="pref_headset_stereowide_title">Stereo Genişletici</string>
+  <string name="pref_headset_stereowide_summary_on">Stereo Genişletici etkin</string>
+  <string name="pref_headset_stereowide_summary_off">Stereo Genişletici devre dışı</string>
+  <string name="pref_headset_stereowide_enable">Etkinleştir</string>
+  <string name="dialog_stereo">Stereo Genişletici</string>
   <string name="eq_preset_acoustic">Akustik</string>
   <string name="eq_preset_bass_booster">Bas Yükseltici</string>
   <string name="eq_preset_bass_reducer">Bas Azaltıcı</string>
@@ -115,8 +121,64 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_wm8994_adc_osr128_summary">128x örnekleme ile analogdan-dijitale dönüştürücü — kaydedilen seslerin kalitesini arttırır</string>
   <string name="pref_wm8994_fll_tuning_title">Ayarlı ses frekansı</string>
   <string name="pref_wm8994_fll_tuning_summary">Ayarlı WM8994 ses frekans kaynağını kullan — sesin kalitesini arttırır</string>
+  <string name="save_preset">Önayarı kaydet</string>
+  <string name="load_preset">Önayarı yükle</string>
+  <string name="new_preset">Yeni hazır ayar...</string>
+  <string name="help_title">Yardım</string>
   <!-- Sound Control -->
+  <string name="soundcontrol_title">Ses Kontrolü</string>
   <!-- Preferences -->
+  <string name="pref_soundcontrol_presets_title">Ses kontrolü hazır ayarları</string>
+  <string name="pref_soundcontrol_headphone_gain_title">Kulaklık kazancı</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_title">Kulaklık PowerAmp kazanç</string>
+  <string name="pref_soundcontrol_microphone_gain_title">Mikrofon kazancı</string>
+  <string name="pref_soundcontrol_speaker_gain_title">Hoparlör kazancı</string>
+  <string name="pref_soundcontrol_headphone_gain_left">Kulaklık (Sol)</string>
+  <string name="pref_soundcontrol_headphone_gain_right">Kulaklık (Sağ)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_left">Kulaklık PowerAmp (sol)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_right">Kulaklık PowerAmp (sağ)</string>
+  <string name="pref_soundcontrol_microphone_handset_gain_title">Kulaklık mikrofonu</string>
+  <string name="pref_soundcontrol_microphone_camcorder_gain_title">Video kamera mikrofonu</string>
+  <string name="sc_version_title">Ses Kontrolü</string>
+  <string name="sc_preset_summary">Yüklemek için bir hazır ayar seçin</string>
+  <string name="sc_preset_loaded">Önceden ayarlanmış \"%s\" yüklendi!</string>
+  <string name="sc_preset_custom">Özel</string>
+  <string name="sc_preset_quality">Kalite</string>
+  <string name="sc_preset_loudness">Yüksek ses</string>
+  <string name="sc_preset_quiet">Sessiz</string>
+  <string name="sc_preset_stock">Stok</string>
+  <string name="sc_value_changed">Lütfen ayarların etkin olması için müziği durdurup tekrar devam edin!</string>
   <!-- Drawer -->
+  <string name="navigation_drawer_toggle">Menüyü aç/kapat</string>
+  <string name="navigation_drawer_open">Gezinti menüsünü aç</string>
+  <string name="navigation_drawer_close">Gezinti menüsünü kapat</string>
+  <string name="navigation_toggle_drawer">Menüye Geç</string>
+  <string name="navigation_toggle_tabbed">Sekmeliye Geç</string>
   <!-- Boeffla Sound Control -->
+  <string name="boeffla_sound_control">Boeffla ses kontrol</string>
+  <string name="boeffla_sound_title">Boeffla Ses</string>
+  <string name="boeffla_sound_summary">Boeffla Ses etkinleştir</string>
+  <string name="bass_freq_tuning">Bass frekans ayarı</string>
+  <string name="dac_direct_summary">Analog kanal kaldır</string>
+  <string name="dac_direct_title">DAC doğrudan</string>
+  <string name="dac_oversampling_summary">128x örnekleme</string>
+  <string name="dac_oversampling_title">DAC örnekleme</string>
+  <string name="fll_tuning_summary">Çip saatini daha iyi kalite için ayarla</string>
+  <string name="fll_tuning_title">FLL Ayarı</string>
+  <string name="general_title">Genel</string>
+  <string name="headphone_title">Kulaklık</string>
+  <string name="mic_title">Mikrofon</string>
+  <string name="mic_call">Gelen çağrı ses düzeyi</string>
+  <string name="mic_general">Genel ses</string>
+  <string name="mono_downmix_summary">Stereo sesi mono sese çevir</string>
+  <string name="mono_downmix_title">Mono çevrimi</string>
+  <string name="over_saturation_suppress">Aşırı canlılığı önleme</string>
+  <string name="privacy_mode_summary">Kulaklık takılı iken telefonun hoparlörü sessiz</string>
+  <string name="privacy_mode_title">Gizlilik modu</string>
+  <string name="speaker_tuning_summary">Telefon hoparlörünü daha iyi bas için ayarla</string>
+  <string name="speaker_tuning_title">Hoparlör ayarlama</string>
+  <string name="speaker_volume_title">Hoparlör sesi</string>
+  <string name="stereo_expansion_summary">Ses derinliğini ve netliğini geliştir</string>
+  <string name="stereo_expansion_title">Stereo genişletme</string>
+  <string name="volumes_title">Ses Düzeyleri</string>
 </resources>

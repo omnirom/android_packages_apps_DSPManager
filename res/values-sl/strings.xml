@@ -127,7 +127,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="help_title">Pomoč</string>
   <string name="help_text"><b>Kaj je Upravljalnik DSP?</b>
 \n\n
-Upravljalnik DSP je program za prilagoditev zvoka glede na posamezni izhod.  <i>DSP</i> pomeni digitalna obdelava signala (angl. Digital Signal Processing) in <i>Upravljalnik</i> se nanaša na dejstvo, da se DSP ne izvaja znotraj samega programa; upravljalnik ga lahko samo omogoči za programe, ki so v skladu z Androidovimi določili o zvočnih učinkih, tj. večino predvajalnikov glasbe.
+Upravljalnik DSP je program za prilagajanje zvoka glede na posamezni izhod.  <i>DSP</i> pomeni digitalna obdelava signala (angl. Digital Signal Processing) in <i>Upravljalnik</i> se nanaša na dejstvo, da se DSP ne izvaja znotraj samega programa; upravljalnik ga lahko samo omogoči za programe, ki so v skladu z Androidovimi določili o zvočnih učinkih, tj. večino predvajalnikov glasbe.
 \n\n\n
 <b>Filozofija</b>
 \n\n
@@ -148,7 +148,7 @@ Ojačitev nizkih tonov je preprost nizkopropustni filter, ki se ga lahko uporabi
 \n\n\n
 3. <b>Izenačevalnik</b>
 \n\n
-To je 6-pasovni izenačevalnik s 16, 64, 250, 1000, 4000 in 16000-hertznimi pasovi.  Priskrbljene so nekatere pogoste prednastavitve, s tapom na graf izenačevalnika pa lahko prilagodite tudi frekvenčni odziv.  Učinek se uporablja za naravnavo frekvenčnega odziva na uporabnikov osebni okus ali določene zmožnosti razpoložljivih slušalk in zvočnikov.
+To je 6-pasovni izenačevalnik s 16, 64, 250, 1000, 4000 in 16000-hertznimi pasovi.  Priskrbljene so nekatere pogoste prednastavitve, z dotikom na graf izenačevalnika pa lahko prilagodite tudi frekvenčni odziv.  Učinek se uporablja za naravnavo frekvenčnega odziva na uporabnikov osebni okus ali določene zmožnosti razpoložljivih slušalk in zvočnikov.
 \n\n
 Izenačevalnik vsebuje tudi filter za izravnavo glasnosti, ki izenači spremembe v odzivu frekvence za ušesa glede na raven tlaka zvoka, ki doseže uporabnikovo uho. Zahtevana je uporaba žičnih slušalk in za pravilno delovanje učinka je treba najprej pravilno naravnati vrednost parametra moči.
 \n\n
