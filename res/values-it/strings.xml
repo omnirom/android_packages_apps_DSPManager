@@ -125,6 +125,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="load_preset">Carica predefinito</string>
   <string name="new_preset">Nuovo predefinito\u2026</string>
   <string name="help_title">Manuale d\'uso</string>
+  <string name="help_text"><b>Che cosa è DSP Manager?</b> \n\n DSP Manager è un\'applicazione per la regolazione dell\'uscita audio. <i>DSP</i> è l\'acronimo di elaborazione del segnale digitale, e la parte di <i>Gestione</i> si riferisce al fatto che il DSP non viene effettivamente eseguito all\'interno dell\'app stessa; la gestione può abilitarsi solo per le app che sono conformi alle specifiche degli effetti audio di  Android, cioè maggior parte dei lettori musicali. Supporta l\'elaborazione audio di \n\n\n <b>Filosofia</b> \n\nL\'elaborazione audio CyanogenMod supporta diverse categorie di uscita: cuffia a filo, altoparlante telefono e auricolare bluetooth. Esiste un pannello di configurazione separato per ogni categoria di uscita. La filosofia del DSP manager è quella di correggere le carenze specifche di ogni uscita audio al fine di raggiungere semrpe l\'esperienza di ascolto ottimale. \n\nA differenza degli effetti audio AOSP, non esistono impostazioni per le app. Si tratta di una scelta specifica: è l\'uscita che ci interessa, non quale app genera l\'audio con cui deve lavorare DSP Manager. \n\n\n <b>Funzionalità</b> \n\n 1. <b>Range dinamico di compressione (RDC)</b>\n\n Questo effetto stima il volume dell\'audio come percepito da un ascoltatore medio e imposta il guadagno audio sulla base di questa stima. Il caso di uso primario è in ambienti rumorosi, come ad esempio in auto o su strada, dove le parti tranquille della musica rischiano di essere soffocate dal rumore di fondo. \n\nLa base sintonizzabile determina quanto duramente DSP Manager cercherà di mantenere il volume audio a livello di uscita. Non c\'è nessuna funzione equivalente AOSP per questo effetto DSP. \n\n\n 2. <b>Gudagno bassi</b> \n\n Il guadagno bassi è un filtro passa basso semplice che può essere utilizzato per aggiungere enfasi alle frequnze inferiori a 55 Hz. Il guadagno bassi è di circa 6 dB e modificando il parametro \'Forza\', che aggiunge la risonanza del filtro alla banda 55 Hz, dando a quella frequenza maggiore enfasi. L\'effetto è stato progettato per combattere la perdita delle frequenze basse che è normale con piccoli altoparlanti e cuffie supra-aural che non chiudono completamente il condotto uditivo dell\'utente. \n\n\n 3.  <b>Equalizzatore</b>\n\n\Si tratta di un equalizzatore a 6 bande con bande a 16, 64, 250, 1000, 4000 e 16000 Hz. Sono inclusi alcuni profili comuni, e la risposta in frequenza può anche essere personalizzata toccando sul grafico dell\'equalizzatore. L\'effetto dovrebbe essere utilizzato per ottimizzare la risposta in frequenza per gusto personale dell\'utente o per la particolare capacità dell\'auricolare o degli altoparlanti. \n\n L\'equalizzatore contiene anche un filtro di compensazione di sonorità, che equipara i cambiamenti nella risposta in frequenza dell\'orecchio sulla base del livello di pressione sonora che raggiunge l\'orecchio dell\'utente. È necessario utilizzare un auricolare con cavo, e il valore del parametro di forza deve essere regolato correttamente prima che l\'effetto possa funzionare come previsto. \n\n Per selezionare il giusto valore per la forza di compensazione, usare il volume della musica più silenzioso e scegliere alcune musiche rumorose ad ampio spettro come rock o metal. Cerca di trovare un ambiente dove i bassi sono potenziati in udibilità e sembrano equilibrate con il resto della musica. Dopo che la compensazione è stata correttamnet impostata, i bassi dovrebbe rimanere allo stesso livello rispetto agli altri strumenti indipendentemente dal livello di ascolto. D\'altra parte, se la musica inizia con pochi bassi pesante a più alti livelli di ascolto, la compensazione è probabilmente impostata troppo forte e dovrebbe essere ridotta. \n\nLa compensazione è aggiunta alle personalizzazioni selezionate dell\'utente. Se si vuole solo la compensazione, l\'equalizzatore deve essere lasciato nell\'impostazione \'Piatto\'. \n\n\n 4.  <b>Auricolare filtro</b>\n\n\Il filtro auricolare è un disegno crossfeed ispirato dal famoso circuito analogico bs2b. L\'effetto passa l\'audio mono invariato e regola il segnale di differenza attraverso un filtro passa-basso che approssima testa ombra sia il ritardo interaurale contemporaneamente, dando il giusto tipo di indizi psicoacustici per le orecchie dell\'utente. L\'intenzione è di prevenire l\'affaticamento dell\'ascoltatore derivante dalla separazione stereo non plausibile inerente con tutte le cuffie. L\'effetto deve essere attivato ogni volta che si usano auricolari stereo. \n\nPerché la miscelazione riduce un po\' la separazione stereo, c\'è un riverbero di effetto Haas, che può essere utilizzato per aumentare la larghezza dell\'immagine stereo percepita. Questo effetto è controllato dal controllo \'Tipo stanza\'.</string>
   <!-- Sound Control -->
   <string name="soundcontrol_title">Controllo suoni</string>
   <!-- Preferences -->
@@ -155,4 +156,30 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="navigation_toggle_drawer">Passa al Drawer</string>
   <string name="navigation_toggle_tabbed">Passa alle Tab</string>
   <!-- Boeffla Sound Control -->
+  <string name="boeffla_sound_control">Controllo audio Boeffla</string>
+  <string name="boeffla_sound_title">Suono Boeffla</string>
+  <string name="boeffla_sound_summary">Attiva suono boeffla</string>
+  <string name="bass_freq_tuning">Ottimizzazione basse frequenze</string>
+  <string name="dac_direct_summary">Bypassa il canale analogico</string>
+  <string name="dac_direct_title">DAC diretto</string>
+  <string name="dac_oversampling_summary">Sovracampionamento 128x</string>
+  <string name="dac_oversampling_title">Sovracampionamento DAC</string>
+  <string name="fll_tuning_summary">Ottimizza il clock del chip per una migliore qualità</string>
+  <string name="fll_tuning_title">Ottimizzazione FLL</string>
+  <string name="general_title">Generale</string>
+  <string name="headphone_title">Cuffia</string>
+  <string name="mic_title">Microfono</string>
+  <string name="mic_call">Volume chiamate</string>
+  <string name="mic_general">Volume generale</string>
+  <string name="mono_downmix_summary">Converti stereo in mono</string>
+  <string name="mono_downmix_title">Downmix mono</string>
+  <string name="over_saturation_suppress">Soppressione sovrasaturazione</string>
+  <string name="privacy_mode_summary">Disattiva l\'altoparlante del telefono con cuffie collegate</string>
+  <string name="privacy_mode_title">Modo privacy</string>
+  <string name="speaker_tuning_summary">Ottimizza l\'altoparlante del telefono per migliori bassi</string>
+  <string name="speaker_tuning_title">Ottimizzazione altoparlante</string>
+  <string name="speaker_volume_title">Volume altoparlante</string>
+  <string name="stereo_expansion_summary">Migliora la chiarezza e profondità del suono</string>
+  <string name="stereo_expansion_title">Espansione stereo</string>
+  <string name="volumes_title">Volumi</string>
 </resources>

@@ -155,4 +155,30 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="navigation_toggle_drawer">Αλλαγή σε Συρτάρι</string>
   <string name="navigation_toggle_tabbed">Αλλαγή σε Καρτέλες</string>
   <!-- Boeffla Sound Control -->
+  <string name="boeffla_sound_control">Πλήκτρα ελέγχου ήχου Boeffla</string>
+  <string name="boeffla_sound_title">Ήχος Boeffla</string>
+  <string name="boeffla_sound_summary">Ενεργοποίηση ήχου boeffla</string>
+  <string name="bass_freq_tuning">Συντονισμός συχνότητας μπάσων</string>
+  <string name="dac_direct_summary">Παράκαμψη αναλογικού καναλιού</string>
+  <string name="dac_direct_title">DAC direct</string>
+  <string name="dac_oversampling_summary">128x υπερδειγματοληψία</string>
+  <string name="dac_oversampling_title">DAC υπερδειγματοληψία</string>
+  <string name="fll_tuning_summary">Συντονισμός χρονισμού του chip για καλύτερη ποιότητα</string>
+  <string name="fll_tuning_title">Συντονισμός FLL</string>
+  <string name="general_title">Γενικά</string>
+  <string name="headphone_title">Ακουστικό</string>
+  <string name="mic_title">Μικρόφωνο</string>
+  <string name="mic_call">Ένταση κατά την κλήση</string>
+  <string name="mic_general">Γενική ένταση</string>
+  <string name="mono_downmix_summary">Μετατροπή ήχου stereo σε mono</string>
+  <string name="mono_downmix_title">Μίξη σε μόνο</string>
+  <string name="over_saturation_suppress">Καταστολή υπερκορεσμού</string>
+  <string name="privacy_mode_summary">Σίγαση ηχείου τηλεφώνου όταν τα ακουστικά είναι συνδεδεμένα</string>
+  <string name="privacy_mode_title">Λειτουργία απορρήτου</string>
+  <string name="speaker_tuning_summary">Συντονισμός ηχείου τηλεφώνου για καλύτερο μπάσο</string>
+  <string name="speaker_tuning_title">Συντονισμός ηχείου</string>
+  <string name="speaker_volume_title">Ένταση ηχείου</string>
+  <string name="stereo_expansion_summary">Βελτίωση βάθους και ευκρίνειας ήχου</string>
+  <string name="stereo_expansion_title">Επέκταση stereo</string>
+  <string name="volumes_title">Εντάσεις</string>
 </resources>

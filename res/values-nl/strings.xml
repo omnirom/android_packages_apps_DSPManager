@@ -125,6 +125,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="load_preset">Voorkeurinstelling laden</string>
   <string name="new_preset">Nieuwe voorkeurinstelling...</string>
   <string name="help_title">Help</string>
+  <string name="help_text"><b>Wat is DSP Manager?</b> 
+\n\n 
+DSP Manager is een per-output app voor audio aanpassingen. <i>DSP</i> staat voor digitale signaalverwerking, en het <i>Manager</i>-gedeelte verwijst naar het feit dat de DSP eigenlijk niet wordt uitgevoerd binnen de app zelf; de manager kan dus alleen worden ingeschakeld voor apps die compatibel met Android\'s audio-effect, dat wil zeggen dat de meeste audio spelers beschikbaar compatibel zijn. \n\n\n 
+<b>filosofie</b> 
+\n\n 
+CyanogenMod’s audioverwerking ondersteunt verschillende output categorieën: normale headset, speaker van de telefoon en bluetooth headsets. Er is een apart configuratievenster voor elke categorie van de output. DSP Manager\'s filosofie is voor elke audio-uitgang met name tekortkomingen te corrigeren om de meest optimale geluidskwaliteit te creëren. 
+\n\n 
+In tegenstelling tot de AOSP audio-effecten, er zijn geen instellingen voor elke app. Dit is een opzettelijke ontwerpkeuze: het gaat om overall kwaliteit van de audio output, niet welke app de audio genereert voor de Manager van DSP om mee te werken. 
+\n\n\n 
+<b>functies</b> 
+\n\n 
+1.	<b>Dynamisch bereik compressie (DBC)</b> 
+\n\n
+Dit effect maakt een schatting van het volume van de audio zoals waargenomen door een gemiddelde luisteraar. De primaire use-case is met luidruchtige omgevingen, zoals in auto\'s of op straat, waar rustige delen van muziek in het risico zijn te worden overstemd door achtergrondgeluiden. 
+\n\n 
+De DSP Manager zal proberen om audio volume op het streefniveau te houden. Er is geen AOSP applicatie voor het DSP effect. 
+\n\n\n 
+2.	<b>Bass boost</b> 
+\n\n 
+De bass boost is een eenvoudige lowpass filter welke wordt gebruikt voor het toevoegen van een nadruk op 55 Hz en lagere frequenties. De impuls is ongeveer 6 dB, gewijzigd door de \'sterkte\' parameter, die resonantie filtert op de band van 55 Hz, die geven de frequentie extra nadruk. Het effect is ontworpen ter bestrijding van verlies van Bass frequentie samen met kleine luidsprekers en hoofdtelefoons die niet goed passen in de gehoorgang. 
+\n\n\n 
+3.	<b>Equalizer</b> 
+\n\n 
+Dit is een 6-bands equalizer met is bands op 16, 64, 250, 1000, 4000 en 16000 Hz. Sommige standaardinstellingen worden meegeleverd, en de frequentierespons kan ook worden aangepast door het aan te passen op de equalizer-grafiek. Het effect kan worden gebruikt om af te stemmen op de frequentierespons, tot aan de persoonlijke smaak van gebruiker toe of aan de specifieke mogelijkheden van de beschikbare hoofdtelefoon of luidsprekers. 
+\n\n 
+De equalizer bevat ook een loudness compensatie filter, die verandert het frequentierespons op basis van het niveau van de geluidsdruk die het oor van de gebruiker bereikt. Gebruik van een normale headset is vereist, en de waarde van de parameter sterkte moet correct worden afgesteld voordat het effect zal werken zoals ontworpen. 
+\n\n 
+Selecteer de juiste waarde voor de sterkte van de compensatie, de laagste muziekvolume gebruiken en kies wat lawaaierige muziek zoals rock of metal. Probeer een instelling te vinden waar de wordt versterkt en evenwichtig is met de rest van je muziek. Nadat de compensatie juist is geconfigureerd, moet bass op hetzelfde niveau blijven ten opzichte van de overige instrumenten, ongeacht het geluidsniveau. Aan de andere kant, als de muziek te veel bass heeft op hogere geluidsniveaus, staan de instellingen voor bass te hoog en moet dan worden aangepast om met plezier naar uw muziek te luisteren. 
+\n\n 
+Word gedaan aan de gekozen aanpassingen van de gebruiker. Als alleen een lichte compensatie is vereist, dan moet de equalizer worden gelaten in de \'Standaard\' instelling. 
+\n\n\n 
+4.	<b>Headset Filter</b> 
+\n\n 
+De headset-filter is een cross feed ontwerp geïnspireerd door de beroemde BS2B analoge schakeling. Het effect laat mono geluid onveranderd, en past het verschil signaal aan door een lowpass filter. Dit benadert zowel hoofd, schaduw en interaurale vertraging tegelijk, de juiste soort Psych akoestische aanwijzingen geven voor de oren van de gebruiker. De bedoeling is om te voorkomen dat vermoeidheid van de luisteraar die voortvloeien uit de ongeloofwaardig stereoscheiding inherente alle headsets. Het effect moet worden ingeschakeld wanneer u gebruikmaakt van stereohoofdtelefoons. 
+\n\n 
+Omdat het mengen de stereoscheiding enigszins vermindert, is er een Haas effect, die kan worden gebruikt om de beeldbreedte van de waargenomen stereo te vergroten. Dit wordt geregeld door het besturingselement ‘Kamer type’.</string>
   <!-- Sound Control -->
   <string name="soundcontrol_title">Geluidscontrole</string>
   <!-- Preferences -->

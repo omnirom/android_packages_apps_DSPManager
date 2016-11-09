@@ -29,11 +29,236 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
+  <string name="select_configuration_title">편집할 설정값 선택</string>
+  <string name="headset_title">헤드셋</string>
+  <string name="speaker_title">스피커</string>
+  <string name="bluetooth_title">블루투스</string>
+  <string name="audio_effects">오디오 효과</string>
+  <string name="pref_unavailable">기기에서 이 기능을 사용할 수 없습니다.</string>
+  <string name="dsp_settings_headset">DSP 설정 - 헤드셋</string>
+  <string name="dsp_settings_speaker">DSP 설정 - 스피커</string>
+  <string name="dsp_settings_bluetooth">DSP 설정 - 블루투스 기기</string>
+  <string name="dsp_settings_wm8994">DSP 설정 - WM8994</string>
+  <string name="pref_dsp_title">동적 범위 압축</string>
+  <string name="pref_dsp_summary_on">압축을 사용합니다.</string>
+  <string name="pref_dsp_summary_off">압축을 사용하지 않습니다.</string>
+  <string name="pref_dsp_enable">활성화</string>
+  <string name="pref_effect_title">효과 강도 선택</string>
+  <string name="pref_effect_freq_title">중심 주파수 효과 선택</string>
+  <string name="dialog_effect">효과 강도</string>
+  <string name="pref_equalizer_title">이퀄라이저</string>
+  <string name="pref_equalizer_summary_on">이퀄라이저를 사용합니다.</string>
+  <string name="pref_equalizer_summary_off">이퀄라이저를 사용하지 않습니다.</string>
+  <string name="pref_equalizer_enable">활성화</string>
+  <string name="pref_equalizer_preset_title">프리셋 선택</string>
+  <string name="pref_equalizer_loudness_title">강한 소리 보간</string>
+  <string name="pref_bassboost_title">저음 증폭</string>
+  <string name="pref_bassboost_summary_on">저음 증폭을 사용합니다.</string>
+  <string name="pref_bassboost_summary_off">저음 증폭을 사용하지 않습니다.</string>
+  <string name="pref_bassboost_enable">활성화</string>
+  <string name="pref_headset_virtual_title">헤드셋 가상 공간 효과</string>
+  <string name="pref_headset_virtual_summary_on">헤드셋 가상 공간 효과를 사용합니다.</string>
+  <string name="pref_headset_virtual_summary_off">헤드셋 가상 공간 효과를 사용하지 않습니다.</string>
+  <string name="pref_headset_virtual_enable">활성화</string>
+  <string name="pref_room_title">공간 형태 선택</string>
+  <string name="dialog_room">공간 형태</string>
+  <string name="menu_reset">초기화</string>
+  <string name="pref_headset_stereowide_title">입체 음향 확장기</string>
+  <string name="pref_headset_stereowide_summary_on">입체 음향 확장을 사용합니다.</string>
+  <string name="pref_headset_stereowide_summary_off">입체 음향 확장을 사용하지 않습니다.</string>
+  <string name="pref_headset_stereowide_enable">활성화</string>
+  <string name="dialog_stereo">입체 음향 확장기</string>
+  <string name="eq_preset_acoustic">어쿠스틱</string>
+  <string name="eq_preset_bass_booster">저음 증폭</string>
+  <string name="eq_preset_bass_reducer">저음 감소</string>
+  <string name="eq_preset_classical">클래식</string>
+  <string name="eq_preset_deep">깊이감</string>
+  <string name="eq_preset_flat">플랫</string>
+  <string name="eq_preset_r_and_b">R&amp;B</string>
+  <string name="eq_preset_rock">락</string>
+  <string name="eq_preset_small_speakers">작은 스피커</string>
+  <string name="eq_preset_treble_booster">고음 증폭</string>
+  <string name="eq_preset_treble_reducer">고음 감소</string>
+  <string name="eq_preset_vocal_booster">음성 증폭</string>
+  <string name="eq_preset_custom">사용자 지정</string>
   <!-- WM8994 -->
   <!-- Categories -->
+  <string name="category_wm8994_internal_speaker">스피커</string>
+  <string name="category_wm8994_signal_processing">신호 처리</string>
+  <string name="category_wm8994_headphone_amp">헤드셋</string>
+  <string name="category_wm8994_codec_optimization">코덱 최적화</string>
+  <string name="category_wm8994_dac_config">디지털/아날로그 변환기 설정</string>
+  <string name="category_wm8994_analog_path">아날로그 경로 설정</string>
+  <string name="category_wm8994_mic_settings">마이크 설정</string>
+  <string name="category_wm8994_microphone_recording">마이크</string>
   <!-- Titles/Summaries -->
+  <string name="pref_wm8994_microphone_recording_title">녹음 프리셋</string>
+  <string name="pref_wm8994_headphone_amp_title">증폭기 수준</string>
+  <string name="pref_wm8994_headphone_amp_summary">아날로그 게인 설정</string>
+  <string name="pref_wm8994_headphone_amp_dlg_title">헤드셋 증폭기 수준</string>
+  <string name="pref_wm8994_headphone_amp_dlg_desc">아날로그 게인</string>
+  <string name="pref_wm8994_bass_boost_enable_title">저음 강화</string>
+  <string name="pref_wm8994_bass_boost_enable_summary">저음 강화 고급 설정</string>
+  <string name="pref_wm8994_bass_boost_title">저음 강화 범위</string>
+  <string name="pref_wm8994_bass_boost_summary">고급 동적 범위 관리</string>
+  <string name="pref_wm8994_bass_boost_preset_title">저음 강화 프리셋</string>
+  <string name="pref_wm8994_bass_boost_dlg_title">저음 강화</string>
+  <string name="pref_wm8994_bass_boost_gain_dlg_desc">게인</string>
+  <string name="pref_wm8994_bass_boost_range_dlg_desc">저음 강화 범위</string>
+  <string name="pref_wm8994_control_enable_title">WM8994 제어 사용</string>
+  <string name="pref_wm8994_control_enable_summary">WM8994 사운드 프로세서 고급 설정</string>
+  <string name="pref_wm8994_speaker_tuning_title">음악 감상에 맞춤</string>
+  <string name="pref_wm8994_speaker_tuning_summary">풍부한 베이스와 균형잡힌 음향을 위해 하드웨어 EQ 재구성</string>
+  <string name="pref_wm8994_mono_downmix_title">모노 다운믹스</string>
+  <string name="pref_wm8994_mono_downmix_summary">스트레오 음원을 모노로 다운믹스(헤드폰과 같은 스트레오 출력)</string>
+  <string name="pref_wm8994_stereo_expansion_title">스테레오 확장</string>
+  <string name="pref_wm8994_stereo_expansion_summary">DSP를 통해 스트레오 음향을 \'확장\'</string>
+  <string name="pref_wm8994_dac_direct_title">D/AC 다이렉트</string>
+  <string name="pref_wm8994_dac_direct_summary">D/AC에 직접 접근하여, 채널 믹서를 통과합니다. 깨끗한 오디오를 출력합니다 (신호 대 노이즈 비율 향상)</string>
+  <string name="pref_wm8994_dac_osr128_title">Hi-fi 재생</string>
+  <string name="pref_wm8994_dac_osr128_summary">DAC 128x 오버샘플링 - 음악 재생 시 깨끗한 소리</string>
+  <string name="pref_wm8994_adc_osr128_title">Hi-fi 녹음</string>
+  <string name="pref_wm8994_adc_osr128_summary">DAC 128x 오버샘플링 - 녹음 품질 향상</string>
+  <string name="pref_wm8994_fll_tuning_title">오디오 클럭 튜닝</string>
+  <string name="pref_wm8994_fll_tuning_summary">튜닝된 WM8994 오디오 클럭 소스 사용 - 소리의 품질을 향상</string>
+  <string name="save_preset">프리셋 저장</string>
+  <string name="load_preset">프리셋 불러오기</string>
+  <string name="new_preset">새 프리셋...</string>
+  <string name="help_title">도움말</string>
+  <string name="help_text"><b>What is DSP Manager?</b>
+\n\n
+DSP Manager is a per-output audio adjustment app. <i>DSP</i> stands for
+Digital signal processing, and the <i>Manager</i> part refers to the fact that the
+DSP is actually not run inside the app itself; the manager can only
+enable it for apps which are compliant with Android\'s audio effect
+specification, i.e. most music players.
+\n\n\n
+<b>Philosophy</b>
+\n\n
+CyanogenMod\'s audio processing supports different output categories:
+wired headset, phone speaker and bluetooth headset. There is a separate
+configuration panel for each output category. DSP Manager\'s philosophy is to
+correct each audio output\'s particular deficiencies in order to reach the most
+optimal listening experience with each.
+\n\n
+Unlike with AOSP audio effects, there are no per-app settings. This is
+a deliberate design choice: it is the output we care about, not which
+app generates the audio for DSP Manager to work with.
+\n\n\n
+<b>Features</b>
+\n\n
+1. <b>Dynamic range compression (DRC)</b>
+\n\n
+This effect estimates the loudness of the audio as perceived by an average
+listener and drives a gain control based on this estimate. The primary use case
+is with noisy environments such as in cars or on street, where quiet parts of
+music are in risk of being drowned out by background noise.
+\n\n
+The sole tunable determines how hard DSP Manager will try to maintain audio
+loudness at the target level. There is no AOSP equivalent for this DSP effect.
+\n\n\n
+2. <b>Bass boost</b>
+\n\n
+The bass boost is a simple lowpass filter which can be used to add an emphasis
+at 55 Hz and lower frequencies. The boost is around 6 dB, and modified by the
+\'strength\' parameter, which adds filter resonance at the 55 Hz band, giving
+that frequency extra emphasis. The effect is designed to combat loss of bass
+frequency common with small speakers and supra-aural headsets which do not
+couple tightly with user\'s ear canal.
+\n\n\n
+3. <b>Equalizer</b>
+\n\n
+This is a 6-band equalizer with bands at 16, 64, 250, 1000, 4000 and 16000 Hz.
+Some common presets are provided, and the frequency response can also be
+customized by tapping on the equalizer graph. The effect should be used to tune
+the frequency response to user\'s personal taste, or to the particular
+capabilities of the available headset or speakers.
+\n\n
+Equalizer also contains a loudness compensation filter, which equalizes the
+changes in ear frequency response based on the sound pressure level which
+reaches the user\'s ear. Use of a wired headset is required, and the strength
+parameter value must be tuned correctly before the effect will work as
+designed.
+\n\n
+To select the right value for the compensation strength, use the quietest music
+volume, and choose some wide-spectrum noisy music such as rock or metal. Try
+to find a setting where the bass is boosted back into audibility and seems
+balanced with the rest of the material. After the compensation has been
+correctly configured, bass should remain at the same level relative to the
+other instruments regardless of the listening level. On the other hand, if
+music starts to sound bass heavy at higher listening levels, the compensation
+is probably set too strong, and should be reduced.
+\n\n
+The compensation is added to the user\'s chosen adjustments. If only compensation
+is desired, the equalizer should be left in the \'Flat\' setting.
+\n\n\n
+4. <b>Headset Filter</b>
+\n\n
+The headset filter is a crossfeed design inspired by the famous bs2b analog
+circuit. The effect passes mono sound unchanged, and adjusts the difference
+signal through a lowpass filter which approximates both head shadow and
+interaural delay at once, giving right kind of psychoacoustic clues for user\'s
+ears. The intention is to prevent listener fatigue arising from the
+implausible stereo separation inherent with all headsets. The effect should be
+enabled whenever using stereo headsets.
+\n\n
+Because the mixing reduces the stereo separation somewhat, there is a
+Haas effect reverb, which can be used to increase the perceived stereo image
+width. This is controlled by the \'Room type\' control.</string>
   <!-- Sound Control -->
+  <string name="soundcontrol_title">소리 제어</string>
   <!-- Preferences -->
+  <string name="pref_soundcontrol_presets_title">소리 제어 프리셋</string>
+  <string name="pref_soundcontrol_headphone_gain_title">헤드폰 Gain</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_title">헤드폰 PowerAmp Gain</string>
+  <string name="pref_soundcontrol_microphone_gain_title">마이크 Gain</string>
+  <string name="pref_soundcontrol_speaker_gain_title">스피커 Gain</string>
+  <string name="pref_soundcontrol_headphone_gain_left">헤드폰 (왼쪽)</string>
+  <string name="pref_soundcontrol_headphone_gain_right">헤드폰 (오른쪽)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_left">헤드폰 PowerAmp (왼쪽)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_right">헤드폰 PowerAmp (오른쪽)</string>
+  <string name="pref_soundcontrol_microphone_handset_gain_title">해드셋 마이크</string>
+  <string name="pref_soundcontrol_microphone_camcorder_gain_title">캠코더 마이크</string>
+  <string name="sc_version_title">소리 제어</string>
+  <string name="sc_preset_summary">불러올 프리셋을 선택하세요</string>
+  <string name="sc_preset_loaded">\"%s\" 프리셋을 불러왔습니다!</string>
+  <string name="sc_preset_custom">사용자 지정</string>
+  <string name="sc_preset_quality">음질</string>
+  <string name="sc_preset_loudness">큰 소리</string>
+  <string name="sc_preset_quiet">조용함</string>
+  <string name="sc_preset_stock">기본값</string>
+  <string name="sc_value_changed">음악을 정지하고 다시 재생하여 설정을 적용하세요!</string>
   <!-- Drawer -->
+  <string name="navigation_drawer_toggle">서랍 토글</string>
+  <string name="navigation_drawer_open">내비게이션 서랍 열기</string>
+  <string name="navigation_drawer_close">내비게이션 서랍 닫기</string>
+  <string name="navigation_toggle_drawer">서랍으로 전환</string>
+  <string name="navigation_toggle_tabbed">탭으로 전환</string>
   <!-- Boeffla Sound Control -->
+  <string name="boeffla_sound_control">Boeffla 사운드 컨트롤</string>
+  <string name="boeffla_sound_title">Boeffla 사운드</string>
+  <string name="boeffla_sound_summary">Boeffla 사운드 사용</string>
+  <string name="bass_freq_tuning">베이스 주파수 조절</string>
+  <string name="dac_direct_summary">아날로그 채널 우회</string>
+  <string name="dac_direct_title">DAC 다이렉트</string>
+  <string name="dac_oversampling_summary">128x 오버샘플링</string>
+  <string name="dac_oversampling_title">DAC 오버샘플링</string>
+  <string name="fll_tuning_summary">칩 클럭을 조절하여 소리의 품질을 개선합니다</string>
+  <string name="fll_tuning_title">FLL 튜닝</string>
+  <string name="general_title">기본</string>
+  <string name="headphone_title">헤드폰</string>
+  <string name="mic_title">마이크</string>
+  <string name="mic_call">통화 볼륨</string>
+  <string name="mic_general">기본 볼륨</string>
+  <string name="mono_downmix_summary">스테레오를 모노로 변환</string>
+  <string name="mono_downmix_title">모노 다운믹스</string>
+  <string name="over_saturation_suppress">과포화된 소리 억제</string>
+  <string name="privacy_mode_summary">헤드폰이 연결된 동안 휴대전화 스피커를 음소거합니다</string>
+  <string name="privacy_mode_title">개인 정보 보호 모드</string>
+  <string name="speaker_tuning_summary">더 나은 베이스를 위해 휴대전화 스피커 튜닝</string>
+  <string name="speaker_tuning_title">스피커 튜닝</string>
+  <string name="speaker_volume_title">스피커 볼륨</string>
+  <string name="stereo_expansion_summary">소리의 깊이와 선명도 향상</string>
+  <string name="stereo_expansion_title">스테레오 확장</string>
+  <string name="volumes_title">볼륨</string>
 </resources>
