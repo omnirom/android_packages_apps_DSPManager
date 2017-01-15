@@ -44,6 +44,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_dsp_summary_off">Compresión desactivada</string>
   <string name="pref_dsp_enable">Habilitar</string>
   <string name="pref_effect_title">Intensidad del efecto</string>
+  <string name="pref_effect_freq_title">Seleccione la frecuencia central del efecto</string>
   <string name="dialog_effect">Intensidad del efecto</string>
   <string name="pref_equalizer_title">Ecualizador</string>
   <string name="pref_equalizer_summary_on">Ecualizador activado</string>
@@ -62,6 +63,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_room_title">Seleccionar tipo de habitación</string>
   <string name="dialog_room">Tipo de habitación</string>
   <string name="menu_reset">Restaurar</string>
+  <string name="pref_headset_stereowide_title">Potenciador de estéreo</string>
+  <string name="pref_headset_stereowide_summary_on">El potenciador de estéreo está habilitado</string>
+  <string name="pref_headset_stereowide_summary_off">El potenciador de estéreo está deshabilitado</string>
+  <string name="pref_headset_stereowide_enable">Habilitar</string>
+  <string name="dialog_stereo">Potenciador de estéreo</string>
   <string name="eq_preset_acoustic">Acústico</string>
   <string name="eq_preset_bass_booster">Potenciar bajos</string>
   <string name="eq_preset_bass_reducer">Reducir bajos</string>
@@ -115,9 +121,101 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_wm8994_adc_osr128_summary">Sobremuestreo a 128x de conversión analógico-a-digital (incrementa la calidad de las grabaciones)</string>
   <string name="pref_wm8994_fll_tuning_title">Reloj de audio ajustado</string>
   <string name="pref_wm8994_fll_tuning_summary">Usar reloj de audio WM8994 ajustado (mejora la calidad del sonido)</string>
+  <string name="save_preset">Guardar Preselección</string>
+  <string name="load_preset">Cargar preestablecido</string>
+  <string name="new_preset">Nuevo ajuste preestablecido...</string>
   <string name="help_title">Ayuda</string>
+  <string name="help_text"><b>¿Qué es DSP Manager?</b>
+\n\n
+DSP Manager es una aplicación de ajuste de audio por salida <i>DSP</i> significa Procesamiento de Señal Digital, y con <i>Manager</i> se refiere al hecho de que el DSP en realidad no se ejecuta dentro de la aplicación misma; el administrador sólo habilita su uso para aplicaciones que son compatibles con los efectos de audio de Android, como por ejemplo, la mayoría de los reproductores de música.
+\n\n\n
+<b>Filosofía</b>
+\n\n
+El procesamiento de audio de CyanogenMod soporta diferentes tipos de salida: Auricular cableado, altavoz del teléfono y auricular bluetooth. Hay un panel de configuración para cada tipo de salida. La filosofía de DSP Manager es corregir las deficiencias particulares de cada salida de audio para alcanzar la experiencia más óptima con cada uno.
+\n\n
+A diferencia de los efectos de audio de AOSP, no hay ningún ajuste por aplicación. Esto es una opción deliberada por diseño: este es nuestro propósito, y no cuales aplicaciones generan audio para trabajar con DSP Manager.
+\n\n\n
+<b>Características</b>
+\n\n
+1. <b>Compresión de rango dinámico (DRC)</b>
+ \n\n
+Este efecto estima el volumen del audio percibido por un oyente promedio y lleva un control de ganancia basado en este cálculo. El caso de uso primario es con ambientes ruidosos tal como en los coches o en la calle, en donde las partes tranquilas de las canciones se encuentran en riesgo de ser ahogadas por el ruido de fondo.
+\n\n 
+El sintonizador de armonía determinará cuando DSP Manager cambiará el volumen de acuerdo al nivel determinado. No hay equivalente AOSP para este efecto de DSP.
+\n\n\n
+2. <b>Refuerzo de bajos</b>
+\n\n
+El refuerzo de bajos es un filtro pasabajos sencillo que puede usarse para añadir énfasis a las frecuencias de 55 Hz y más bajas. El impulso es de alrededor de 6 dB y puede ser modificado por el parámetro \'fuerza\', que agrega filtro de resonancia en la banda de 55Hz, dando a esta frecuencia un énfasis extra. El efecto está diseñado para combatir la pérdida de frecuencias comunes con pequeños altavoces y auriculares supra aurales que no se acoplan bien con el canal de oído del usuario.
+\n\n\n
+3. <b>Ecualizador</b>
+\n\n
+Es un ecualizador de 6 bandas, 16, 64, 250, 1000, 4000 y 16000 Hz. Se proporcionan algunos valores comunes, y la respuesta de frecuencia puede personalizarse pulsando sobre el gráfico. El efecto puede usarse para ajustar la respuesta de frecuencia al gusto personal del usuario, o a las capacidades particulares de los altavoces o auriculares disponibles.
+\n\n
+El ecualizador también contiene un filtro de compensación de volumen, que compensa los cambios en la respuesta de frecuencia del oído basado en el nivel de presión acústica que éste alcanza. Es necesario utilizar un auricular con cable, y el valor del parámetro de intensidad debe ajustarse correctamente antes de que el efecto funcione como está diseñado.
+\n\n
+Para seleccionar el valor adecuado para la resistencia de la compensación, utiliza el volumen más bajo posible y elija música del tipo ruidosa de amplio espectro como el rock o el metal. Trata de encontrar una configuración en donde el bajo sea impulsado hacia la audibilidad y parezca equilibrado con el resto del material. Después que la compensación se ha configurado correctamente, el bajo debe permanecer en el mismo nivel en relación con los demás instrumentos independientemente del nivel de escuchado. Por otro lado, si la música comienza a sonar con bajos muy pesados a más altos niveles de escucha, la compensación posiblemente se encuentre demasiado fuerte y debe reducirse.
+\n\n
+La compensación se suma al ajuste elegido por el usuario. Si sólo se desea compensar, el ecualizador debe dejarse en la posición \'Plana\'.
+\n\n\n
+4. <b>Filtro de auricular</b>
+\n\n
+El filtro de auricular posee un diseño de crossfeed inspirado en el famoso circuito analógico de bs2b. El efecto pasa el sonido mono sin cambios y ajusta la señal diferencial a través de un filtro pasabajos que se aproxima a ambos sombra superior y retraso interaural, dando certeros tipos de pistas psicoacústicas para los oídos del usuario. La intención es evitar la fatiga del oyente provocada por la separación estéreo inverosímil inherente con los auriculares. El efecto debe habilitarse cada vez que se usen auriculares estéreo.
+\n\n
+Debido a que la mezcla reduce un poco de la separación estérea, hay una reverberación del efecto Haas, que se puede utilizar para aumentar el ancho de la imagen estéreo percibida. Esto es controlado por la configuración de \'Tipo de habitación\'.</string>
   <!-- Sound Control -->
+  <string name="soundcontrol_title">Control de sonido</string>
   <!-- Preferences -->
+  <string name="pref_soundcontrol_presets_title">Ajustes preestablecidos del control de sonido</string>
+  <string name="pref_soundcontrol_headphone_gain_title">Ganancia de auriculares</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_title">Ganancia PowerAmp de auriculares</string>
+  <string name="pref_soundcontrol_microphone_gain_title">Ganancia del micrófono</string>
+  <string name="pref_soundcontrol_speaker_gain_title">Ganancia del altavoz</string>
+  <string name="pref_soundcontrol_headphone_gain_left">Auricular (izquierda)</string>
+  <string name="pref_soundcontrol_headphone_gain_right">Auricular (derecha)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_left">Auricular PowerAmp (izquierda)</string>
+  <string name="pref_soundcontrol_headphone_poweramp_gain_right">Auricular PowerAmp (derecha)</string>
+  <string name="pref_soundcontrol_microphone_handset_gain_title">Micrófono de auricular</string>
+  <string name="pref_soundcontrol_microphone_camcorder_gain_title">Micrófono de videocámara</string>
+  <string name="sc_version_title">Control de sonido</string>
+  <string name="sc_preset_summary">Elija un ajuste preestablecido para cargar</string>
+  <string name="sc_preset_loaded">Preestablecido \"%s\" cargado!</string>
+  <string name="sc_preset_custom">Personalizado</string>
+  <string name="sc_preset_quality">Calidad</string>
+  <string name="sc_preset_loudness">Sonoridad</string>
+  <string name="sc_preset_quiet">Tranquilo</string>
+  <string name="sc_preset_stock">Predeterminado</string>
+  <string name="sc_value_changed">Por favor, detenga y reanude su música para aplicar los valores!</string>
   <!-- Drawer -->
+  <string name="navigation_drawer_toggle">Cajón de Interruptores</string>
+  <string name="navigation_drawer_open">Abrir panel de navegación</string>
+  <string name="navigation_drawer_close">Cierra el cajón de navegación</string>
+  <string name="navigation_toggle_drawer">Cambiar a cajón</string>
+  <string name="navigation_toggle_tabbed">Cambiar a pestañas</string>
   <!-- Boeffla Sound Control -->
+  <string name="boeffla_sound_control">Control de sonido Boeffla</string>
+  <string name="boeffla_sound_title">Sonido Boeffla</string>
+  <string name="boeffla_sound_summary">Habilitar sonido boeffla</string>
+  <string name="bass_freq_tuning">Sintonización de frecuencias bajas</string>
+  <string name="dac_direct_summary">Derivar el canal analógico</string>
+  <string name="dac_direct_title">DAC directo</string>
+  <string name="dac_oversampling_summary">Sobremuestreo de 128x</string>
+  <string name="dac_oversampling_title">Sobremuestreo DAC</string>
+  <string name="fll_tuning_summary">Ajustar el reloj del chip para una mejor calidad</string>
+  <string name="fll_tuning_title">Ajustes de FLL</string>
+  <string name="general_title">General</string>
+  <string name="headphone_title">Auriculares</string>
+  <string name="mic_title">Micrófono</string>
+  <string name="mic_call">Volumen de la llamada</string>
+  <string name="mic_general">Volumen general</string>
+  <string name="mono_downmix_summary">Convertir estéreo en mono</string>
+  <string name="mono_downmix_title">Mezclar mono</string>
+  <string name="over_saturation_suppress">Suprimir la sobre saturación</string>
+  <string name="privacy_mode_summary">Silenciar el altavoz del teléfono cuando hay auriculares conectados</string>
+  <string name="privacy_mode_title">Modo de privacidad</string>
+  <string name="speaker_tuning_summary">Afine el altavoz del teléfono para mejorar bajos</string>
+  <string name="speaker_tuning_title">Afinar altavoz</string>
+  <string name="speaker_volume_title">Volumen del altavoz</string>
+  <string name="stereo_expansion_summary">Mejorar la claridad y profundidad de sonido</string>
+  <string name="stereo_expansion_title">Expansión estéreo</string>
+  <string name="volumes_title">Volúmenes</string>
 </resources>

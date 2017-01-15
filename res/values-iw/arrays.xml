@@ -30,43 +30,43 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string-array name="microphone_recording_presets">
-    <item>Original</item>
-    <item>Balanserad</item>
-    <item>Hög känslighet</item>
-    <item>Loud Environment</item>
+    <item>מקורי</item>
+    <item>מאוזן</item>
+    <item>רגישות גבוהה</item>
+    <item>סביבה רועשת</item>
   </string-array>
   <string-array name="headphone_modes">
-    <item>Studio</item>
-    <item>Rum</item>
-    <item>Stort rum</item>
-    <item>Scen</item>
+    <item>סטודיו</item>
+    <item>חדר</item>
+    <item>חדר גדול</item>
+    <item>במה</item>
   </string-array>
   <string-array name="equalizer_loudness_modes">
-    <item>Inaktiverad</item>
-    <item>Svagast</item>
-    <item>Svagare</item>
-    <item>Svag</item>
-    <item>Stark</item>
-    <item>Starkare</item>
-    <item>Starkast</item>
+    <item>מבוטל</item>
+    <item>הכי חלש</item>
+    <item>חלש יותר</item>
+    <item>חלש</item>
+    <item>חזק</item>
+    <item>חזק יותר</item>
+    <item>הכי חזק</item>
   </string-array>
   <string-array name="compression_modes">
-    <item>Lätt</item>
-    <item>Måttlig</item>
-    <item>Extrem</item>
+    <item>מבט</item>
+    <item>בינוני</item>
+    <item>קיצוני</item>
   </string-array>
   <string-array name="bassboost_modes">
-    <item>Lätt</item>
-    <item>Måttlig</item>
-    <item>Extrem</item>
+    <item>מבט</item>
+    <item>בינוני</item>
+    <item>קיצוני</item>
   </string-array>
   <string-array name="wm8994_bassboost_modes">
-    <item>Standard</item>
-    <item>Small Speakers</item>
+    <item>סטנדרטי</item>
+    <item>רמקולים קטנים</item>
   </string-array>
   <string-array name="stereowide_modes">
-    <item>Lätt</item>
-    <item>Måttlig</item>
-    <item>Stark</item>
+    <item>קל</item>
+    <item>בינוני</item>
+    <item>גבוה</item>
   </string-array>
 </resources>

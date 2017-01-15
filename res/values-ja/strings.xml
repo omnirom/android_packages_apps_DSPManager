@@ -33,14 +33,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="headset_title">ヘッドセット</string>
   <string name="speaker_title">スピーカー</string>
   <string name="bluetooth_title">Bluetoothデバイス</string>
+  <string name="audio_effects">オーディオエフェクト</string>
+  <string name="pref_unavailable">あなたのデバイスではサポートされていません</string>
   <string name="dsp_settings_headset">DSP 設定 - ヘッドフォン</string>
   <string name="dsp_settings_speaker">DSP 設定 - スピーカー</string>
   <string name="dsp_settings_bluetooth">DSP 設定 - Bluetooth デバイス</string>
+  <string name="dsp_settings_wm8994">DSP 設定 - WM8994</string>
   <string name="pref_dsp_title">ダイナミックレンジコンプレッション</string>
   <string name="pref_dsp_summary_on">コンプレッションは有効</string>
   <string name="pref_dsp_summary_off">コンプレッションは無効</string>
   <string name="pref_dsp_enable">有効にする</string>
   <string name="pref_effect_title">エフェクトの強度を選択</string>
+  <string name="pref_effect_freq_title">エフェクト中心周波数を選択</string>
   <string name="dialog_effect">エフェクト強度</string>
   <string name="pref_equalizer_title">イコライザ</string>
   <string name="pref_equalizer_summary_on">イコライザは有効</string>
@@ -59,6 +63,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="pref_room_title">部屋のタイプを選択</string>
   <string name="dialog_room">部屋のタイプ</string>
   <string name="menu_reset">リセット</string>
+  <string name="pref_headset_stereowide_enable">有効</string>
   <string name="eq_preset_acoustic">アコースティック</string>
   <string name="eq_preset_bass_booster">ベースブースト</string>
   <string name="eq_preset_bass_reducer">ベースリデュース</string>

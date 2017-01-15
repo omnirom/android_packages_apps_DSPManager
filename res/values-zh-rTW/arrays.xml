@@ -64,4 +64,9 @@
     <item>標準</item>
     <item>小型喇叭</item>
   </string-array>
+  <string-array name="stereowide_modes">
+    <item>輕微</item>
+    <item>中等</item>
+    <item>極端</item>
+  </string-array>
 </resources>

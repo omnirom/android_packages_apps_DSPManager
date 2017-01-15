@@ -30,43 +30,43 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string-array name="microphone_recording_presets">
-    <item>Original</item>
-    <item>Balanserad</item>
-    <item>Hög känslighet</item>
-    <item>Loud Environment</item>
+    <item>Asli</item>
+    <item>Seimbang</item>
+    <item>Kepekaan Tinggi</item>
+    <item>Persekitaran Bising</item>
   </string-array>
   <string-array name="headphone_modes">
     <item>Studio</item>
-    <item>Rum</item>
-    <item>Stort rum</item>
-    <item>Scen</item>
+    <item>Bilik</item>
+    <item>Bilik besar</item>
+    <item>Pentas</item>
   </string-array>
   <string-array name="equalizer_loudness_modes">
-    <item>Inaktiverad</item>
-    <item>Svagast</item>
-    <item>Svagare</item>
-    <item>Svag</item>
-    <item>Stark</item>
-    <item>Starkare</item>
-    <item>Starkast</item>
+    <item>Nyahaktifkan</item>
+    <item>Paling lemah</item>
+    <item>Lebih lemah</item>
+    <item>Lemah</item>
+    <item>Kuat</item>
+    <item>Semakin kuat</item>
+    <item>Terkuat</item>
   </string-array>
   <string-array name="compression_modes">
-    <item>Lätt</item>
-    <item>Måttlig</item>
-    <item>Extrem</item>
+    <item>Sedikit</item>
+    <item>Sederhana</item>
+    <item>Melampau</item>
   </string-array>
   <string-array name="bassboost_modes">
-    <item>Lätt</item>
-    <item>Måttlig</item>
-    <item>Extrem</item>
+    <item>Sedikit</item>
+    <item>Sederhana</item>
+    <item>Melampau</item>
   </string-array>
   <string-array name="wm8994_bassboost_modes">
     <item>Standard</item>
-    <item>Small Speakers</item>
+    <item>Speaker kecil</item>
   </string-array>
   <string-array name="stereowide_modes">
-    <item>Lätt</item>
-    <item>Måttlig</item>
-    <item>Stark</item>
+    <item>Ringan</item>
+    <item>Sederhana</item>
+    <item>Tinggi</item>
   </string-array>
 </resources>

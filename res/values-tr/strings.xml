@@ -29,7 +29,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 <resources>
-  <string name="select_configuration_title">Düzenlemek İçin Yapılandırma Seçin</string>
+  <string name="select_configuration_title">Düzenlenecek yapılandırmayı seçin</string>
   <string name="headset_title">Kulaklık</string>
   <string name="speaker_title">Hoparlör</string>
   <string name="bluetooth_title">Bluetooth</string>
@@ -125,6 +125,44 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   <string name="load_preset">Önayarı yükle</string>
   <string name="new_preset">Yeni hazır ayar...</string>
   <string name="help_title">Yardım</string>
+  <string name="help_text"><b>DSP Manager nedir?</b>
+\n\n
+DSP Manager bir çıktı başına ses düzenleme uygulamasıdır. <i>DSP</i> Dijital sinyal işleme anlamına gelir, ve <i>Manager</i> kısmı ise DSP\'nin aslında uygulamanın içinde kendi başına çalışmadığını, sadece Manager\'in uygulamalar için aktif edebildiğine işaret eder.
+\n\n\n
+<b>Felsefe</b>
+\n\n
+CyanogenMod\'un ses işlemesi farklı çıkış kategorilerini destekler:
+kablolu kulaklık, telefon hoparlörü ve bluetooth hoparlörler. Her çıkış kategorisi için ayrılmış ayar paneli bulunur. DSP Manager\'ın felsefesi en ideal dinleme deneyimine ulaşmak için her çıkışın ayarlarını ayrı ayrı düzenlemektir.
+\n\n
+AOSP ses efektlerinin aksine, uygulama başına ayar yoktur. Bu kasti bir tasarım seçeneğidir: ilgilendiğimiz şey çıkıştır, hangi uygulamanın DSP Manager ile çalışacağı değil.
+\n\n\n
+<b>Özellikler</b>
+\n\n
+1. <b>Dinamik alan basıncı (DRC)</b>
+\n\n
+Bu efekt sesin ortalama bir dinleyicinin algıladığı kadar yüksek olup olmadığını tahmin eder ve bu tahmine dayalı bir kazanç kontrolü sağlar. Birincil kullanım durumu, müziklerin sessiz kısımlarının arka plan gürültüsü tarafından boğulma tehlikesi altında olduğu arabalar veya sokak gibi gürültülü ortamlar içindir.
+\n\n
+Ayarlanabilir ton, DSP Yöneticisinin ses seviyesini hedef seviyede tutmaya çalışmasının ne kadar zor olacağını belirler. Bu DSP efekti için AOSP eşdeğeri yoktur.
+\n\n\n
+2.<b>Bas yükseltici</b>
+\n\n
+Bas yükseltme, 55 Hz ve daha düşük frekanslarda bir vurgu eklemek için kullanılabilen basit bir alçak geçiren filtredir. Güçlendirme 6 dB civarındadır ve 55 Hz bandında filtre rezonansı ekleyen \'kuvvet\' parametresi tarafından değiştirilir ve bu frekans ekstra önem verir. Etki, kullanıcıların kulak kanalıyla sıkı bağlanmayan küçük hoparlörler ve supra-kulaklı kulaklıklar ile ortak bas frekansının kaybı ile mücadele etmek için tasarlanmıştır.
+\n\n\n
+3. <b>Ekolayzer</b>
+\n\n
+Bu, 16, 64, 250, 1000, 4000 ve 16000 Hz\'de bantlar içeren bir 6 bantlı ekolayzırdır. Bazı ortak önayarlar sağlanmış ve frekans tepkisi de ekolayzır grafiğine dokunularak özelleştirilebilir. Etki, kullanıcının kişisel beğenisine veya mevcut kulaklığın veya hoparlörlerin özelliklerine göre frekans tepkisini ayarlamak için kullanılmalıdır.
+\n\n
+Ekolayzır ayrıca, kullanıcının kulağına ulaşan ses basıncına dayanarak kulak frekans tepkisinde meydana gelen değişiklikleri eşitleyen bir ses yüksekliği telafisi filtresi de içerir. Kablolu bir kulaklığın kullanılması gereklidir ve efektin tasarlandığı gibi çalışması için güç parametresi değeri doğru şekilde ayarlanmalıdır.
+\n\n
+Kompanzasyon gücü için doğru değeri seçmek için en sessiz müzik ses seviyesini kullanın ve kaya veya metal gibi geniş spektrumlu gürültülü müzik seçin. Basın duyulabilirliğe geri döndürüldüğü ve malzemenin geri kalanıyla dengeli görüneceği bir ortam bulmaya çalışın. Kompanzasyon doğru şekilde yapılandırıldıktan sonra, bas seviyeleri ne olursa olsun, bas diğer enstrümanlara göre aynı seviyede kalmalıdır. Öte yandan, müzik daha yüksek dinleme düzeylerinde ağır bas sesler almaya başlarsa, telafi muhtemelen çok güçlü ayarlanır ve azaltılmalıdır.
+\n\n
+Kompanzasyon, kullanıcının seçtiği ayarlamalara eklenir. Sadece kompanzasyon isteniyorsa, ekolayzır \'Düz\' ayarında bırakılmalıdır.
+\n\n\n
+4. <b>Kulaklık Filtresi</b>
+\n\n
+Kulaklıklı mikroişlemci filtresi, ünlü bs2b analog devresinden esinlenerek tasarlanmış çapraz beslemeli bir tasarımdır. Etki, mono sesi değişmeden ilerler ve fark sinyalini, kullanıcının kulakları için doğru psikoakustik ipuçları veren, aynı anda hem baştaki gölgeye hem de interaural gecikmeye yaklaşan bir alçak geçiren filtreden geçirerek ayarlar. Niyet, tüm kulaklık setleri ile doğasında bulunan inanılmaz stereo ayrımından kaynaklanan dinleyici yorgunluğunu önlemektir. Bu efekt stereo kulaklık kullanıldığında etkinleştirilmelidir.
+\n\n
+Karışım stereo ayırmayı biraz azalttığından, algılanan stereo görüntü genişliğini arttırmak için kullanılabilen bir Haas efektli yankı vardır. Bu, \'Oda tipi\' kontrolü tarafından kontrol edilir.</string>
   <!-- Sound Control -->
   <string name="soundcontrol_title">Ses Kontrolü</string>
   <!-- Preferences -->
