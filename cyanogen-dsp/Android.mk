@@ -24,16 +24,16 @@ LOCAL_SRC_FILES := \
 	EffectEqualizer.cpp \
 	EffectVirtualizer.cpp \
 	EffectStereoWide.cpp \
-	FIR16.cpp \
-# terminator
+	FIR16.cpp
 
 LOCAL_C_INCLUDES += \
-	frameworks/base/include \
-	hardware/libhardware/include \
-	system/core/include \
-	system/core/base/include \
-	system/media/audio_effects/include \
-# terminator
+        frameworks/av/include \
+        hardware/libhardware/include \
+        system/core/include \
+        system/core/base/include \
+        system/media/audio/include \
+        system/media/audio_effects/include \
+        frameworks/native/libs/binder/include
 
 LOCAL_SHARED_LIBRARIES := \
 	libcutils \
@@ -52,7 +52,7 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE_CLASS := ETC
 
-LOCAL_MODULE_PATH := $(TARGET_OUT)/vendor/etc
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_PREBUILT)
 endif
