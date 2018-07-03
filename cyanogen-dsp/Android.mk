@@ -2,7 +2,9 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+ifneq ($(TARGET_SYSTEM_AUDIO_EFFECTS),true)
 LOCAL_VENDOR_MODULE := true
+endif
 
 LOCAL_MODULE := libcyanogen-dsp
 
